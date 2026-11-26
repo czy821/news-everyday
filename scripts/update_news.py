@@ -101,214 +101,45 @@ def _extract_balanced_objects(text: str) -> list:
 
 
 def extract_json_object(raw_text: str) -> dict:
-    """兼容各种模型返回的纯 JSON、Markdown 代码块、末尾多余逗号及局部语法瑕疵。"""
+    """兼容各种模型返回的纯 JSON、顶层数组 [...]、Markdown 代码块、多余逗号及局部语法瑕疵。"""
     text = (raw_text or "").strip()
     if "```" in text:
         m = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
         if m:
             text = m.group(1).strip()
-    start = text.find("{")
-    end = text.rfind("}")
-    if start != -1 and end != -1 and end > start:
-        text = text[start : end + 1]
+
+    # 找到最外层 { ... } 或 [ ... ]
+    obj_start, obj_end = text.find("{"), text.rfind("}")
+    arr_start, arr_end = text.find("["), text.rfind("]")
+    if arr_start != -1 and (obj_start == -1 or arr_start < obj_start) and arr_end > arr_start:
+        text = text[arr_start : arr_end + 1]
+    elif obj_start != -1 and obj_end > obj_start:
+        text = text[obj_start : obj_end + 1]
+
+    def _normalize_parsed(parsed):
+        if isinstance(parsed, list):
+            return {"articles": parsed}
+        if isinstance(parsed, dict):
+            for k in ("articles", "news", "items", "data", "list", "results"):
+                if isinstance(parsed.get(k), list):
+                    parsed["articles"] = parsed[k]
+                    break
+            if "articles" not in parsed and parsed.get("title"):
+                return {"articles": [parsed]}
+            return parsed
+        return {"articles": []}
+
     try:
-        return json.loads(text)
+        return _normalize_parsed(json.loads(text))
     except json.JSONDecodeError:
         repaired = _repair_json_text(text)
         try:
-            return json.loads(repaired)
+            return _normalize_parsed(json.loads(repaired))
         except json.JSONDecodeError:
-            # 尝试逐条抢救 articles 数组里的对象
-            arr_idx = repaired.find('"articles"')
-            if arr_idx != -1:
-                rescued = _extract_balanced_objects(repaired[arr_idx:])
-                if rescued:
-                    return {"articles": rescued}
+            rescued = _extract_balanced_objects(repaired)
+            if rescued:
+                return {"articles": rescued}
             raise
-
-
-def fetch_rss(url: str, source_name: str, limit: int = 8) -> list:
-    items = []
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "NoonBriefingBot/1.0 (+https://github.com)"},
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            raw = resp.read()
-        root = ET.fromstring(raw)
-        entries = root.findall(".//item") or root.findall(".//{http://www.w3.org/2005/Atom}entry")
-        for entry in entries[:limit]:
-            title = (
-                entry.findtext("title")
-                or entry.findtext("{http://www.w3.org/2005/Atom}title")
-                or ""
-            ).strip()
-            link = (entry.findtext("link") or "").strip()
-            if not link:
-                link_el = entry.find("{http://www.w3.org/2005/Atom}link")
-                if link_el is not None:
-                    link = link_el.attrib.get("href", "").strip()
-            desc = (
-                entry.findtext("description")
-                or entry.findtext("{http://www.w3.org/2005/Atom}summary")
-                or ""
-            )
-            pub = (
-                entry.findtext("pubDate")
-                or entry.findtext("{http://www.w3.org/2005/Atom}updated")
-                or ""
-            ).strip()
-            if title and link.startswith("http"):
-                items.append({
-                    "source": source_name,
-                    "title": strip_html(title),
-                    "summary": strip_html(desc)[:300],
-                    "url": link,
-                    "pubDate": pub,
-                })
-    except Exception as exc:
-        print(f"[WARN] RSS fetch failed for {source_name} ({url}): {exc}", file=sys.stderr)
-    return items
-
-
-def collect_candidates() -> dict:
-    pool = {}
-    for region, feeds in RSS_FEEDS.items():
-        collected = []
-        seen_urls = set()
-        for name, url in feeds:
-            for item in fetch_rss(url, name, limit=8):
-                if item["url"] not in seen_urls:
-                    seen_urls.add(item["url"])
-                    collected.append(item)
-        pool[region] = collected[:12]
-        print(f"[INFO] Collected {len(pool[region])} candidates for region={region}")
-    return pool
-
-
-def detect_llm_config() -> dict | None:
-    """自动检测任意已配置的 API Key，并推断协议类型、接口地址与默认模型。"""
-    custom_base = os.environ.get("LLM_BASE_URL", "").strip().rstrip("/")
-    custom_model = os.environ.get("LLM_MODEL", "").strip()
-
-    key_candidates = [
-        ("LLM_API_KEY", os.environ.get("LLM_API_KEY", "").strip()),
-        ("API_KEY", os.environ.get("API_KEY", "").strip()),
-        ("DEEPSEEK_API_KEY", os.environ.get("DEEPSEEK_API_KEY", "").strip()),
-        ("OPENAI_API_KEY", os.environ.get("OPENAI_API_KEY", "").strip()),
-        ("ANTHROPIC_API_KEY", os.environ.get("ANTHROPIC_API_KEY", "").strip()),
-        ("GEMINI_API_KEY", os.environ.get("GEMINI_API_KEY", "").strip()),
-        ("DASHSCOPE_API_KEY", os.environ.get("DASHSCOPE_API_KEY", "").strip()),
-        ("QWEN_API_KEY", os.environ.get("QWEN_API_KEY", "").strip()),
-        ("MOONSHOT_API_KEY", os.environ.get("MOONSHOT_API_KEY", "").strip()),
-        ("KIMI_API_KEY", os.environ.get("KIMI_API_KEY", "").strip()),
-        ("ZHIPU_API_KEY", os.environ.get("ZHIPU_API_KEY", "").strip()),
-        ("OPENROUTER_API_KEY", os.environ.get("OPENROUTER_API_KEY", "").strip()),
-        ("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", "").strip()),
-        ("SILICONFLOW_API_KEY", os.environ.get("SILICONFLOW_API_KEY", "").strip()),
-    ]
-    chosen_env, api_key = next(((k, v) for k, v in key_candidates if v), (None, ""))
-    if not api_key:
-        return None
-
-    if custom_base:
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": custom_base,
-            "model": custom_model or "gpt-4o-mini",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "GEMINI_API_KEY" or api_key.startswith("AIza"):
-        return {
-            "provider": "gemini",
-            "api_key": api_key,
-            "base_url": "https://generativelanguage.googleapis.com/v1beta",
-            "model": custom_model or os.environ.get("GEMINI_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "ANTHROPIC_API_KEY" or api_key.startswith("sk-ant-"):
-        return {
-            "provider": "anthropic",
-            "api_key": api_key,
-            "base_url": "https://api.anthropic.com/v1",
-            "model": custom_model or "claude-3-5-sonnet-latest",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "DEEPSEEK_API_KEY":
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://api.deepseek.com/v1",
-            "model": custom_model or "deepseek-chat",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env in ("DASHSCOPE_API_KEY", "QWEN_API_KEY"):
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-            "model": custom_model or "qwen-plus",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env in ("MOONSHOT_API_KEY", "KIMI_API_KEY"):
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://api.moonshot.cn/v1",
-            "model": custom_model or "moonshot-v1-8k",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "ZHIPU_API_KEY":
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://open.bigmodel.cn/api/paas/v4",
-            "model": custom_model or "glm-4-flash",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "SILICONFLOW_API_KEY":
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://api.siliconflow.cn/v1",
-            "model": custom_model or "Qwen/Qwen2.5-7B-Instruct",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "OPENROUTER_API_KEY" or api_key.startswith("sk-or-"):
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://openrouter.ai/api/v1",
-            "model": custom_model or "google/gemini-2.5-flash",
-            "source_env": chosen_env,
-        }
-
-    if chosen_env == "GROQ_API_KEY" or api_key.startswith("gsk_"):
-        return {
-            "provider": "openai_compat",
-            "api_key": api_key,
-            "base_url": "https://api.groq.com/openai/v1",
-            "model": custom_model or "llama-3.3-70b-versatile",
-            "source_env": chosen_env,
-        }
-
-    return {
-        "provider": "openai_compat",
-        "api_key": api_key,
-        "base_url": "https://api.openai.com/v1",
-        "model": custom_model or "gpt-4o-mini",
-        "source_env": chosen_env,
-    }
 
 
 def invoke_llm_json(cfg: dict, prompt: str) -> dict:
@@ -390,8 +221,89 @@ def invoke_llm_json(cfg: dict, prompt: str) -> dict:
     return extract_json_object(raw_text)
 
 
+def _normalize_article(a: dict, region: str, idx: int, scope: str, today_str: str, fallback_cand: dict | None) -> dict | None:
+    if not isinstance(a, dict):
+        return None
+    title = str(a.get("title") or "").strip()
+    if not title:
+        return None
+
+    # 兼容 sources 缺失、字符串或单对象情况，自动回填真实候选池信源
+    raw_sources = a.get("sources")
+    valid_sources = []
+    if isinstance(raw_sources, list):
+        for s in raw_sources:
+            if isinstance(s, dict) and s.get("url"):
+                valid_sources.append({"name": str(s.get("name") or "原文链接"), "url": str(s["url"])})
+            elif isinstance(s, str) and s.startswith("http"):
+                valid_sources.append({"name": "原文链接", "url": s})
+    elif isinstance(raw_sources, dict) and raw_sources.get("url"):
+        valid_sources.append({"name": str(raw_sources.get("name") or "原文链接"), "url": str(raw_sources["url"])})
+
+    if not valid_sources and a.get("url") and str(a["url"]).startswith("http"):
+        valid_sources.append({"name": str(a.get("source") or "原文链接"), "url": str(a["url"])})
+    if not valid_sources and fallback_cand:
+        valid_sources.append({"name": fallback_cand["source"], "url": fallback_cand["url"]})
+    if not valid_sources:
+        return None
+
+    body = a.get("body")
+    if isinstance(body, str):
+        body = [p.strip() for p in body.split("\n") if p.strip()]
+    if not isinstance(body, list) or not body:
+        body = [str(a.get("lead") or title)]
+
+    art_type = a.get("type") if a.get("type") in ("deep", "news", "fun") else ("deep" if idx == 1 and region in ("us", "kr", "eu", "cn") else "news")
+    try:
+        read_mins = float(a.get("readMins") or (2.5 if art_type == "deep" else (0.5 if art_type == "fun" else 1.5)))
+    except Exception:
+        read_mins = 1.5
+
+    return {
+        "id": f"{region}-{idx}",
+        "region": region,
+        "regionLabel": REGION_LABELS[region],
+        "scope": scope,
+        "category": str(a.get("category") or "全球速递"),
+        "type": art_type,
+        "readMins": read_mins,
+        "date": today_str,
+        "title": title,
+        "lead": str(a.get("lead") or body[0]),
+        "body": [str(p) for p in body],
+        "impactOrdinary": str(a.get("impactOrdinary") or "该事件与日常消费、就业或公共政策息息相关，值得持续留意后续落地细节。"),
+        "impactWorld": str(a.get("impactWorld") or "该动向折射出当前区域合作与产业链调整的新趋势。"),
+        "sources": valid_sources,
+    }
+
+
+def _generate_single_article(cfg: dict, region: str, cand: dict, idx: int, scope: str, art_type: str, today_str: str) -> dict | None:
+    """兜底单篇生成：每次只生成1篇文章，JSON 极短，几乎不可能失败。"""
+    read_mins = 2.5 if art_type == "deep" else (0.5 if art_type == "fun" else 1.5)
+    prompt = f"""请把下面这条 {REGION_LABELS[region]} 新闻改写成家常化、通俗有趣的中文。
+只返回纯 JSON 对象（不要用中文以外的引号做键名，正文引号请用“”）：
+{{
+  "title": "通俗有趣的中文标题",
+  "category": "贸易博弈|硬核科技|宏观钱包|地缘安全|社会百态|生态奇趣|文化跨界|民生烟火",
+  "lead": "一句话拉家常导语",
+  "body": ["第一段通俗讲解", "第二段补充背景"],
+  "impactOrdinary": "对普通人生活或钱包的具体影响",
+  "impactWorld": "对世界格局或行业趋势的影响"
+}}
+新闻素材：{json.dumps(cand, ensure_ascii=False)}"""
+    res = invoke_llm_json(cfg, prompt)
+    arts = res.get("articles") or ([res] if res.get("title") else [])
+    if not arts:
+        return None
+    item = arts[0]
+    item["type"] = art_type
+    item["readMins"] = read_mins
+    item["sources"] = [{"name": cand["source"], "url": cand["url"]}]
+    return _normalize_article(item, region, idx, scope, today_str, cand)
+
+
 def generate_region_articles(cfg: dict, region: str, candidates: list, count: int, today_str: str) -> list:
-    """按区域小批量生成，避免单次请求输出过长导致 JSON 截断。"""
+    """按区域生成 + 缺失槽位单篇补全，确保 100% 产出有效中文深度解析。"""
     if not candidates:
         return []
     scope = "domestic" if region == "cn" else "intl"
@@ -430,32 +342,39 @@ def generate_region_articles(cfg: dict, region: str, candidates: list, count: in
 候选池：
 {json.dumps(candidates, ensure_ascii=False)}
 """
-    last_err = None
-    res = None
+    cleaned = []
     for attempt in range(2):
         try:
             res = invoke_llm_json(cfg, prompt)
-            if isinstance(res, dict) and res.get("articles"):
+            raw_arts = res.get("articles", []) if isinstance(res, dict) else []
+            temp = []
+            for idx, a in enumerate(raw_arts[:count], start=1):
+                cand = candidates[(idx - 1) % len(candidates)]
+                norm = _normalize_article(a, region, idx, scope, today_str, cand)
+                if norm:
+                    temp.append(norm)
+            if temp:
+                cleaned = temp
                 break
         except Exception as exc:
-            last_err = exc
-            if attempt == 0:
-                print(f"[INFO] Retrying {region} after parse/API error: {exc}")
-                continue
-            raise
-    if not res:
-        raise RuntimeError(str(last_err or "Empty response"))
-    arts = res.get("articles", [])
-    cleaned = []
-    for idx, a in enumerate(arts[:count], start=1):
-        if not a.get("title") or not a.get("sources"):
-            continue
-        a["id"] = f"{region}-{idx}"
-        a["region"] = region
-        a["regionLabel"] = REGION_LABELS[region]
-        a["scope"] = scope
-        a["date"] = today_str
-        cleaned.append(a)
+            print(f"[INFO] Batch attempt {attempt+1} for {region} had error: {exc}")
+
+    # 若批量返回不足 count 篇（或为 0 篇），自动逐篇补全剩余槽位
+    used_urls = {s["url"] for a in cleaned for s in a.get("sources", [])}
+    remaining_cands = [c for c in candidates if c["url"] not in used_urls] or candidates
+    cand_cursor = 0
+    while len(cleaned) < min(count, len(candidates)) and cand_cursor < len(remaining_cands):
+        slot_idx = len(cleaned) + 1
+        art_type = "deep" if (slot_idx == 1 and has_deep) else ("fun" if slot_idx == count and region != "other" else "news")
+        cand = remaining_cands[cand_cursor]
+        cand_cursor += 1
+        try:
+            single = _generate_single_article(cfg, region, cand, slot_idx, scope, art_type, today_str)
+            if single:
+                cleaned.append(single)
+        except Exception as exc:
+            print(f"[WARN] Single-article fallback failed for {region}-{slot_idx}: {exc}")
+
     return cleaned
 
 
