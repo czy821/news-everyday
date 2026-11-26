@@ -1,19 +1,7 @@
 #!/usr/bin/env python3
 """
-午间万象 · 每日自动更新脚本（通用任意大模型 API Key 版，纯 Python 3 标准库，零第三方依赖）
-
-支持的任意 API Key 配置方式（在 GitHub 仓库 Settings -> Secrets -> Actions 中任选其一）：
-1. 通用 OpenAI 兼容接口（推荐，通吃 DeepSeek / Kimi / 通义千问 / 智谱 GLM / 硅基流动 / OpenRouter / 中转站 / OpenAI）：
-   - LLM_API_KEY：你的 API Key
-   - LLM_BASE_URL（可选）：接口地址，如 https://api.deepseek.com/v1 或 https://api.moonshot.cn/v1
-   - LLM_MODEL（可选）：模型名称，如 deepseek-chat、gpt-4o-mini、qwen-plus 等
-2. 免填 URL 快捷密钥（自动识别厂商与默认模型）：
-   - DEEPSEEK_API_KEY（自动走 DeepSeek）
-   - OPENAI_API_KEY（自动走 OpenAI）
-   - ANTHROPIC_API_KEY（自动走 Claude）
-   - GEMINI_API_KEY（自动走 Gemini）
-   - 或直接把 AIza... / sk-ant-... / sk-or-... / gsk_... 填到 LLM_API_KEY 中，脚本也会自动识别！
-3. 未配置任何 Key 时：自动降级为 RSS 真实新闻直出模式，依然每日更新 data/edition.json。
+午间万象 · 每日自动更新脚本（高可靠分批生成 + 任意大模型 API 自动适配版）
+纯 Python 3 标准库，零第三方依赖。
 """
 
 import datetime
@@ -71,7 +59,7 @@ def strip_html(text: str) -> str:
 
 
 def extract_json_object(raw_text: str) -> dict:
-    """兼容各种模型返回的纯 JSON 或带 ```json 代码块包裹的内容。"""
+    """兼容各种模型返回的纯 JSON、Markdown 代码块或前后带说明文字的 JSON。"""
     text = (raw_text or "").strip()
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*", "", text)
@@ -119,7 +107,7 @@ def fetch_rss(url: str, source_name: str, limit: int = 8) -> list:
                 items.append({
                     "source": source_name,
                     "title": strip_html(title),
-                    "summary": strip_html(desc)[:320],
+                    "summary": strip_html(desc)[:300],
                     "url": link,
                     "pubDate": pub,
                 })
@@ -138,7 +126,7 @@ def collect_candidates() -> dict:
                 if item["url"] not in seen_urls:
                     seen_urls.add(item["url"])
                     collected.append(item)
-        pool[region] = collected[:16]
+        pool[region] = collected[:12]
         print(f"[INFO] Collected {len(pool[region])} candidates for region={region}")
     return pool
 
@@ -150,16 +138,24 @@ def detect_llm_config() -> dict | None:
 
     key_candidates = [
         ("LLM_API_KEY", os.environ.get("LLM_API_KEY", "").strip()),
-        ("OPENAI_API_KEY", os.environ.get("OPENAI_API_KEY", "").strip()),
+        ("API_KEY", os.environ.get("API_KEY", "").strip()),
         ("DEEPSEEK_API_KEY", os.environ.get("DEEPSEEK_API_KEY", "").strip()),
+        ("OPENAI_API_KEY", os.environ.get("OPENAI_API_KEY", "").strip()),
         ("ANTHROPIC_API_KEY", os.environ.get("ANTHROPIC_API_KEY", "").strip()),
         ("GEMINI_API_KEY", os.environ.get("GEMINI_API_KEY", "").strip()),
+        ("DASHSCOPE_API_KEY", os.environ.get("DASHSCOPE_API_KEY", "").strip()),
+        ("QWEN_API_KEY", os.environ.get("QWEN_API_KEY", "").strip()),
+        ("MOONSHOT_API_KEY", os.environ.get("MOONSHOT_API_KEY", "").strip()),
+        ("KIMI_API_KEY", os.environ.get("KIMI_API_KEY", "").strip()),
+        ("ZHIPU_API_KEY", os.environ.get("ZHIPU_API_KEY", "").strip()),
+        ("OPENROUTER_API_KEY", os.environ.get("OPENROUTER_API_KEY", "").strip()),
+        ("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", "").strip()),
+        ("SILICONFLOW_API_KEY", os.environ.get("SILICONFLOW_API_KEY", "").strip()),
     ]
     chosen_env, api_key = next(((k, v) for k, v in key_candidates if v), (None, ""))
     if not api_key:
         return None
 
-    # 1. 若用户手动指定了 LLM_BASE_URL，默认走通用 OpenAI 兼容协议（支持几乎所有国内/国外/中转站接口）
     if custom_base:
         return {
             "provider": "openai_compat",
@@ -169,7 +165,6 @@ def detect_llm_config() -> dict | None:
             "source_env": chosen_env,
         }
 
-    # 2. 按环境变量名或 Key 前缀自动识别主流服务商
     if chosen_env == "GEMINI_API_KEY" or api_key.startswith("AIza"):
         return {
             "provider": "gemini",
@@ -197,7 +192,43 @@ def detect_llm_config() -> dict | None:
             "source_env": chosen_env,
         }
 
-    if api_key.startswith("sk-or-"):
+    if chosen_env in ("DASHSCOPE_API_KEY", "QWEN_API_KEY"):
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+            "model": custom_model or "qwen-plus",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env in ("MOONSHOT_API_KEY", "KIMI_API_KEY"):
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://api.moonshot.cn/v1",
+            "model": custom_model or "moonshot-v1-8k",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "ZHIPU_API_KEY":
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://open.bigmodel.cn/api/paas/v4",
+            "model": custom_model or "glm-4-flash",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "SILICONFLOW_API_KEY":
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://api.siliconflow.cn/v1",
+            "model": custom_model or "Qwen/Qwen2.5-7B-Instruct",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "OPENROUTER_API_KEY" or api_key.startswith("sk-or-"):
         return {
             "provider": "openai_compat",
             "api_key": api_key,
@@ -206,7 +237,7 @@ def detect_llm_config() -> dict | None:
             "source_env": chosen_env,
         }
 
-    if api_key.startswith("gsk_"):
+    if chosen_env == "GROQ_API_KEY" or api_key.startswith("gsk_"):
         return {
             "provider": "openai_compat",
             "api_key": api_key,
@@ -215,7 +246,6 @@ def detect_llm_config() -> dict | None:
             "source_env": chosen_env,
         }
 
-    # 默认走 OpenAI 兼容协议
     return {
         "provider": "openai_compat",
         "api_key": api_key,
@@ -225,77 +255,8 @@ def detect_llm_config() -> dict | None:
     }
 
 
-def build_editor_prompt(pool: dict, today_str: str, next_edition_num: int) -> str:
-    return f"""你是《午间万象 · 12:00 每日时政茶馆》的主编。请严格基于下面提供的真实 RSS 新闻候选池，生成 {today_str} 第 {next_edition_num} 期的完整 JSON 数据。
-
-硬性要求：
-1. 总计必须正好 20 篇文章，严格满足：
-   - region="us" 正好 4 篇（scope="intl"）
-   - region="kr" 正好 4 篇（scope="intl"）
-   - region="eu" 正好 4 篇（scope="intl"）
-   - region="other" 正好 3 篇（scope="intl"）
-   - region="cn" 正好 5 篇（scope="domestic"）
-   （国际15:国内5 = 3:1；国际中美韩欧12:其他3 = 8:2）
-2. 篇幅与阅读时长：总 readMins 之和控制在 24.0 到 27.0 分钟之间。必须包含 4 篇 type="deep"（美/韩/欧/中各1篇，每篇 2.5 分钟）、10 篇 type="news"（1.0-1.5 分钟）、6 篇 type="fun"（0.5-1.0 分钟）。
-3. 风格与内容：
-   - 用家常化、通俗生动、像午饭聊天一样有趣的中文撰写；保持客观中立，清晰标注消息来源。
-   - 不局限于严肃政治，主动挑选候选池里有趣的科技、社会、生态、民生和文化新闻。
-   - 每篇必须包含 impactOrdinary（对普通人的影响）和 impactWorld（对世界格局的影响），尤其是 4 篇深度专题要剖析透彻。
-   - 每篇 sources 数组中的 url 必须原样复制自下面候选池中的真实链接，严禁编造 URL！
-4. 同时生成 2 道当日热点互动投票（polls）。
-
-请只输出严格的纯 JSON 对象（不要加解释文字），结构如下：
-{{
-  "editionNumber": {next_edition_num},
-  "date": "{today_str}",
-  "updatedAt": "{today_str} 12:00",
-  "headline": "今日一期主标题（25字以内，有温度）",
-  "subtitle": "今日导语（80字以内，概括亮点）",
-  "articles": [
-    {{
-      "id": "us-1",
-      "region": "us|kr|eu|other|cn",
-      "regionLabel": "🇺🇸 美国",
-      "scope": "intl|domestic",
-      "category": "贸易博弈|硬核科技|宏观钱包|地缘安全|社会百态|生态奇趣|文化跨界|民生烟火",
-      "type": "deep|news|fun",
-      "readMins": 2.5,
-      "date": "{today_str}",
-      "title": "...",
-      "lead": "...",
-      "body": ["第一段...", "第二段..."],
-      "impactOrdinary": "...",
-      "impactWorld": "...",
-      "sources": [{{"name": "来源名", "url": "候选池真实URL"}}]
-    }}
-  ],
-  "polls": [
-    {{
-      "id": "poll1",
-      "question": "...",
-      "options": [
-        {{"id": "a", "label": "...", "baseVotes": 40}},
-        {{"id": "b", "label": "...", "baseVotes": 35}},
-        {{"id": "c", "label": "...", "baseVotes": 25}}
-      ]
-    }}
-  ]
-}}
-
-真实 RSS 候选池：
-{json.dumps(pool, ensure_ascii=False)}
-"""
-
-
-def call_universal_llm(pool: dict, today_str: str, next_edition_num: int) -> dict | None:
-    cfg = detect_llm_config()
-    if not cfg:
-        print("[INFO] No LLM API key found; using RSS fallback builder.")
-        return None
-
-    print(f"[INFO] Using provider={cfg['provider']} model={cfg['model']} (from {cfg['source_env']})")
-    prompt = build_editor_prompt(pool, today_str, next_edition_num)
-
+def invoke_llm_json(cfg: dict, prompt: str) -> dict:
+    """向已配置的模型发起单次请求并解析 JSON。"""
     if cfg["provider"] == "gemini":
         endpoint = f"{cfg['base_url']}/models/{cfg['model']}:generateContent?key={cfg['api_key']}"
         payload = {
@@ -308,7 +269,7 @@ def call_universal_llm(pool: dict, today_str: str, next_edition_num: int) -> dic
             headers={"Content-Type": "application/json"},
             method="POST",
         )
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             res_data = json.loads(resp.read().decode("utf-8"))
         raw_text = res_data["candidates"][0]["content"]["parts"][0]["text"]
         return extract_json_object(raw_text)
@@ -317,7 +278,7 @@ def call_universal_llm(pool: dict, today_str: str, next_edition_num: int) -> dic
         endpoint = f"{cfg['base_url']}/messages"
         payload = {
             "model": cfg["model"],
-            "max_tokens": 8192,
+            "max_tokens": 4096,
             "temperature": 0.6,
             "messages": [{"role": "user", "content": prompt}],
         }
@@ -331,21 +292,21 @@ def call_universal_llm(pool: dict, today_str: str, next_edition_num: int) -> dic
             },
             method="POST",
         )
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             res_data = json.loads(resp.read().decode("utf-8"))
         raw_text = "".join(
             block.get("text", "") for block in res_data.get("content", []) if block.get("type") == "text"
         )
         return extract_json_object(raw_text)
 
-    # 通用 OpenAI 兼容协议（OpenAI / DeepSeek / Kimi / 通义千问 / 智谱 / 硅基流动 / OpenRouter / Groq / 中转站）
     base_url = cfg["base_url"]
     endpoint = base_url if base_url.endswith("/chat/completions") else f"{base_url}/chat/completions"
     payload = {
         "model": cfg["model"],
+        "max_tokens": 4096,
         "temperature": 0.6,
         "messages": [
-            {"role": "system", "content": "你是专业且风趣的中文时政编辑，只返回合法的 JSON 对象。"},
+            {"role": "system", "content": "你是风趣通俗的中文时政主编，只返回合法的纯 JSON 对象，不要输出任何额外解释。"},
             {"role": "user", "content": prompt},
         ],
     }
@@ -358,72 +319,103 @@ def call_universal_llm(pool: dict, today_str: str, next_edition_num: int) -> dic
         },
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        res_data = json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=90) as resp:
+            res_data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as http_err:
+        err_body = ""
+        try:
+            err_body = http_err.read().decode("utf-8", errors="ignore")[:300]
+        except Exception:
+            pass
+        raise RuntimeError(f"HTTP {http_err.code}: {err_body}") from http_err
+
     raw_text = res_data["choices"][0]["message"]["content"]
     return extract_json_object(raw_text)
 
 
-def build_fallback_edition(pool: dict, today_str: str, next_edition_num: int) -> dict:
-    """无 API Key 时的保底构建器：直接按 3:1 与 8:2 比例组装真实 RSS 资讯。"""
-    articles = []
-    for region, count in TARGET_COUNTS.items():
-        items = pool.get(region, [])[:count]
-        for idx, item in enumerate(items, start=1):
-            is_deep = idx == 1 and region in ("us", "kr", "eu", "cn")
-            is_fun = idx == count and region != "other"
-            art_type = "deep" if is_deep else ("fun" if is_fun else "news")
-            read_mins = 2.5 if is_deep else (0.5 if is_fun else 1.5)
-            articles.append({
-                "id": f"{region}-{idx}",
-                "region": region,
-                "regionLabel": REGION_LABELS[region],
-                "scope": "domestic" if region == "cn" else "intl",
-                "category": "社会百态" if is_fun else "全球速递",
-                "type": art_type,
-                "readMins": read_mins,
-                "date": today_str,
-                "title": item["title"],
-                "lead": item["summary"] or f"来自 {item['source']} 的最新报道，点击原文查看完整内容。",
-                "body": [
-                    item["summary"] or item["title"],
-                    f"（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：{item['source']}）",
-                ],
-                "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-                "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
-                "sources": [{"name": item["source"], "url": item["url"]}],
-            })
+def generate_region_articles(cfg: dict, region: str, candidates: list, count: int, today_str: str) -> list:
+    """按区域小批量生成，避免单次请求输出过长导致 JSON 截断。"""
+    if not candidates:
+        return []
+    scope = "domestic" if region == "cn" else "intl"
+    has_deep = region in ("us", "kr", "eu", "cn")
+    deep_rule = f"其中第 1 篇必须为 type='deep'（readMins=2.5），其余 {count-1} 篇混合 type='news'（1.0-1.5分钟）和 type='fun'（0.5-1.0分钟）。" if has_deep else f"全部 {count} 篇混合 type='news'（1.0-1.5分钟）和 type='fun'（0.5-1.0分钟）。"
 
-    return {
-        "editionNumber": next_edition_num,
-        "date": today_str,
-        "updatedAt": f"{today_str} 12:00",
-        "headline": f"{today_str} 午间万象：全球与国内最新 {len(articles)} 条动态速览",
-        "subtitle": "自动通过 GitHub Actions 从全球主流信源抓取更新；配置任意大模型 API Key 即可解锁家常化深度改写与双维拆解。",
-        "articles": articles,
-        "polls": [
-            {
-                "id": "poll1",
-                "question": "今天这期午间新闻里，你最关注哪个板块？",
-                "options": [
-                    {"id": "a", "label": "🌍 国际政经与美韩欧动向", "baseVotes": 45},
-                    {"id": "b", "label": "🇨🇳 国内民生与科技进展", "baseVotes": 38},
-                    {"id": "c", "label": "🎈 轻松有趣的奇闻轶事", "baseVotes": 27},
-                ],
-            }
-        ],
-    }
+    prompt = f"""请从下面 {REGION_LABELS[region]} 真实新闻候选池中精选 {count} 条，用家常化、通俗生动、像午饭聊天一样有趣的中文改写。
+要求：
+1. {deep_rule}
+2. 每篇必须有中文 title、lead（一句话拉家常导语）、body（2-3段通俗正文的数组）、impactOrdinary（对普通人的影响，具体贴近生活）、impactWorld（对世界格局的影响，有深度洞察）。
+3. sources 中的 url 必须原样复制自候选池，严禁编造链接！
 
+只输出纯 JSON：
+{{
+  "articles": [
+    {{
+      "id": "{region}-1",
+      "region": "{region}",
+      "regionLabel": "{REGION_LABELS[region]}",
+      "scope": "{scope}",
+      "category": "贸易博弈|硬核科技|宏观钱包|地缘安全|社会百态|生态奇趣|文化跨界|民生烟火",
+      "type": "deep|news|fun",
+      "readMins": 1.5,
+      "date": "{today_str}",
+      "title": "...",
+      "lead": "...",
+      "body": ["第一段...", "第二段..."],
+      "impactOrdinary": "...",
+      "impactWorld": "...",
+      "sources": [{{"name": "来源名", "url": "候选池真实URL"}}]
+    }}
+  ]
+}}
 
-def validate_edition(data: dict) -> bool:
-    arts = data.get("articles", [])
-    if len(arts) < 12:
-        print(f"[ERROR] Too few articles: {len(arts)}", file=sys.stderr)
-        return False
-    for a in arts:
+候选池：
+{json.dumps(candidates, ensure_ascii=False)}
+"""
+    res = invoke_llm_json(cfg, prompt)
+    arts = res.get("articles", [])
+    cleaned = []
+    for idx, a in enumerate(arts[:count], start=1):
         if not a.get("title") or not a.get("sources"):
-            return False
-    return True
+            continue
+        a["id"] = f"{region}-{idx}"
+        a["region"] = region
+        a["regionLabel"] = REGION_LABELS[region]
+        a["scope"] = scope
+        a["date"] = today_str
+        cleaned.append(a)
+    return cleaned
+
+
+def build_fallback_articles_for_region(region: str, candidates: list, count: int, today_str: str, reason: str) -> list:
+    items = candidates[:count]
+    out = []
+    for idx, item in enumerate(items, start=1):
+        is_deep = idx == 1 and region in ("us", "kr", "eu", "cn")
+        is_fun = idx == count and region != "other"
+        art_type = "deep" if is_deep else ("fun" if is_fun else "news")
+        read_mins = 2.5 if is_deep else (0.5 if is_fun else 1.5)
+        out.append({
+            "id": f"{region}-{idx}",
+            "region": region,
+            "regionLabel": REGION_LABELS[region],
+            "scope": "domestic" if region == "cn" else "intl",
+            "category": "社会百态" if is_fun else "全球速递",
+            "type": art_type,
+            "readMins": read_mins,
+            "date": today_str,
+            "title": item["title"],
+            "lead": item["summary"] or f"来自 {item['source']} 的最新报道，点击原文查看完整内容。",
+            "body": [
+                item["summary"] or item["title"],
+                f"（AI 深度改写暂未触发，原因：{reason}。原文来源：{item['source']}）",
+            ],
+            "impactOrdinary": f"待 AI 解锁（原因：{reason}）。",
+            "impactWorld": f"待 AI 解锁（原因：{reason}）。",
+            "sources": [{"name": item["source"], "url": item["url"]}],
+        })
+    return out
 
 
 def main():
@@ -443,27 +435,111 @@ def main():
         next_num = 1
 
     pool = collect_candidates()
-    total_candidates = sum(len(v) for v in pool.values())
-    if total_candidates == 0:
+    if sum(len(v) for v in pool.values()) == 0:
         print("[ERROR] No RSS items fetched; keeping existing edition.json.", file=sys.stderr)
         sys.exit(1)
 
-    edition = None
-    try:
-        edition = call_universal_llm(pool, today_str, next_num)
-    except Exception as exc:
-        print(f"[WARN] LLM generation failed ({exc}); falling back to RSS mode.", file=sys.stderr)
+    cfg = detect_llm_config()
+    if cfg:
+        print(f"[INFO] Detected LLM config: provider={cfg['provider']} model={cfg['model']} base_url={cfg['base_url']} env={cfg['source_env']}")
+    else:
+        print("[WARN] No LLM API key detected in environment variables.")
 
-    if not edition or not validate_edition(edition):
-        edition = build_fallback_edition(pool, today_str, next_num)
+    all_articles = []
+    errors = []
+    ai_success_count = 0
+
+    for region, count in TARGET_COUNTS.items():
+        candidates = pool.get(region, [])
+        if cfg:
+            try:
+                arts = generate_region_articles(cfg, region, candidates, count, today_str)
+                if len(arts) >= max(1, count - 1):
+                    all_articles.extend(arts)
+                    ai_success_count += len(arts)
+                    print(f"[OK] AI generated {len(arts)} articles for {region}")
+                    continue
+                raise RuntimeError(f"AI returned only {len(arts)} valid articles")
+            except Exception as exc:
+                err_msg = str(exc)
+                print(f"[WARN] AI failed for {region}: {err_msg}", file=sys.stderr)
+                errors.append(f"{region}: {err_msg}")
+                all_articles.extend(build_fallback_articles_for_region(region, candidates, count, today_str, err_msg))
+        else:
+            reason = "未检测到 Secrets 中的 API Key（请确认 Secret 名称为 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY 等）"
+            all_articles.extend(build_fallback_articles_for_region(region, candidates, count, today_str, reason))
+
+    # 生成主标题与互动投票
+    headline = f"{today_str} 午间万象：全球与国内最新 {len(all_articles)} 条动态"
+    subtitle = "端杯热茶，20–30分钟聊透今天全球与身边的大小事：国际国内3:1、美韩欧8:2。"
+    polls = [
+        {
+            "id": "poll1",
+            "question": "今天这期午间新闻里，你最关注哪个板块？",
+            "options": [
+                {"id": "a", "label": "🌍 国际政经与美韩欧动向", "baseVotes": 45},
+                {"id": "b", "label": "🇨🇳 国内民生与科技进展", "baseVotes": 38},
+                {"id": "c", "label": "🎈 轻松有趣的奇闻轶事", "baseVotes": 27},
+            ],
+        }
+    ]
+
+    if cfg and ai_success_count > 0:
+        try:
+            titles_preview = [a["title"] for a in all_articles[:10]]
+            meta_prompt = f"""基于今天已选的头条标题：{json.dumps(titles_preview, ensure_ascii=False)}
+请生成本期《午间万象》的主标题、导语和2道有趣的茶馆互动投票。只输出纯 JSON：
+{{
+  "headline": "25字以内有温度的主标题",
+  "subtitle": "80字以内家常化导语",
+  "polls": [
+    {{
+      "id": "poll1",
+      "question": "投票问题1",
+      "options": [
+        {{"id": "a", "label": "选项1", "baseVotes": 42}},
+        {{"id": "b", "label": "选项2", "baseVotes": 36}},
+        {{"id": "c", "label": "选项3", "baseVotes": 22}}
+      ]
+    }},
+    {{
+      "id": "poll2",
+      "question": "投票问题2",
+      "options": [
+        {{"id": "a", "label": "选项1", "baseVotes": 51}},
+        {{"id": "b", "label": "选项2", "baseVotes": 31}},
+        {{"id": "c", "label": "选项3", "baseVotes": 18}}
+      ]
+    }}
+  ]
+}}"""
+            meta = invoke_llm_json(cfg, meta_prompt)
+            headline = meta.get("headline") or headline
+            subtitle = meta.get("subtitle") or subtitle
+            if isinstance(meta.get("polls"), list) and len(meta["polls"]) >= 1:
+                polls = meta["polls"]
+        except Exception as exc:
+            print(f"[WARN] Meta/polls generation failed: {exc}", file=sys.stderr)
+    elif errors:
+        subtitle = f"部分板块 AI 调用异常（{errors[0][:80]}），已自动保留原文链接。"
+
+    edition = {
+        "editionNumber": next_num,
+        "date": today_str,
+        "updatedAt": f"{today_str} 12:00",
+        "headline": headline,
+        "subtitle": subtitle,
+        "articles": all_articles,
+        "polls": polls,
+    }
 
     if dry_run:
-        print(f"[DRY-RUN] Generated {len(edition['articles'])} articles for {today_str}")
+        print(f"[DRY-RUN] Generated {len(all_articles)} articles (AI={ai_success_count}) for {today_str}")
         return
 
     with open(EDITION_PATH, "w", encoding="utf-8") as f:
         json.dump(edition, f, ensure_ascii=False, indent=2)
-    print(f"[OK] Updated {EDITION_PATH} with {len(edition['articles'])} articles ({today_str})")
+    print(f"[OK] Updated {EDITION_PATH} with {len(all_articles)} articles (AI={ai_success_count}) for {today_str}")
 
 
 if __name__ == "__main__":
