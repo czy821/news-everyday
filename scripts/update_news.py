@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-午间万象 · 每日自动更新脚本（高可靠分批生成 + 任意大模型 API 自动适配版）
+午间万象 · 每日自动更新脚本（高可靠分批生成 + 单篇兜底 + 任意大模型 API 自动适配版）
 纯 Python 3 标准库，零第三方依赖。
 """
 
@@ -59,13 +59,10 @@ def strip_html(text: str) -> str:
 
 
 def _repair_json_text(text: str) -> str:
-    # 去掉对象或数组末尾多余逗号
-    text = re.sub(r",\s*([}\]])", r"\1", text)
-    return text
+    return re.sub(r",\s*([}\]])", r"\1", text)
 
 
 def _extract_balanced_objects(text: str) -> list:
-    """当整体 JSON 某个字段有引号/逗号瑕疵时，逐个抢救合法的文章对象。"""
     objs = []
     depth = 0
     in_str = False
@@ -108,7 +105,6 @@ def extract_json_object(raw_text: str) -> dict:
         if m:
             text = m.group(1).strip()
 
-    # 找到最外层 { ... } 或 [ ... ]
     obj_start, obj_end = text.find("{"), text.rfind("}")
     arr_start, arr_end = text.find("["), text.rfind("]")
     if arr_start != -1 and (obj_start == -1 or arr_start < obj_start) and arr_end > arr_start:
@@ -140,6 +136,190 @@ def extract_json_object(raw_text: str) -> dict:
             if rescued:
                 return {"articles": rescued}
             raise
+
+
+def fetch_rss(url: str, source_name: str, limit: int = 8) -> list:
+    items = []
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "NoonBriefingBot/1.0 (+https://github.com)"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            raw = resp.read()
+        root = ET.fromstring(raw)
+        entries = root.findall(".//item") or root.findall(".//{http://www.w3.org/2005/Atom}entry")
+        for entry in entries[:limit]:
+            title = (
+                entry.findtext("title")
+                or entry.findtext("{http://www.w3.org/2005/Atom}title")
+                or ""
+            ).strip()
+            link = (entry.findtext("link") or "").strip()
+            if not link:
+                link_el = entry.find("{http://www.w3.org/2005/Atom}link")
+                if link_el is not None:
+                    link = link_el.attrib.get("href", "").strip()
+            desc = (
+                entry.findtext("description")
+                or entry.findtext("{http://www.w3.org/2005/Atom}summary")
+                or ""
+            )
+            pub = (
+                entry.findtext("pubDate")
+                or entry.findtext("{http://www.w3.org/2005/Atom}updated")
+                or ""
+            ).strip()
+            if title and link.startswith("http"):
+                items.append({
+                    "source": source_name,
+                    "title": strip_html(title),
+                    "summary": strip_html(desc)[:300],
+                    "url": link,
+                    "pubDate": pub,
+                })
+    except Exception as exc:
+        print(f"[WARN] RSS fetch failed for {source_name} ({url}): {exc}", file=sys.stderr)
+    return items
+
+
+def collect_candidates() -> dict:
+    pool = {}
+    for region, feeds in RSS_FEEDS.items():
+        collected = []
+        seen_urls = set()
+        for name, url in feeds:
+            for item in fetch_rss(url, name, limit=8):
+                if item["url"] not in seen_urls:
+                    seen_urls.add(item["url"])
+                    collected.append(item)
+        pool[region] = collected[:12]
+        print(f"[INFO] Collected {len(pool[region])} candidates for region={region}")
+    return pool
+
+
+def detect_llm_config() -> dict | None:
+    """自动检测任意已配置的 API Key，并推断协议类型、接口地址与默认模型。"""
+    custom_base = os.environ.get("LLM_BASE_URL", "").strip().rstrip("/")
+    custom_model = os.environ.get("LLM_MODEL", "").strip()
+
+    key_candidates = [
+        ("LLM_API_KEY", os.environ.get("LLM_API_KEY", "").strip()),
+        ("API_KEY", os.environ.get("API_KEY", "").strip()),
+        ("DEEPSEEK_API_KEY", os.environ.get("DEEPSEEK_API_KEY", "").strip()),
+        ("OPENAI_API_KEY", os.environ.get("OPENAI_API_KEY", "").strip()),
+        ("ANTHROPIC_API_KEY", os.environ.get("ANTHROPIC_API_KEY", "").strip()),
+        ("GEMINI_API_KEY", os.environ.get("GEMINI_API_KEY", "").strip()),
+        ("DASHSCOPE_API_KEY", os.environ.get("DASHSCOPE_API_KEY", "").strip()),
+        ("QWEN_API_KEY", os.environ.get("QWEN_API_KEY", "").strip()),
+        ("MOONSHOT_API_KEY", os.environ.get("MOONSHOT_API_KEY", "").strip()),
+        ("KIMI_API_KEY", os.environ.get("KIMI_API_KEY", "").strip()),
+        ("ZHIPU_API_KEY", os.environ.get("ZHIPU_API_KEY", "").strip()),
+        ("OPENROUTER_API_KEY", os.environ.get("OPENROUTER_API_KEY", "").strip()),
+        ("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", "").strip()),
+        ("SILICONFLOW_API_KEY", os.environ.get("SILICONFLOW_API_KEY", "").strip()),
+    ]
+    chosen_env, api_key = next(((k, v) for k, v in key_candidates if v), (None, ""))
+    if not api_key:
+        return None
+
+    if custom_base:
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": custom_base,
+            "model": custom_model or "gpt-4o-mini",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "GEMINI_API_KEY" or api_key.startswith("AIza"):
+        return {
+            "provider": "gemini",
+            "api_key": api_key,
+            "base_url": "https://generativelanguage.googleapis.com/v1beta",
+            "model": custom_model or os.environ.get("GEMINI_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "ANTHROPIC_API_KEY" or api_key.startswith("sk-ant-"):
+        return {
+            "provider": "anthropic",
+            "api_key": api_key,
+            "base_url": "https://api.anthropic.com/v1",
+            "model": custom_model or "claude-3-5-sonnet-latest",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "DEEPSEEK_API_KEY":
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://api.deepseek.com/v1",
+            "model": custom_model or "deepseek-chat",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env in ("DASHSCOPE_API_KEY", "QWEN_API_KEY"):
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+            "model": custom_model or "qwen-plus",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env in ("MOONSHOT_API_KEY", "KIMI_API_KEY"):
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://api.moonshot.cn/v1",
+            "model": custom_model or "moonshot-v1-8k",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "ZHIPU_API_KEY":
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://open.bigmodel.cn/api/paas/v4",
+            "model": custom_model or "glm-4-flash",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "SILICONFLOW_API_KEY":
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://api.siliconflow.cn/v1",
+            "model": custom_model or "Qwen/Qwen2.5-7B-Instruct",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "OPENROUTER_API_KEY" or api_key.startswith("sk-or-"):
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://openrouter.ai/api/v1",
+            "model": custom_model or "google/gemini-2.5-flash",
+            "source_env": chosen_env,
+        }
+
+    if chosen_env == "GROQ_API_KEY" or api_key.startswith("gsk_"):
+        return {
+            "provider": "openai_compat",
+            "api_key": api_key,
+            "base_url": "https://api.groq.com/openai/v1",
+            "model": custom_model or "llama-3.3-70b-versatile",
+            "source_env": chosen_env,
+        }
+
+    return {
+        "provider": "openai_compat",
+        "api_key": api_key,
+        "base_url": "https://api.openai.com/v1",
+        "model": custom_model or "gpt-4o-mini",
+        "source_env": chosen_env,
+    }
 
 
 def invoke_llm_json(cfg: dict, prompt: str) -> dict:
@@ -228,7 +408,6 @@ def _normalize_article(a: dict, region: str, idx: int, scope: str, today_str: st
     if not title:
         return None
 
-    # 兼容 sources 缺失、字符串或单对象情况，自动回填真实候选池信源
     raw_sources = a.get("sources")
     valid_sources = []
     if isinstance(raw_sources, list):
@@ -278,10 +457,9 @@ def _normalize_article(a: dict, region: str, idx: int, scope: str, today_str: st
 
 
 def _generate_single_article(cfg: dict, region: str, cand: dict, idx: int, scope: str, art_type: str, today_str: str) -> dict | None:
-    """兜底单篇生成：每次只生成1篇文章，JSON 极短，几乎不可能失败。"""
     read_mins = 2.5 if art_type == "deep" else (0.5 if art_type == "fun" else 1.5)
     prompt = f"""请把下面这条 {REGION_LABELS[region]} 新闻改写成家常化、通俗有趣的中文。
-只返回纯 JSON 对象（不要用中文以外的引号做键名，正文引号请用“”）：
+只返回纯 JSON 对象（正文引号请一律使用中文“”或「」）：
 {{
   "title": "通俗有趣的中文标题",
   "category": "贸易博弈|硬核科技|宏观钱包|地缘安全|社会百态|生态奇趣|文化跨界|民生烟火",
@@ -303,7 +481,6 @@ def _generate_single_article(cfg: dict, region: str, cand: dict, idx: int, scope
 
 
 def generate_region_articles(cfg: dict, region: str, candidates: list, count: int, today_str: str) -> list:
-    """按区域生成 + 缺失槽位单篇补全，确保 100% 产出有效中文深度解析。"""
     if not candidates:
         return []
     scope = "domestic" if region == "cn" else "intl"
@@ -359,7 +536,6 @@ def generate_region_articles(cfg: dict, region: str, candidates: list, count: in
         except Exception as exc:
             print(f"[INFO] Batch attempt {attempt+1} for {region} had error: {exc}")
 
-    # 若批量返回不足 count 篇（或为 0 篇），自动逐篇补全剩余槽位
     used_urls = {s["url"] for a in cleaned for s in a.get("sources", [])}
     remaining_cands = [c for c in candidates if c["url"] not in used_urls] or candidates
     cand_cursor = 0
@@ -459,7 +635,6 @@ def main():
             reason = "未检测到 Secrets 中的 API Key（请确认 Secret 名称为 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY 等）"
             all_articles.extend(build_fallback_articles_for_region(region, candidates, count, today_str, reason))
 
-    # 生成主标题与互动投票
     headline = f"{today_str} 午间万象：全球与国内最新 {len(all_articles)} 条动态"
     subtitle = "端杯热茶，20–30分钟聊透今天全球与身边的大小事：国际国内3:1、美韩欧8:2。"
     polls = [
