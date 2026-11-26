@@ -3,7 +3,7 @@
   "date": "2026-11-26",
   "updatedAt": "2026-11-26 12:00",
   "headline": "2026-11-26 午间万象：全球与国内最新 20 条动态速览",
-  "subtitle": "自动通过 GitHub Actions 从全球主流信源抓取更新；配置 GEMINI_API_KEY 即可解锁家常化深度改写与双维拆解。",
+  "subtitle": "自动通过 GitHub Actions 从全球主流信源抓取更新；配置任意大模型 API Key 即可解锁家常化深度改写与双维拆解。",
   "articles": [
     {
       "id": "us-1",
@@ -14,18 +14,18 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "'Memories of a Good Meal': How food made a difference during WWII",
-      "lead": "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
+      "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says",
+      "lead": "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like.",
       "body": [
-        "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：NPR News）"
+        "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like.",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6028781/memories-of-a-good-meal-cookbook-chef-alon-shaya"
+          "url": "https://www.npr.org/2026/11/26/g-s1-155950/up-first-newsletter-thanksgiving-weather-travel-trump-tariffs-iowa-detonation-fcc-free-speech"
         }
       ]
     },
@@ -38,18 +38,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "At Albuquerque's Indian Pueblo Kitchen, Native American dishes are the main course",
-      "lead": "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
+      "title": "'Memories of a Good Meal': How food made a difference during WWII",
+      "lead": "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
       "body": [
-        "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：NPR News）"
+        "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-5983712/indian-pueblo-kitchen-native-american-food-albuquerque"
+          "url": "https://www.npr.org/2026/11/26/nx-s1-6028781/memories-of-a-good-meal-cookbook-chef-alon-shaya"
         }
       ]
     },
@@ -62,18 +62,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Court lets Puerto Rico governor fire firm that runs the island's troubled power grid",
-      "lead": "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
+      "title": "At Albuquerque's Indian Pueblo Kitchen, Native American dishes are the main course",
+      "lead": "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
       "body": [
-        "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：NPR News）"
+        "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6054139/court-rules-puerto-ricos-governor-can-fire-company-that-runs-troubled-power-grid"
+          "url": "https://www.npr.org/2026/11/26/nx-s1-5983712/indian-pueblo-kitchen-native-american-food-albuquerque"
         }
       ]
     },
@@ -86,18 +86,18 @@
       "type": "fun",
       "readMins": 0.5,
       "date": "2026-11-26",
-      "title": "Powerful storms disrupt holiday travel, as Macy's Thanksgiving Day Parade is postponed",
-      "lead": "Extreme weather that has unleashed strong winds, high tides, heavy rain and floods is expected to impact travel plans of an estimated 81.5 million people as they travel across the United States.",
+      "title": "Court lets Puerto Rico governor fire firm that runs the island's troubled power grid",
+      "lead": "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
       "body": [
-        "Extreme weather that has unleashed strong winds, high tides, heavy rain and floods is expected to impact travel plans of an estimated 81.5 million people as they travel across the United States.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：NPR News）"
+        "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6054079/storms-expected-on-both-coasts-as-millions-travel-for-thanksgiving"
+          "url": "https://www.npr.org/2026/11/26/nx-s1-6054139/court-rules-puerto-ricos-governor-can-fire-company-that-runs-troubled-power-grid"
         }
       ]
     },
@@ -110,18 +110,18 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "Police seek arrest warrant for top scorer of tax accountant exam accused of AI-assisted cheating",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- Police on Thursday filed for an arrest warrant for th...",
+      "title": "(LEAD) Lee touts new deposit system as effective in curbing illegal fishing by Chinese vessels",
+      "lead": "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...",
       "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- Police on Thursday filed for an arrest warrant for th...",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Yonhap News）"
+        "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126011900315"
+          "url": "https://en.yna.co.kr/view/AEN20261126011751315"
         }
       ]
     },
@@ -134,18 +134,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Lee approves confirmation hearing requests for ministerial, spy chief nominees",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung has approved requests for par...",
+      "title": "Police seek arrest warrant for top scorer of tax accountant exam accused of AI-assisted cheating",
+      "lead": "SEOUL, Nov. 26 (Yonhap) -- Police on Thursday filed for an arrest warrant for th...",
       "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung has approved requests for par...",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Yonhap News）"
+        "SEOUL, Nov. 26 (Yonhap) -- Police on Thursday filed for an arrest warrant for th...",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126012000320"
+          "url": "https://en.yna.co.kr/view/AEN20261126011900315"
         }
       ]
     },
@@ -158,18 +158,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "(2nd LD) Unionized rail workers launch work-to-rule campaign; 4 train services canceled",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...",
+      "title": "Lee approves confirmation hearing requests for ministerial, spy chief nominees",
+      "lead": "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung has approved requests for par...",
       "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Yonhap News）"
+        "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung has approved requests for par...",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126002452315"
+          "url": "https://en.yna.co.kr/view/AEN20261126012000320"
         }
       ]
     },
@@ -182,18 +182,18 @@
       "type": "fun",
       "readMins": 0.5,
       "date": "2026-11-26",
-      "title": "Lee touts new deposit system as effective in curbing illegal fishing by Chinese vessels",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...",
+      "title": "(2nd LD) Unionized rail workers launch work-to-rule campaign; 4 train services canceled",
+      "lead": "SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...",
       "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Yonhap News）"
+        "SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126011700315"
+          "url": "https://en.yna.co.kr/view/AEN20261126002452315"
         }
       ]
     },
@@ -210,10 +210,10 @@
       "lead": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
       "body": [
         "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：BBC Europe）"
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "BBC Europe",
@@ -234,10 +234,10 @@
       "lead": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from Marvin Reuter's firm.",
       "body": [
         "Nearly a third of crossings in early 2026 allegedly involved boats or engines from Marvin Reuter's firm.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：BBC Europe）"
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "BBC Europe",
@@ -258,10 +258,10 @@
       "lead": "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
       "body": [
         "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：BBC Europe）"
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "BBC Europe",
@@ -282,10 +282,10 @@
       "lead": "After eight years of Socialist-led rule, snap elections are taking place on Sunday with conservative Alberto Núñez Feijóo vying to win office.",
       "body": [
         "After eight years of Socialist-led rule, snap elections are taking place on Sunday with conservative Alberto Núñez Feijóo vying to win office.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：BBC Europe）"
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "BBC Europe",
@@ -302,18 +302,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Thanksgiving dinner costs rise, putting pressure on US households",
-      "lead": "Turkeys see a 26-percent price rise, forcing families to reconsider hosting and opt for potluck-style celebrations.",
+      "title": "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
+      "lead": "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
       "body": [
-        "Turkeys see a 26-percent price rise, forcing families to reconsider hosting and opt for potluck-style celebrations.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Al Jazeera）"
+        "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Al Jazeera）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/economy/2026/11/26/thanksgiving-dinner-costs-rise-putting-pressure-on-us-households?traffic_source=rss"
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/26/eyewitnesses-describe-scenes-of-egypts-deadly-vehicle-fire?traffic_source=rss"
         }
       ]
     },
@@ -326,18 +326,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Palestine coach says team represents suffering but also offers hope",
-      "lead": "Despite navigating personal hardships, Ihab Abu Jazar calls it a &#039;badge of honour&#039; to coach the Palestine football team.",
+      "title": "FIFA says personal and business information stolen in cyberattack",
+      "lead": "FIFA sources say no files from the abandoned FIFA Forward Enterprise project were accessed.",
       "body": [
-        "Despite navigating personal hardships, Ihab Abu Jazar calls it a &#039;badge of honour&#039; to coach the Palestine football team.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Al Jazeera）"
+        "FIFA sources say no files from the abandoned FIFA Forward Enterprise project were accessed.",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Al Jazeera）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/11/26/palestine-national-football-team-coach-suffering-hope?traffic_source=rss"
+          "url": "https://www.aljazeera.com/sports/2026/11/26/fifa-says-personal-and-business-information-stolen-in-cyberattack?traffic_source=rss"
         }
       ]
     },
@@ -350,18 +350,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Kenya gov’t violated constitution with Ebola quarantine site, court says",
-      "lead": "Kenya&#039;s High Court orders halt to ⁠further works at quarantine facility until details of deal with US are disclosed.",
+      "title": "With the rise of AI, are we close to having universal basic income",
+      "lead": "Is UBI the solution to mass unemployment in an AI economy?",
       "body": [
-        "Kenya&#039;s High Court orders halt to ⁠further works at quarantine facility until details of deal with US are disclosed.",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：Al Jazeera）"
+        "Is UBI the solution to mass unemployment in an AI economy?",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Al Jazeera）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/26/kenya-govt-violated-constitution-with-ebola-quarantine-site-court-says?traffic_source=rss"
+          "url": "https://www.aljazeera.com/video/money-works/2026/11/26/with-the-rise-of-ai-are-we-close-to-having-universal-basic-income?traffic_source=rss"
         }
       ]
     },
@@ -374,18 +374,18 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "民政部：推进全国殡葬服务热线12353建设",
-      "lead": "中新网11月26日电 据民政部网站消息，近期，经工业和信息化部批准，12353为全国统一设立的殡葬服务热线电话号码。该热线将向群众提供政策咨询、服务受理、投诉建议等殡葬领域服务，为群众获取规范殡葬服务提供便利。",
+      "title": "粤港澳大湾区首批用水器具水效标准亮相鹏城",
+      "lead": "中新网深圳11月26日电 (记者 王坚)粤港澳大湾区首批用水器具水效“湾区标准”26日在深圳举行的第三届节水产业创新发展成果展上面向公众及媒体宣传推介。",
       "body": [
-        "中新网11月26日电 据民政部网站消息，近期，经工业和信息化部批准，12353为全国统一设立的殡葬服务热线电话号码。该热线将向群众提供政策咨询、服务受理、投诉建议等殡葬领域服务，为群众获取规范殡葬服务提供便利。",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：中新网时政）"
+        "中新网深圳11月26日电 (记者 王坚)粤港澳大湾区首批用水器具水效“湾区标准”26日在深圳举行的第三届节水产业创新发展成果展上面向公众及媒体宣传推介。",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738296.shtml"
+          "url": "https://www.chinanews.com.cn/cj/2026/11-26/10738408.shtml"
         }
       ]
     },
@@ -398,18 +398,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "以小城烟火铸治愈良方 电视剧《小城良方》研讨会举行",
-      "lead": "中新网北京11月26日电 (记者 高凯)由中国电视艺术委员会、上海市广播电视局共同主办的电视剧《小城良方》研讨会日前在京举行。",
+      "title": "辽宁深耕基层治理 全域守护民众购彩权益",
+      "lead": "中新网本溪11月26日电 (记者 李晛)11月26日，随着最后一场理性购彩专题讲座在辽宁省本溪市溪湖区东风街道新立社区落幕，由辽宁省体育彩票中心主办的“购彩者权益保护季”活动正式收官。",
       "body": [
-        "中新网北京11月26日电 (记者 高凯)由中国电视艺术委员会、上海市广播电视局共同主办的电视剧《小城良方》研讨会日前在京举行。",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：中新网时政）"
+        "中新网本溪11月26日电 (记者 李晛)11月26日，随着最后一场理性购彩专题讲座在辽宁省本溪市溪湖区东风街道新立社区落幕，由辽宁省体育彩票中心主办的“购彩者权益保护季”活动正式收官。",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/cul/2026/11-26/10738268.shtml"
+          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738410.shtml"
         }
       ]
     },
@@ -422,18 +422,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "东风着陆场准备就绪 迎接神舟二十三号飞船“回家”",
-      "lead": "今天(26日)，东风着陆场组织所有搜救力量，展开神舟二十三号飞船返回前的全系统综合演练，做好迎接航天员回家的准备。",
+      "title": "中外嘉宾齐聚蓉城 求解“治水之道”如何通向“治国之道”",
+      "lead": "中新网成都11月26日电 (记者 何浠)“都江堰·江河战略论坛”26日在成都举行。会上发布《江河穿越千年 涵养时代文明——从都江堰看江河治理的中国智慧》智库报告、形成《江河治理·都江堰倡议》。历史地理学者、水利专家与国际水务人士围绕古堰讨论：发端于岷江的“治水之道”，何以通向“治国之道”。",
       "body": [
-        "今天(26日)，东风着陆场组织所有搜救力量，展开神舟二十三号飞船返回前的全系统综合演练，做好迎接航天员回家的准备。",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：中新网时政）"
+        "中新网成都11月26日电 (记者 何浠)“都江堰·江河战略论坛”26日在成都举行。会上发布《江河穿越千年 涵养时代文明——从都江堰看江河治理的中国智慧》智库报告、形成《江河治理·都江堰倡议》。历史地理学者、水利专家与国际水务人士围绕古堰讨论：发端于岷江的“治水之道”，何以通向“治国之道”。",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738292.shtml"
+          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738396.shtml"
         }
       ]
     },
@@ -446,18 +446,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "大风蓝色预警：京津冀等17省区市部分地区阵风可达7至9级",
-      "lead": "中国天气网讯 中央气象台11月26日18时继续发布大风蓝色预警：",
+      "title": "“莫扎特之夜”纪念莫扎特诞辰270周年音乐会在沈阳举行",
+      "lead": "中新网沈阳11月26日电 (记者 李晛)11月26日晚，“莫扎特之夜”纪念莫扎特诞辰270周年音乐会在沈阳盛京大剧院举行。",
       "body": [
-        "中国天气网讯 中央气象台11月26日18时继续发布大风蓝色预警：",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：中新网时政）"
+        "中新网沈阳11月26日电 (记者 李晛)11月26日晚，“莫扎特之夜”纪念莫扎特诞辰270周年音乐会在沈阳盛京大剧院举行。",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738290.shtml"
+          "url": "https://www.chinanews.com.cn/cul/2026/11-26/10738402.shtml"
         }
       ]
     },
@@ -470,18 +470,18 @@
       "type": "fun",
       "readMins": 0.5,
       "date": "2026-11-26",
-      "title": "突破千度高温考验 四足消防侦察狗在苏州完成实战演练",
-      "lead": "中新网苏州11月26日电(兰锐 泱波)可耐受千度高温、穿透浓烟、实时回传高清火场画面的四足消防侦察狗，11月25日在苏州亮相并完成实战演练。这款装备由哈尔滨工业大学苏州高等研究院、江苏省智能机器人技术创新中心和哈工大孵化的四川龙甲空天材料科技有限公司联合研发，实现1000℃高温环境下持续识别探查、锁定位置、回传信息等作业，攻克传统四足机器人热防护、感知通信协同难点，填补消防前期侦测智能化装备空白。",
+      "title": "山东泰安：初冬泰山普照寺彩叶斑斓",
+      "lead": "11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为游客驻足欣赏。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾",
       "body": [
-        "中新网苏州11月26日电(兰锐 泱波)可耐受千度高温、穿透浓烟、实时回传高清火场画面的四足消防侦察狗，11月25日在苏州亮相并完成实战演练。这款装备由哈尔滨工业大学苏州高等研究院、江苏省智能机器人技术创新中心和哈工大孵化的四川龙甲空天材料科技有限公司联合研发，实现1000℃高温环境下持续识别探查、锁定位置、回传信息等作业，攻克传统四足机器人热防护、感知通信协同难点，填补消防前期侦测智能化装备空白。",
-        "（提示：在 GitHub 仓库 Secrets 中配置 GEMINI_API_KEY 后，本篇将自动由 AI 改写为家常化通俗长文与深度双维拆解。原文来源：中新网时政）"
+        "11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为游客驻足欣赏。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾",
+        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置 GEMINI_API_KEY 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置 GEMINI_API_KEY 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
+      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738286.shtml"
+          "url": "https://www.chinanews.com.cn/tp/2026/11-26/10738399.shtml"
         }
       ]
     }
