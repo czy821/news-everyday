@@ -2,8 +2,8 @@
   "editionNumber": 330,
   "date": "2026-11-26",
   "updatedAt": "2026-11-26 12:00",
-  "headline": "卫星百万颗，火车停运中，先把午饭吃好",
-  "subtitle": "中午好。天上要放百万颗卫星，地上火车说停就停；有人因一句吐槽丢了工作，有人考第一靠AI。世界很忙，咱先吃饭。",
+  "headline": "天上百万星、地上核车间，午饭先吃碗炖肉",
+  "subtitle": "天上马斯克撒卫星，地上金正恩进车间；韩国铁路磨洋工，渔船进门先交钱。感恩节被暴风雨堵了路，博物馆最火的展品竟是一碗绿辣椒炖肉。世界挺吵，先喝口热汤。",
   "articles": [
     {
       "id": "us-1",
@@ -14,23 +14,23 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "天上要建“AI机房”？SpaceX获批放100万颗卫星，科学家直挠头",
-      "lead": "中午刷手机看到这条，我差点把汤喷出来：以后算力不够，难道真要把服务器挂到天上去？",
+      "title": "马斯克要往天上撒100万颗卫星，科学家抬头看了看天：这事儿不太靠谱",
+      "lead": "感恩节前一天，美国通信监管机构一拍板，给SpaceX的“太空机房”开了绿灯——一口气100万颗卫星，听着像科幻，其实批文都下来了。",
       "body": [
-        "美国联邦通信委员会给马斯克的SpaceX开了绿灯，允许它部署数量高达100万颗的卫星，用来在太空搞数据中心。这个数字听着像科幻片，但监管文件是认真的；反对者担心的科研、天文观测等问题，被FCC以“不在我管辖范围”为由挡了回去。",
-        "为什么要把机房搬上天？说白了，地面上的AI数据中心太吃电、太吃地、太需要散热，而太空有太阳能，也有天然的“大冰箱”环境。听上去很美，可100万颗卫星不是100万辆共享单车，轨道拥挤、碰撞碎片、天文观测受干扰、后续维修和监管，全是硬骨头。",
-        "科学家之所以 skeptical，不是故意泼冷水，而是因为“批准”不等于“建成”。发射成本、卫星寿命、数据回传、国际规则都还没完全跑通。FCC这一纸许可更像先发门票，真正能不能把太空变成AI算力农场，还得看技术和治理跟不跟得上。"
+        "美国联邦通信委员会（FCC）本周批准了SpaceX的一项计划：把大量卫星送上天，在轨道上搭起数据中心，用太空的太阳能和低温环境给人工智能算力“降温”。官方口径是百万颗量级，这个数字本身就把不少人吓了一跳——人类自打进入太空时代以来，所有国家发射过的卫星加一块儿，也远远不到这个数。",
+        "科学界的第一反应是皱眉。天文学家担心夜空被密密麻麻的反光点占满，望远镜拍到的深空照片里全是划过的亮线；也有人担心这么多设备一旦失灵，近地轨道会变成一锅“太空粥”，碎片连环撞击的连锁反应谁都不敢打包票。FCC的处理方式是：这些担忧不属于我们的监管范围，所以不予采纳。一句话，把球踢了出去。",
+        "支持者的算盘也很直白：地面数据中心耗电、耗水、占地，还天天被居民投诉噪音；太空里有24小时不断的阳光，散热靠真空，理论上确实“凉快”。可问题在于，从批文到真把百万颗卫星送上去，中间隔着火箭运力、在轨维护、激光通信、以及一张谁都算不清的账单。这更像是一场豪赌，赌的是未来十年算力的话语权。"
       ],
-      "impactOrdinary": "对普通人来说，短期别指望明天云盘就降价；但如果太空算力真跑通，AI服务、偏远地区联网可能多一条路。与此同时，天文爱好者看星星会更难，卫星碎片风险也需要更严的规则来兜底，不能只听发布会画饼。",
-      "impactWorld": "美国监管机构单方面放行超大规模轨道基础设施，等于给“太空商业化”又踩了一脚油门，也会刺激其他国家和企业抢轨道、抢频谱、抢规则话语权。更深一层，它把“全球公地怎么管”这个老问题推到了台前：太空不能只靠先到先得。",
+      "impactOrdinary": "对普通人来说，短期内最直接的变化可能是偏远地区网速变好、卫星宽带更便宜——但代价也会落到生活细节里：天文爱好者的照片越来越“花”，观星旅游的体验打折；近地轨道越挤，保险费和后续发射成本都会往上走，最终还是会摊进你我的网费账单里。",
+      "impactWorld": "这事的深层含义是：太空正从“全人类共用的一片天”，变成“谁先占轨道谁开张”的商业地产。轨道和频谱是有限资源，一旦被大规模圈占，后来的国家只能排队或者绕道；天文科研、气象观测、导弹预警都会被挤压。说白了，这是把地面的算力霸权搬到天上，倒逼其他国家跟进一场轨道圈地赛。",
       "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
-        },
         {
           "name": "NPR News",
           "url": "https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
         }
       ]
     },
@@ -39,23 +39,22 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "民生烟火",
+      "category": "地缘安全",
       "type": "news",
-      "readMins": 1.2,
+      "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "感恩节出门先看天：暴风雨搅局，梅西游行都推迟了",
-      "lead": "本来拎着行李箱赶火车、赶飞机的朋友注意了，这回不是小打小闹，东西海岸一起“加戏”。",
+      "title": "特朗普递话没接住，金正恩转身进了核材料车间",
+      "lead": "一边是华盛顿放风说“随时可以聊聊”，一边是平壤晒出视察核材料生产设施的照片——这顿隔空喊话，算是没对上频道。",
       "body": [
-        "美国感恩节假期撞上强风暴，狂风、高潮位、暴雨和洪水一起上，预计影响约8150万人的出行计划。梅西感恩节大游行也被迫推迟，可见天气这次没给面子。",
-        "东海岸尤其担心沿海 flooding，航班、公路和铁路都可能被连锁拖慢。节假日最怕的不是堵车，是“堵在路上还不知道下一段能不能走”，所以出门前刷航班和路况比刷短视频重要。",
-        "这类极端天气越来越像假期里的“固定嘉宾”：来得猛、范围大、恢复慢。地方政府忙着预警，机场和铁路忙着改签，普通人能做的就是预留时间、别硬闯积水路段，把充电宝当身份证一样带好。"
+        "据美国媒体报道，朝鲜最高领导人金正恩近日视察了生产核武器原料的设施，并公开表示要继续扩充核武库，理由是应对来自美国和韩国的威胁。这番话的时机很微妙：就在此前，特朗普方面释放过愿意接触的信号，结果对方连台阶都没踩。",
+        "外界注意到，朝方这次强调的是“更多、更先进”，而不是“谈判筹码”。分析人士的判断是，平壤已经把核武从谈判桌上的牌，改成了写进宪法的底牌——先保住既成事实，再谈别的。而在华盛顿这边，对朝政策长期在“极限施压”和“首脑外交”之间摇摆，缺乏连贯性，正好被对方摸清了节奏。"
       ],
-      "impactOrdinary": "如果你这两天要飞、要开车、要去看游行，最好提前查航班和封路信息，多留半天余量；家里备点水和充电设备，别把车开进看着不深的积水里。节日计划可以改，安全别打折。",
-      "impactWorld": "极端天气频繁冲击节假日交通，考验的不只是天气预报，还有机场、铁路、电网和应急系统的韧性。对全球来说，这类事件会推高保险和物流成本，也让“气候适应”从口号变成每年都要算的民生账。",
+      "impactOrdinary": "这事儿离菜市场很远，但会悄悄进你的钱包：东北亚局势一紧，避险资金就往美元和黄金跑，油价、航运保费跟着抖三抖；家里有孩子在日韩留学、或者做外贸跑东亚航线的，也能感觉到气氛变紧、手续变多。",
+      "impactWorld": "最直接的影响是核谈判窗口又被关小了一格。日本和韩国国内“要不要自己搞核武”的声音会更大，美国在半岛的军事部署也可能加码，东北亚滑向军备竞赛的风险上升。更长远看，这等于给全球核不扩散体系又开了一道口子——如果拥核能换来安全感，那其他国家凭什么不学？",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6054079/storms-expected-on-both-coasts-as-millions-travel-for-thanksgiving"
+          "url": "https://www.npr.org/2026/11/26/g-s1-155955/north-korea-kim-nuclear-weapons-trump"
         }
       ]
     },
@@ -64,23 +63,26 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "宏观钱包",
+      "category": "民生烟火",
       "type": "news",
-      "readMins": 1.4,
+      "readMins": 1.0,
       "date": "2026-11-26",
-      "title": "英伟达被标普“敲黑板”：不是没钱，是怕你把宝全押在一个人身上",
-      "lead": "AI圈顶流也有烦心事：信用评级机构开始嘀咕，这家公司治理和“关键先生”风险有点扎眼。",
+      "title": "老天爷不看日历：暴风雨堵住感恩节的路，梅西大游行也推迟了",
+      "lead": "火鸡刚进烤箱，天气先上桌了——狂风、暴雨、高潮位一起来，全美预计8100多万人的出行计划被打乱，连纽约的梅西感恩节大游行都罕见地推迟。",
       "body": [
-        "标普正在考虑把英伟达的信用评级下调到AA-，理由不是“马上要没钱”，而是治理结构和“关键人物风险”。翻译成家常话：公司太依赖掌门人黄仁勋，万一有个风吹草动，市场会紧张。",
-        "英伟达是这轮AI热潮的卖铲人，芯片、服务器、数据中心都围着它转。评级机构担心的不是某一张显卡，而是整个AI产业链把太多期待压在一家公司、一个团队身上。评级真下调，融资成本、供应商信心和股价情绪都可能被带着晃一晃。",
-        "当然，AA-仍然是高等级，离“垃圾债”差着十万八千里。但资本市场就是这样，风向一变，先紧张的是估值。对英伟达来说，这更像一张提醒条：光跑得快不够，公司治理和接班安排也得让外界放心。"
+        "美国东西两岸这几天同时遭极端天气袭击，沿海地区面临洪水风险，内陆则是强风加暴雨。偏偏赶上感恩节出行高峰，机场大面积延误、高速排长龙，很多人本来算好了“吃完火鸡赶红眼航班”，结果只能在候机厅里啃三明治。",
+        "纽约的梅西感恩节大游行一向风雨无阻，这次却被迫推迟——巨型气球最怕大风，安全第一。对不少美国家庭来说，这场游行是节日仪式感的一部分，它一延期，很多人的“ Thanksgiving 打开方式”也跟着改了。"
       ],
-      "impactOrdinary": "如果你养老金、指数基金里装着科技股，短期波动可能更明显；如果你只是买显卡打游戏，价格不会因为这条新闻立刻跳水。但它提醒普通人：AI热不是只涨不跌，别把全部积蓄押在单一赛道。",
-      "impactWorld": "全球AI竞赛高度依赖少数芯片巨头，评级机构开始盯“关键人风险”，说明金融界对AI繁荣的底层稳定性有了戒心。若融资成本上升，数据中心扩张节奏可能被拖慢，进而影响全球算力价格和科技竞争格局。",
+      "impactOrdinary": "最实在的影响就是：航班改签、高速堵车、超市火鸡和蜡烛被抢购一空，停电地区的家庭得摸黑过节。极端天气正在变成一种“节日固定节目”，以后订机票、安排探亲，恐怕得多留一天缓冲时间。",
+      "impactWorld": "这类极端天气越来越频繁，正在从“新闻”变成“成本”。保险业重新给沿海房产定价，城市被迫加码排水和电网改造，气候议题在选举中的分量也越来越重。说到底，天气正在改写各国的财政账本和选票流向。",
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+          "name": "NPR News",
+          "url": "https://www.npr.org/2026/11/26/nx-s1-6054079/storms-expected-on-both-coasts-as-millions-travel-for-thanksgiving"
+        },
+        {
+          "name": "NPR News",
+          "url": "https://www.npr.org/2026/11/26/g-s1-155950/up-first-newsletter-thanksgiving-weather-travel-trump-tariffs-iowa-detonation-fcc-free-speech"
         }
       ]
     },
@@ -89,23 +91,22 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "社会百态",
+      "category": "文化跨界",
       "type": "fun",
       "readMins": 0.8,
       "date": "2026-11-26",
-      "title": "电视上吐槽教练，18小时后被裁：罗杰斯这波“嘴快”代价有点大",
-      "lead": "职场大忌又添一例：当着全国观众说老板不行，结果人事通知来得比外卖还快。",
+      "title": "这家博物馆最火的“展品”，是一碗绿辣椒炖肉",
+      "lead": "在新墨西哥州阿尔伯克基，有一家博物馆，观众看完展不急着走，反而先排队点菜——因为餐厅本身就是重头戏。",
       "body": [
-        "匹兹堡钢人队把42岁的四分卫阿隆·罗杰斯裁了。导火索是他上电视公开批评主教练迈克·麦卡锡，而球队此前刚宣布让他给替补梅森·鲁道夫让位。短短18小时，剧情从“坐板凳”冲到“收拾柜子”。",
-        "罗杰斯是未来名人堂级别的球星，但再大的腕儿，公开拆台也会让更衣室和管理层脸上挂不住。球队选择快刀斩乱麻，等于告诉所有人：战术可以讨论，公开打脸不行。",
-        "这事放在办公室里也熟：有意见可以提，渠道和场合很关键。全国直播开怼老板，爽是爽，代价可能是一张离职证明。球迷看热闹，打工人看门道。"
+        "这家叫印第安普韦布洛厨房的餐厅开在博物馆里，主打原住民的传统菜肴：绿辣椒炖肉、烤南瓜，还有用八角和小茴香提味的甜饼干。当地人说，这不是“博物馆餐”，而是从小吃到大的家常味。",
+        "有意思的是，菜单背后就是历史课。食材怎么来、怎么做、谁在厨房里忙活，讲的都是普韦布洛人自己的故事。比起玻璃柜里的文物，一口热汤显然更容易让人记住一个民族。"
       ],
-      "impactOrdinary": "吃瓜归吃瓜，普通人能学到的职场经验很朴素：对上级有意见，先走私下沟通；公开发声前想清楚后果。球迷的话， fantasy 阵容记得改，别一觉醒来发现首发没了。",
-      "impactWorld": "这桩闹剧折射的是美国体育商业里球星话语权和球队权威的拉扯：社交媒体时代，一句电视评论就能引爆全球球迷讨论。它不至于改变世界格局，但会提醒各队，管理超级明星和管好公关，已经是同一门课。",
+      "impactOrdinary": "对吃货来说，这是最接地气的文化课：想吃懂一个地方，先坐下吃饭。下次旅行做攻略时，博物馆餐厅值得单独列一行，而且记得早点去，热门时段是真排队。",
+      "impactWorld": "这背后是一种叙事权的转移——原住民不再只是被研究的“展品”，而是自己讲故事、自己开餐厅、自己定价的经营者。饮食成了文化软实力最省力的出口，也提醒各国：讲好国家形象，有时候一碗汤比一份白皮书管用。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6054760/steelers-cut-aaron-rodgers"
+          "url": "https://www.npr.org/2026/11/26/nx-s1-5983712/indian-pueblo-kitchen-native-american-food-albuquerque"
         }
       ]
     },
@@ -118,15 +119,15 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "中国渔船要交“保证金”了？李在明说这招管用，海上猫鼠游戏换了玩法",
-      "lead": "韩国总统李在明26日亲自给一套新上线的“押金制”打广告，说这是治中国渔船非法捕捞的一剂良药——听着像小区物业收装修押金，只不过这回押的是渔船。",
+      "title": "渔船想进来？先交“保证金”！李在明这招专治越界捕捞",
+      "lead": "午饭桌上聊点海上事儿：韩国总统李在明今天拍着胸脯说，新搞的“保证金制度”对付越界渔船挺管用。",
       "body": [
-        "事情不复杂：以前韩国海警抓到越界捕鱼的中国渔船，罚一笔、放回去，船东回头换个船号接着来，成了“罚款包年套餐”。新招是让渔船先交一笔担保金，等于先押钱后下海，一旦违规直接扣，抓一次疼一年。李在明当天在公开场合夸这套机制“有效”，语气像是终于找到了一款好用的工具。",
-        "韩国西海岸的渔民这些年怨气不小，说自己近海的黄花鱼、带鱼还没长大就被捞走了，燃油钱都快挣不回来。对他们来说，政府能不能拦住船，比发多少补贴都实在。而对中国一侧的渔船船东来说，押金意味着出海前先压一笔不小的现金，小船队压力尤其大。",
-        "不过这套制度能不能真落地，还得看执法端：谁来查、查得多勤、被扣的船东能不能找到申诉渠道。押金不是万能钥匙，但把“违规成本”从一笔可报销的罚款，变成一块压在账上的石头，思路确实变了。"
+        "韩国总统李在明26日公开给自家的新规矩点赞：外国渔船要是被怀疑在韩国海域“捞过界”，想走人可以，先把一笔保证金押在这儿。他的意思很直白——罚款追起来太费劲，不如先把钱攥在手里，看谁还敢抱着侥幸心理来碰运气。",
+        "这事儿说白了就是海上版的“先押钱再说话”。过去抓到越界渔船，走完调查、处罚、交涉这一长串流程，船早跑没影了，罚款常常成了一张空头支票。现在改成进门先押钱，等于把执法的“后手”挪到了“前手”，韩国方面还强调会继续加码对非法捕捞的查处力度。",
+        "当然，海上的事儿从来不只是海上的事儿。渔场重叠、划界分歧、渔民饭碗，样样都牵着两国神经。韩国这边想用经济杠杆把执法成本压下来，中方渔船和相关部门大概率也会盯着这套规则怎么落地、会不会一竿子打翻一船人。接下来比的不是嗓门，而是谁的规矩更站得住脚、谁的沟通渠道更顺畅。"
       ],
-      "impactOrdinary": "对韩国西海岸渔民来说，海里鱼多点、少点“不速之客”，直接关系到一年收成；对国内爱吃韩式烤带鱼、小黄鱼的家庭，短期鱼价不会因此大跳水，但远洋货源和进口海鲜的价格波动会更明显。做中韩海产贸易的小老板，则要开始习惯“押金+合规审查”这套新流程。",
-      "impactWorld": "这不是简单的抓船罚款，而是沿海国把专属经济区执法从“事后处罚”升级为“事前准入”——先交钱、后出海。这种模式一旦在韩国跑通，日本、菲律宾等同样被非法捕捞困扰的国家很可能照抄。它也会成为中韩关系里一个持续摩擦、但不至于翻桌的低烈度议题：谈得下去，但每年都要吵几回。",
+      "impactOrdinary": "对咱普通人最直接的影响是海鲜价格和供应节奏。黄海、东海一线渔船作业受更严查验，出港成本变高，部分海货短期可能涨价；跑远洋船的家庭则要多留一份心，靠港前先弄清当地押金和处罚规则，别辛苦一趟反倒赔进去。",
+      "impactWorld": "这类“保证金式执法”正在变成沿海国家处理海上纠纷的新模板：绕开漫长的外交扯皮，用金融手段把主权主张变成即时成本。它一方面提高了越界捕捞的门槛，另一方面也容易把渔业摩擦升级成规则之争。对地区格局而言，黄海治理会不会从“喊话驱离”走向“制度挤压”，将成为观察中韩海上互信的一块试金石。",
       "sources": [
         {
           "name": "Yonhap News",
@@ -141,20 +142,20 @@
       "scope": "intl",
       "category": "民生烟火",
       "type": "news",
-      "readMins": 1.3,
+      "readMins": 1.2,
       "date": "2026-11-26",
-      "title": "韩国铁路员工开始“照章办事”，几趟火车直接停运，通勤族先遭殃",
-      "lead": "韩国铁路公社的工会26日启动“合规怠工”——不罢工、不举牌，就是每一步都严格按规章慢慢来，结果当天就有几趟列车直接取消。",
+      "title": "火车司机“按章慢慢开”，韩国铁路今天开始磨洋工",
+      "lead": "今天要坐火车出门的朋友注意了：韩国铁路工会开始“照章办事”，说白了就是按规矩一条条抠，车自然就跑不快了。",
       "body": [
-        "所谓“照章办事”，说白了就是把平时的灵活操作全收起来：限速该降到最低就降到最低，检查该做三遍就做三遍。乘客看不出来谁在抗议，但列车表先乱了，晚点、取消接踵而至。",
-        "这招的高明之处在于“合法”：工资照拿，政府难抓把柄，可运力像被人悄悄拧小了半圈。对于每天靠京釜线、湖南线通勤的人来说，这比一场明牌罢工更折磨——因为你永远不知道明早那班车还在不在。"
+        "韩国铁道公社的工会26日启动“合规怠工”，不罢工、不拉横幅，就是严格按规程操作，每一步都不省。效果立竿见影——当天已有3趟列车服务被取消，晚点风险也跟着往上蹿，通勤族和返乡客最先感受到这股“慢动作”。",
+        "这种打法讲究的是“合法施压”：工会用最低效率逼资方回到谈判桌，既保留了道义姿态，又把压力实打实传到时刻表上。铁路方面则忙着调车、引导旅客改签，站台上大概率是一阵阵的广播提醒和一阵阵的叹气。"
       ],
-      "impactOrdinary": "首尔上班族、周末回老家的大学生、靠火车发货的小商户，都会先挨这一刀。建议这几天赶车的人多留半小时余量，别把重要会议押在一趟可能消失的列车上。",
-      "impactWorld": "韩国的“合规怠工”是发达经济体劳资博弈的典型样本：不掀桌子，只调低效率旋钮。这种软性对抗若成常态，会让外资重新评估韩国物流的稳定性，也给其他国家的工会提供了一套“可复制模板”。",
+      "impactOrdinary": "最近在韩国坐火车，最好提前半小时出门，能改签就改签，重要行程留出缓冲。上下班靠铁路通勤的人，可能要临时改公交或拼车；家里有老人孩子赶远路的，出发前务必刷一眼列车运行信息，别在站台上干着急。",
+      "impactWorld": "铁路怠工看着是劳资纠纷，实际是发达国家公共服务涨价与人力短缺的缩影：当通胀吃掉工资、自动化又步步紧逼，工会越来越倾向用“合规”这种灰色手段施压。这类柔性对抗若成常态，会影响外资对韩国物流稳定性的判断，也给其他国家的公共交通治理提了个醒。",
       "sources": [
         {
           "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126002452315"
+          "url": "https://en.yna.co.kr/view/AEN20261126002451315"
         }
       ]
     },
@@ -167,14 +168,14 @@
       "type": "fun",
       "readMins": 0.8,
       "date": "2026-11-26",
-      "title": "韩国税务师考试第一名被爆用AI作弊，警察上门要抓人",
-      "lead": "考了全国第一，结果被怀疑是AI替他考的——韩国警方26日直接申请逮捕令，这大概是今年最尴尬的“状元”。",
+      "title": "税务师考试第一名翻车：AI帮忙答题，警察来请喝茶",
+      "lead": "考试考第一不稀奇，考第一还被警察盯上就稀奇了——韩国这位税务师考试状元，被指用人工智能作弊。",
       "body": [
-        "这位考生在税务师考试里拿了最高分，本该是朋友圈炫耀一整年的剧本，结果被查出疑似借助AI工具答题。警方认为情节严重，当天就申请了逮捕令。",
-        "以前作弊是递小抄，现在是递算法。考试的对手从邻座考生，变成了看不见的服务器——监考老师再火眼金睛，也拦不住手机里那个“懂王”。"
+        "韩国警方26日对这名税务师考试头名考生申请了逮捕令，理由是他涉嫌借助人工智能在考试中作弊。消息一出，考生圈炸锅：别人熬夜背书，他熬夜调提示词，这赛道也太离谱了。",
+        "更尴尬的是，税务师这行吃的就是“算得清、信得过”这碗饭，还没拿证就先背上作弊嫌疑，职业信用先碎了一地。接下来警察要查的不只是他怎么用AI，还有没有同伙、有没有产业链。"
       ],
-      "impactOrdinary": "这事给所有考证党提了个醒：AI能帮你复习，但帮你答题就是拿前途赌运气。更现实的是，接下来各类资格考试的安检、禁带设备、考场信号屏蔽只会更严，规规矩矩考试的人要多受几道折腾。",
-      "impactWorld": "全世界的资格认证体系都面临同一个问题：当AI能考过人类第一名，证书还代表能力吗？韩国这案子可能成为一个判例节点，推动各国从“防小抄”转向“防模型”，甚至重构考试本身的设计逻辑。",
+      "impactOrdinary": "这案子给所有考试党提了个醒：AI是工具不是替身，考场上动歪脑筋，代价可能是成绩清零加刑事记录。对用人单位来说，以后招人光看分数不够了，面试和实操环节会越来越较真。",
+      "impactWorld": "全球考试体系正被生成式AI逼着改规则：从纸笔防作弊到考场屏蔽信号，再到改考“过程性能力”，各国都在补课。谁先把AI作弊的认定标准和处罚链条立起来，谁就能守住资格认证的公信力，这已经是教育治理的国际竞赛。",
       "sources": [
         {
           "name": "Yonhap News",
@@ -188,17 +189,17 @@
       "regionLabel": "🇰🇷 韩国",
       "scope": "intl",
       "category": "硬核科技",
-      "type": "fun",
-      "readMins": 0.7,
+      "type": "news",
+      "readMins": 1.0,
       "date": "2026-11-26",
-      "title": "Olive Young被黑客摸进后门，790人信息泄露，数字小得有点意外",
-      "lead": "韩国美妆零售龙头Olive Young 26日承认内部系统被黑，员工和客户共790人的个人信息被泄露——数字不大，但足够让人心里发毛。",
+      "title": "Olive Young被黑，790人的信息被人顺手牵羊",
+      "lead": "爱逛美妆店的姐妹留意一下：韩国连锁美妆店Olive Young承认内部系统被黑客摸进去了，790人的个人信息外泄。",
       "body": [
-        "公司说是在内部业务系统里发现了未经授权的外部访问，确认后立刻对外通报。790这个数字放在动辄几百万条泄露的新闻里显得“克制”，但被点到的这790个人，可都是实打实的姓名、联系方式级别的暴露。",
-        "有意思的是节奏：先发现、先确认、先公布，没等舆论发酵。对一家天天处理会员数据的零售巨头来说，这更像一次被迫的“安全体检”。"
+        "CJ旗下Olive Young 26日表示，公司内部业务系统遭网络攻击，确认有外部人员未经授权进入，部分员工和顾客的个人信息因此泄露，受影响人数为790人。对一个天天排队的国民美妆品牌来说，这个数字不算大，但足够让人心里咯噔一下。",
+        "公司方面称已展开排查和补救。不过大家最关心的还是那老几样：泄露的到底是姓名电话，还是更敏感的东西？通知到不到位？后续会不会有人拿信息去搞钓鱼短信？这些问号，比货架上的新品更值得盯。"
       ],
-      "impactOrdinary": "如果你注册过Olive Young的会员或用过它的App，这几周留意下陌生短信和“客服来电”，别随手点链接。日常买个面膜顺手填的手机号，也可能变成别人手里的资源。",
-      "impactWorld": "零售业掌握的是最琐碎也最好用的个人数据，正成为黑客的常规靶场。韩国这起“小规模泄露”其实是全球供应链安全的缩影：企业防不住一次入侵，赔上的可能是整个品牌的信任折扣。",
+      "impactOrdinary": "如果你最近在Olive Young注册过会员或下过单，收到“订单异常”“积分兑换”之类的短信链接，先别急着点，官方App里核实一遍再说。密码该换就换，别一套密码走天下；常逛的店出了事，顺手查查自己的账户有没有陌生登录记录。",
+      "impactWorld": "零售企业掌握着海量消费画像，一次小小的入侵就可能变成精准诈骗的原料。韩国这起事件再次说明：数据安全不再是科技公司的专属命题，而是所有连锁零售的生死线。谁的合规和应急做得实，谁才能在跨境数据监管趋严的年代留住消费者信任。",
       "sources": [
         {
           "name": "Korea Times",
@@ -211,23 +212,22 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "贸易博弈",
+      "category": "全球速递",
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "英欧新条约里藏了个“十年之痒”：说好不分手，但十年后可以提离婚",
-      "lead": "英欧这对“离婚后还住对门”的老夫妻，今天下午要把新合同摊在桌上了——而且合同里明明白白写着：十年后谁都能说散就散。",
+      "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
+      "lead": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
       "body": [
-        "英国和欧盟要签的新条约文本今天下午正式公布，配套的执行法案也一起端上来。最扎眼的一条不是关税、不是渔业，而是里面悄悄塞进了一个“十年终止条款”：条约跑满十年，任何一方都可以提前打招呼走人。说白了，这纸合同不是奔着白头偕老去的，是奔着“先过十年试试”去的。",
-        "为什么这么设计？因为双方心里都清楚，谁都怕被绑死。英国怕签完就甩不掉，被欧盟规则慢慢“腌入味”；欧盟也怕给英国开了太舒服的口子，别的成员国看了眼红跟着学。于是十年这道坎就成了一个安全阀——既能让企业安心做长期生意，又给政客留了随时翻脸的后门。",
-        "更值得琢磨的是时机和措辞。脱欧这么多年，贸易摩擦、人员流动、北爱尔兰的老账都还在，双方却突然开始讲“重置关系”。这不是谁服软，而是两边算完账发现：互相加码的成本，比坐下来签字贵多了。今天的条约，本质上是把过去几年的乱账，重新装订成一本可以随时再改的活页本。"
+        "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "对普通人最直接的是：做英欧生意的中小企业、跑跨境物流的司机、在英国和欧洲两头打工的人，未来几年规则会更稳、少折腾，但也别指望一辈子不变——十年后可能又是一轮重新谈判，届时有房贷、有孩子上学的人，又得重新算一遍生活账。",
-      "impactWorld": "这说明欧洲的整合模式正在变得“可拆卸化”：不再是 irrevocable 的绑定，而是一层层的期限合约。英欧这种“带退出条款的深度合作”如果跑得通，会成为其他地区处理邻国关系的新模板——大家不必同床共枕，也能先把生意做了；但代价是，长期战略信任会持续打折，全球规则更碎片化、更讲短期算计。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -236,23 +236,22 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "民生烟火",
+      "category": "全球速递",
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "西班牙周日投票：干了八年的“管家”要被换掉？",
-      "lead": "西班牙这周末要投票了， socialist 政府管了八年家，现在保守派费霍带着一票人马敲门，问选民一句：“要不要换个人试试？”",
+      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+      "lead": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from Marvin Reuter's firm.",
       "body": [
-        "这次是提前大选，说白了就是现任政府觉得自己那套账本推不动了，索性把选择权丢回给老百姓。对手是保守派人民党的阿尔贝托·努涅斯·费霍，主打的就是“换个会算账的来”。",
-        "西班牙人眼下最关心的不是宏大叙事，而是房租、电价、游客太多把小区挤爆、年轻人找不到稳定工作。八年时间够长了，投票箱往往就成了一个情绪出口：不是多喜欢新来的，而是想给旧的提个醒。",
-        "麻烦在于，西班牙的选举制度让大党也很难单独过半，最后大概率又得拉小党凑班子。所以周日投完，真正的戏才开场——谈联盟、许条件、分部长，能拖好几周。"
+        "Nearly a third of crossings in early 2026 allegedly involved boats or engines from Marvin Reuter's firm.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "如果保守派上台，租房补贴、能源限价、旅游区管控这些政策可能调方向；做旅游、餐饮、农业的季节工，短期内最容易感到“风向变了”。在西班牙有房产、有亲戚、有生意的人，值得盯一眼周一的汇率和债市反应。",
-      "impactWorld": "西班牙是欧元区第四大经济体，也是南欧从“债务危机样板”变“增长优等生”的代表。它一旦政治左右摇摆，欧盟内部关于财政规则、移民分摊、对华关税的投票天平都会轻微倾斜——南欧的声音，从来不只是南欧的事。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/c6wy4ejnyvdyo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -261,23 +260,22 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "文化跨界",
-      "type": "fun",
-      "readMins": 0.8,
+      "category": "全球速递",
+      "type": "news",
+      "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "一把吉他引发的跨大西洋吵架：Fender 和德国“模仿秀”杠上了",
-      "lead": "美国人造了把传奇电吉他，德国人照着样子也造了一把，价格还不贵——现在两边律师事务所的电话都被打爆了。",
+      "title": "France's political mainstream risks presidential vote debacle with no clear candidate",
+      "lead": "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
       "body": [
-        "争议的主角是 Fender 家的 Stratocaster，摇滚史上出镜率最高的琴之一。美国公司现在盯上了一家德国厂商，说人家做的“通用版”外形太像，等于蹭了几十年的名气。",
-        "德国这边大概率会说：形状是行业通用语言，就像牛仔裤五个口袋，不能谁先做就归谁。这种仗打起来，最后往往不是谁对谁错，而是谁的律师更贵、谁更耗得起。",
-        "最魔幻的是，买琴的人根本不关心这些——他们只想知道，以后那种便宜又顺手的“平替”，还能不能买到。"
+        "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "如果你或孩子正在学吉他，这件事直接关系到入门琴的价格：一旦判下来收紧，平价“仿款”可能涨价或消失，二手市场也会跟着波动。手里有老款平替琴的人，说不定还能小赚一笔。",
-      "impactWorld": "这案子是“设计版权”全球扩张的又一个注脚：从奢侈品包到运动鞋再到乐器，产品外形正在被当成资产来圈地。判法一旦立住，全球制造业的“通用设计”空间会被再压缩一格，中小厂商的模仿式创新会更难走。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/cqd01l9x8k48o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cq772vedgepro?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -287,22 +285,21 @@
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
       "category": "社会百态",
-      "type": "news",
-      "readMins": 1.5,
+      "type": "fun",
+      "readMins": 0.5,
       "date": "2026-11-26",
-      "title": "英吉利海峡的小船，可能有一大半是从德国一个船贩子手里买的",
-      "lead": "BBC 记者跑到德国，堵住了一个卖小船的老板，问他：你那船，怎么老出现在偷渡的新闻画面里？",
+      "title": "Spanish elections: What you need to know and what's at stake",
+      "lead": "After eight years of Socialist-led rule, snap elections are taking place on Sunday with conservative Alberto Núñez Feijóo vying to win office.",
       "body": [
-        "BBC 的调查说，2026 年初横渡英吉利海峡的偷渡船里，将近三分之一涉嫌用了这家德国公司的船或发动机。记者直接上门对质，对方的态度和说法，都成了新闻的一部分。",
-        "这事儿的荒诞之处在于：在德国卖一条小船，大概率完全合法；但这条船一旦被转手、装人、推下法国海滩，就变成了另一国的刑事案件。中间那段链条，谁也说不清算谁的。",
-        "英法两边一直在打击人蛇集团，可船和马达只要还能在欧洲内部自由买卖，堵一个港口，生意就换条路走。这条“供应链”，比想象中结实得多。"
+        "After eight years of Socialist-led rule, snap elections are taking place on Sunday with conservative Alberto Núñez Feijóo vying to win office.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：BBC Europe）"
       ],
-      "impactOrdinary": "对在英国、法国生活的普通人来说，这意味着海滩、港口附近的巡逻和检查还会加码，跨海峡的渡轮、货运可能更堵更慢；对做水上器材生意的小商户，未来很可能被要求登记买家身份、留底用途，手续只多不少。",
-      "impactWorld": "移民问题正在从“边境问题”变成“内部市场监管问题”：只要欧盟内部货物自由流通，打击偷渡就必须跨境共享交易数据。这会把更多主权敏感的东西——买家信息、公司注册、金融流向——摊到欧洲各国桌面上，也会给极右翼政党送上新的口实。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c6wy4ejnyvdyo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -311,23 +308,22 @@
       "region": "other",
       "regionLabel": "🌍 其他地区",
       "scope": "intl",
-      "category": "硬核科技",
+      "category": "全球速递",
       "type": "news",
-      "readMins": 1.4,
+      "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "连国际足联都被黑客“光顾”了：个人信息和商业资料被顺走",
-      "lead": "这年头，连管着全世界踢球的那帮人也没躲过黑客，FIFA自己承认：资料被偷了。",
+      "title": "Haftar meets Erdogan: Can Turkiye reunify Libya as it courts rival sides?",
+      "lead": "Maritime agreement pivotal for Turkiye&#039;s Eastern Mediterranean gas claims as Libya&#039;s unification process faces hurdles.",
       "body": [
-        "国际足联26日证实，他们遭到了一次网络攻击，一批个人信息和商业信息被人偷走。说白了，不只是几位官员的电话邮箱，可能还包括一些合作伙伴、商业往来方面的资料。",
-        "不过FIFA赶紧补了一句“别慌”：那个已经停掉的“FIFA Forward Enterprise”项目，里面的文件没有被访问到。也就是说，丢的是外围的东西，核心项目暂时算是有惊无险。",
-        "有意思的是，这事放在今天一点都不稀奇。体育组织手握转播权、赞助合同、球迷数据库，早就成了黑客眼里的“肥肉”。球场上拼脚法，服务器里拼的是谁的密码更结实。"
+        "Maritime agreement pivotal for Turkiye&#039;s Eastern Mediterranean gas claims as Libya&#039;s unification process faces hurdles.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：Al Jazeera）"
       ],
-      "impactOrdinary": "对普通球迷来说，最现实的影响是：如果你在FIFA相关平台注册过账号、买过票、留过邮箱手机号，最近收到“官方通知你改密码”“点这里领补偿”的邮件短信，先别急着点，多半是趁乱钓鱼的。看完热闹，顺手把自己常用密码换一换，比骂两句管用。",
-      "impactWorld": "体育组织正在变成“准金融级”的数据大户，但安全投入往往跟不上商业扩张。FIFA这次被摸进来，等于给所有国际体育机构敲了一记警钟：未来围绕赛事数据、转播系统和球迷信息的攻防，会成为国际组织治理里躲不开的一条暗线。谁的数据守不住，谁的话语权就打折。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/11/26/fifa-says-personal-and-business-information-stolen-in-cyberattack?traffic_source=rss"
+          "url": "https://www.aljazeera.com/news/2026/11/26/haftar-meets-erdogan-can-turkiye-reunify-libya-as-it-courts-rival-sides?traffic_source=rss"
         }
       ]
     },
@@ -336,22 +332,22 @@
       "region": "other",
       "regionLabel": "🌍 其他地区",
       "scope": "intl",
-      "category": "文化跨界",
-      "type": "fun",
-      "readMins": 0.8,
+      "category": "全球速递",
+      "type": "news",
+      "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "詹姆斯又刷纪录：这回是“最老的三双先生”",
-      "lead": "别人这个年纪在群里发养生文章，他还在NBA场上刷三双，真不给人活路。",
+      "title": "Are we ready to live longer? | Centre Stage",
+      "lead": "Dr Slim Slama of Qatar Foundation&#039;s WISH talks to Al Jazeera about the future of healthcare.",
       "body": [
-        "詹姆斯26日砍下25分、12次助攻、10个篮板，顺手帮费城76人终结了迈阿密热火的七连胜，也把自己送上了“NBA历史上拿下三双年纪最大的球员”这个位置。",
-        "三双这词听着玄，其实就是得分、助攻、篮板三项都上双，一场球里又当得分手又当组织者还得抢板，年轻人干一场都喘，他这岁数还能这么折腾，确实离谱。"
+        "Dr Slim Slama of Qatar Foundation&#039;s WISH talks to Al Jazeera about the future of healthcare.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：Al Jazeera）"
       ],
-      "impactOrdinary": "对咱们普通人来说，这就是一针“年龄焦虑缓解剂”：别动不动说自己三十多岁就废了。当然也别学太狠，人家背后是几十年如一日的训练和身体管理，咱能学的是那句——把状态维持在能干活的程度，就已经赢一半了。",
-      "impactWorld": "职业体育的“运动寿命”正在被不断拉长，背后是训练科学、康复技术和商业运营的整体升级。詹姆斯这种“超长待机”的样本，会进一步改写联盟对老将的价值判断，也让全球体育产业更愿意为“经验+身体管理”买单。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/sports/2026/11/26/lebron-james-nba-oldest-player-triple-double-philadelphia-76ers?traffic_source=rss"
+          "url": "https://www.aljazeera.com/video/centre-stage/2026/11/26/are-we-ready-to-live-longer-centre-stage?traffic_source=rss"
         }
       ]
     },
@@ -360,23 +356,22 @@
       "region": "other",
       "regionLabel": "🌍 其他地区",
       "scope": "intl",
-      "category": "宏观钱包",
+      "category": "全球速递",
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "AI把活都干了，以后是不是人人发一份“保底工资”？",
-      "lead": "AI越来越能干，大家心里那根弦也越绷越紧：工作要真被它抢了，钱从哪儿来？有人给出了个简单粗暴的答案——国家按月发。",
+      "title": "Jordan Parliament debates ‘antiterror’ law after deadly Karak church attack",
+      "lead": "House votes to refer draft amendments to the 2006 Anti-Terrorism Law to its Legal Committee for review.",
       "body": [
-        "半岛电视台26日讨论了一个越来越热的词：全民基本收入，简称UBI。意思很直白——不管你有钱没钱、上不上班，政府定期给每个人发一笔钱，先把“饿不着”这条底线兜住。",
-        "支持的人说，AI这波进步太快，翻译、客服、写稿、写代码，一个接一个被啃下来，如果大批人突然没了收入，贫富差距会像拉开拉链一样越裂越大，发钱是最直接的止血办法。",
-        "反对的声音也不小：钱从哪来？税加上去，企业会不会先跑？还有人担心，白给的钱会不会让人干脆不干活了。所以到现在，试点满天飞，真正 nationwide 铺开的，一个都没有。"
+        "House votes to refer draft amendments to the 2006 Anti-Terrorism Law to its Legal Committee for review.",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：Al Jazeera）"
       ],
-      "impactOrdinary": "这事对咱们最实际的意义，不是明天就能领钱，而是提醒你：如果你干的活是“流程清晰、能被标准化描述”的那一类，就得早点给自己加点AI替不了的东西——跟人打交道的能力、判断力、现场解决问题的本事。发钱是远景，保住饭碗是眼前。",
-      "impactWorld": "AI冲击把“分配问题”重新推到了台前：过去几百年，社会靠“有工作才有收入”这套逻辑运转，如果这套逻辑被技术撬松，各国迟早要在税收、福利和劳动制度上做大改。谁先找到“效率提升”和“社会不撕裂”之间的平衡点，谁就能在下一轮全球竞争里少一点内耗。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/economy/2026/11/26/is-ubi-the-solution-to-mass-unemployment-in-an-ai-economy?traffic_source=rss"
+          "url": "https://www.aljazeera.com/news/2026/11/26/jordan-parliament-debates-antiterror-law-after-deadly-karak-church-attack?traffic_source=rss"
         }
       ]
     },
@@ -389,18 +384,18 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "中俄两军举行战略磋商",
-      "lead": "中新社北京11月26日电 据中国国防部网站消息，11月26日，中俄两军以视频会议方式举行战略磋商。双方围绕落实两国元首共识、推动两军关系持续深化拓展进行交流，就国际和地区形势深入交换意见，表示两军将进一步加强沟通协作，共同维护国际和地区安全稳定。(完)",
+      "title": "马来西亚诈骗受害者人均损失首次位列亚洲前七",
+      "lead": "中新网吉隆坡11月26日电 (记者 刘育英)据马新社26日报道，全球反诈骗联盟(GASA)透露，马来西亚首次被列入亚洲诈骗受害者平均经济损失最高的七个经济体之列，与日本、韩国、新加坡、中国香港及中国台湾等经济体同列。",
       "body": [
-        "中新社北京11月26日电 据中国国防部网站消息，11月26日，中俄两军以视频会议方式举行战略磋商。双方围绕落实两国元首共识、推动两军关系持续深化拓展进行交流，就国际和地区形势深入交换意见，表示两军将进一步加强沟通协作，共同维护国际和地区安全稳定。(完)",
-        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
+        "中新网吉隆坡11月26日电 (记者 刘育英)据马新社26日报道，全球反诈骗联盟(GASA)透露，马来西亚首次被列入亚洲诈骗受害者平均经济损失最高的七个经济体之列，与日本、韩国、新加坡、中国香港及中国台湾等经济体同列。",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
-      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738424.shtml"
+          "url": "https://www.chinanews.com.cn/gj/2026/11-26/10738451.shtml"
         }
       ]
     },
@@ -413,18 +408,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "2026-2027中国羽毛球俱乐部超级联赛在杭州开赛",
-      "lead": "11月26日，江苏羽超的丁柯蕴(上)、郑惟罡(中)和浙江竞体的李茜(下)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，青岛仁洲的蒋振邦(左)和张弛(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，瑞昌李宁羽球学院的高家炫(左)和黄可欣(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。",
+      "title": "水务黑科技亮相第三届节水产业创新发展成果展",
+      "lead": "中新网深圳11月26日电 (记者 王坚)为期三天的第三届节水产业创新发展成果展暨2026环境水务产业科技博览会26日在深圳开幕。展会以“数智融合水润未来”为主题，集中展示节水技术、智慧水务、绿色低碳及成套装备等领域前沿成果，集中发布50多项涉水新技术、新产品，参展企业达115家。",
       "body": [
-        "11月26日，江苏羽超的丁柯蕴(上)、郑惟罡(中)和浙江竞体的李茜(下)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，青岛仁洲的蒋振邦(左)和张弛(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，瑞昌李宁羽球学院的高家炫(左)和黄可欣(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。",
-        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
+        "中新网深圳11月26日电 (记者 王坚)为期三天的第三届节水产业创新发展成果展暨2026环境水务产业科技博览会26日在深圳开幕。展会以“数智融合水润未来”为主题，集中展示节水技术、智慧水务、绿色低碳及成套装备等领域前沿成果，集中发布50多项涉水新技术、新产品，参展企业达115家。",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
-      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/tp/2026/11-26/10738405.shtml"
+          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738447.shtml"
         }
       ]
     },
@@ -437,18 +432,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "中外代表新疆共话“绿色城市”发展之道",
-      "lead": "中新社乌鲁木齐11月26日电 (记者 苟继鹏)“如果一座城市只有3.7%的土地可以住人，沙漠和戈壁占了大部分，每年有几十天黄沙蔽日，该如何发展？”",
+      "title": "全国流感处于中流行水平 检测阳性率上升 中疾控发布提示",
+      "lead": "中国疾控中心今天(26日)发布的11月16日—11月22日全国急性呼吸道传染病哨点监测情况显示，当前，全国流感活动整体处于中流行水平，南、北方省份流感病毒检测阳性率上升。全国检出流感阳性样本中，A(H1N1)pdm09占比65.0%、A(H3N2)占比9.7%，B(Victoria)系占比25.3%。5—14岁病例组检测阳性率高于其他年龄组。",
       "body": [
-        "中新社乌鲁木齐11月26日电 (记者 苟继鹏)“如果一座城市只有3.7%的土地可以住人，沙漠和戈壁占了大部分，每年有几十天黄沙蔽日，该如何发展？”",
-        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
+        "中国疾控中心今天(26日)发布的11月16日—11月22日全国急性呼吸道传染病哨点监测情况显示，当前，全国流感活动整体处于中流行水平，南、北方省份流感病毒检测阳性率上升。全国检出流感阳性样本中，A(H1N1)pdm09占比65.0%、A(H3N2)占比9.7%，B(Victoria)系占比25.3%。5—14岁病例组检测阳性率高于其他年龄组。",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
-      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738436.shtml"
+          "url": "https://www.chinanews.com.cn/jk/2026/11-26/10738453.shtml"
         }
       ]
     },
@@ -461,18 +456,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "20余名缅甸华裔昆明“侨”见传统技艺 感知南侨机工事迹",
-      "lead": "中新网昆明11月26日电 题：20余名缅甸华裔昆明“侨”见传统技艺 感知南侨机工事迹",
+      "title": "20家海外华文媒体代表走进滇西 循百年侨脉“侨”见幸福新云南",
+      "lead": "中新网昆明11月26日电 (时文枝)26日，“侨见云南·四海同声”2026年海外华文媒体云南行在昆明启幕。来自法国、葡萄牙及波兰等国家和地区的20家海外华文媒体代表将由此向西而行，循百年侨脉，“侨”见云岭大地上民族团结与沿边开放的幸福生活。",
       "body": [
-        "中新网昆明11月26日电 题：20余名缅甸华裔昆明“侨”见传统技艺 感知南侨机工事迹",
-        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
+        "中新网昆明11月26日电 (时文枝)26日，“侨见云南·四海同声”2026年海外华文媒体云南行在昆明启幕。来自法国、葡萄牙及波兰等国家和地区的20家海外华文媒体代表将由此向西而行，循百年侨脉，“侨”见云岭大地上民族团结与沿边开放的幸福生活。",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
-      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/hr/2026/11-26/10738442.shtml"
+          "url": "https://www.chinanews.com.cn/hr/2026/11-26/10738446.shtml"
         }
       ]
     },
@@ -485,18 +480,18 @@
       "type": "fun",
       "readMins": 0.5,
       "date": "2026-11-26",
-      "title": "三亚聚力打造国内国际双循环重要交汇节点",
-      "lead": "中新网三亚11月26日电 (张月和)中国共产党三亚市第九次代表大会11月24日至26日在三亚市委党校召开。海南省委常委、三亚市委书记王祺扬在会上作报告时说，今后五年，三亚将提升对外开放能级，聚力打造国内国际双循环重要交汇节点。",
+      "title": "台积电拟扩大在美投资 舆论忧先进制程加速外移",
+      "lead": "中新社台北11月26日电 台湾积体电路制造股份有限公司(台积电)将于当地时间12月4日在美国亚利桑那州厂区举行扩建典礼，另拟斥资逾200亿美元赴得克萨斯州设厂。在美投资不断加码，舆论对台积电先进制程加速外移的疑虑随之再起。",
       "body": [
-        "中新网三亚11月26日电 (张月和)中国共产党三亚市第九次代表大会11月24日至26日在三亚市委党校召开。海南省委常委、三亚市委书记王祺扬在会上作报告时说，今后五年，三亚将提升对外开放能级，聚力打造国内国际双循环重要交汇节点。",
-        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
+        "中新社台北11月26日电 台湾积体电路制造股份有限公司(台积电)将于当地时间12月4日在美国亚利桑那州厂区举行扩建典礼，另拟斥资逾200亿美元赴得克萨斯州设厂。在美投资不断加码，舆论对台积电先进制程加速外移的疑虑随之再起。",
+        "（AI 深度改写暂未触发，原因：AI returned only 0 valid articles。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
-      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactOrdinary": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
+      "impactWorld": "待 AI 解锁（原因：AI returned only 0 valid articles）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/cj/2026/11-26/10738441.shtml"
+          "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738444.shtml"
         }
       ]
     }
@@ -504,42 +499,42 @@
   "polls": [
     {
       "id": "poll1",
-      "question": "天上要建AI机房，你第一反应是？",
+      "question": "天上真要撒一百万颗卫星，你最先想到啥？",
       "options": [
         {
           "id": "a",
-          "label": "先担心抬头看不见星星",
-          "baseVotes": 42
+          "label": "以后抬头还能看见星星吗",
+          "baseVotes": 46
         },
         {
           "id": "b",
-          "label": "先问电费和散热谁掏",
-          "baseVotes": 36
+          "label": "万一掉下来算谁家的",
+          "baseVotes": 34
         },
         {
           "id": "c",
-          "label": "先替科学家挠头",
-          "baseVotes": 22
+          "label": "只要能上网快点，撒吧",
+          "baseVotes": 20
         }
       ]
     },
     {
       "id": "poll2",
-      "question": "AI帮你考第一，但可能被警察敲门，你干不干？",
+      "question": "博物馆最火的展品是一碗炖肉，你出门旅游最先找什么？",
       "options": [
         {
           "id": "a",
-          "label": "不干，踏实复习",
-          "baseVotes": 51
+          "label": "直奔当地小吃摊",
+          "baseVotes": 52
         },
         {
           "id": "b",
-          "label": "偷偷用，别声张",
-          "baseVotes": 31
+          "label": "老老实实逛展馆",
+          "baseVotes": 30
         },
         {
           "id": "c",
-          "label": "让AI先写份检讨",
+          "label": "回酒店躺着最香",
           "baseVotes": 18
         }
       ]
