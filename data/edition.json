@@ -2,30 +2,35 @@
   "editionNumber": 330,
   "date": "2026-11-26",
   "updatedAt": "2026-11-26 12:00",
-  "headline": "2026-11-26 午间万象：全球与国内最新 20 条动态速览",
-  "subtitle": "自动通过 GitHub Actions 从全球主流信源抓取更新；配置任意大模型 API Key 即可解锁家常化深度改写与双维拆解。",
+  "headline": "卫星百万颗，火车停运中，先把午饭吃好",
+  "subtitle": "中午好。天上要放百万颗卫星，地上火车说停就停；有人因一句吐槽丢了工作，有人考第一靠AI。世界很忙，咱先吃饭。",
   "articles": [
     {
       "id": "us-1",
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "硬核科技",
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says",
-      "lead": "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like.",
+      "title": "天上要建“AI机房”？SpaceX获批放100万颗卫星，科学家直挠头",
+      "lead": "中午刷手机看到这条，我差点把汤喷出来：以后算力不够，难道真要把服务器挂到天上去？",
       "body": [
-        "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
+        "美国联邦通信委员会给马斯克的SpaceX开了绿灯，允许它部署数量高达100万颗的卫星，用来在太空搞数据中心。这个数字听着像科幻片，但监管文件是认真的；反对者担心的科研、天文观测等问题，被FCC以“不在我管辖范围”为由挡了回去。",
+        "为什么要把机房搬上天？说白了，地面上的AI数据中心太吃电、太吃地、太需要散热，而太空有太阳能，也有天然的“大冰箱”环境。听上去很美，可100万颗卫星不是100万辆共享单车，轨道拥挤、碰撞碎片、天文观测受干扰、后续维修和监管，全是硬骨头。",
+        "科学家之所以 skeptical，不是故意泼冷水，而是因为“批准”不等于“建成”。发射成本、卫星寿命、数据回传、国际规则都还没完全跑通。FCC这一纸许可更像先发门票，真正能不能把太空变成AI算力农场，还得看技术和治理跟不跟得上。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "对普通人来说，短期别指望明天云盘就降价；但如果太空算力真跑通，AI服务、偏远地区联网可能多一条路。与此同时，天文爱好者看星星会更难，卫星碎片风险也需要更严的规则来兜底，不能只听发布会画饼。",
+      "impactWorld": "美国监管机构单方面放行超大规模轨道基础设施，等于给“太空商业化”又踩了一脚油门，也会刺激其他国家和企业抢轨道、抢频谱、抢规则话语权。更深一层，它把“全球公地怎么管”这个老问题推到了台前：太空不能只靠先到先得。",
       "sources": [
         {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
+        },
+        {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/g-s1-155950/up-first-newsletter-thanksgiving-weather-travel-trump-tariffs-iowa-detonation-fcc-free-speech"
+          "url": "https://www.npr.org/2026/11/26/g-s1-155940/fcc-spacex-satellites-data-centers-in-space"
         }
       ]
     },
@@ -34,22 +39,23 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "民生烟火",
       "type": "news",
-      "readMins": 1.5,
+      "readMins": 1.2,
       "date": "2026-11-26",
-      "title": "'Memories of a Good Meal': How food made a difference during WWII",
-      "lead": "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
+      "title": "感恩节出门先看天：暴风雨搅局，梅西游行都推迟了",
+      "lead": "本来拎着行李箱赶火车、赶飞机的朋友注意了，这回不是小打小闹，东西海岸一起“加戏”。",
       "body": [
-        "New Orleans Chef Alon Shaya's new cookbook shares stories of resilience from World War II, centered around food.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
+        "美国感恩节假期撞上强风暴，狂风、高潮位、暴雨和洪水一起上，预计影响约8150万人的出行计划。梅西感恩节大游行也被迫推迟，可见天气这次没给面子。",
+        "东海岸尤其担心沿海 flooding，航班、公路和铁路都可能被连锁拖慢。节假日最怕的不是堵车，是“堵在路上还不知道下一段能不能走”，所以出门前刷航班和路况比刷短视频重要。",
+        "这类极端天气越来越像假期里的“固定嘉宾”：来得猛、范围大、恢复慢。地方政府忙着预警，机场和铁路忙着改签，普通人能做的就是预留时间、别硬闯积水路段，把充电宝当身份证一样带好。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "如果你这两天要飞、要开车、要去看游行，最好提前查航班和封路信息，多留半天余量；家里备点水和充电设备，别把车开进看着不深的积水里。节日计划可以改，安全别打折。",
+      "impactWorld": "极端天气频繁冲击节假日交通，考验的不只是天气预报，还有机场、铁路、电网和应急系统的韧性。对全球来说，这类事件会推高保险和物流成本，也让“气候适应”从口号变成每年都要算的民生账。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6028781/memories-of-a-good-meal-cookbook-chef-alon-shaya"
+          "url": "https://www.npr.org/2026/11/26/nx-s1-6054079/storms-expected-on-both-coasts-as-millions-travel-for-thanksgiving"
         }
       ]
     },
@@ -58,22 +64,23 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "宏观钱包",
       "type": "news",
-      "readMins": 1.5,
+      "readMins": 1.4,
       "date": "2026-11-26",
-      "title": "At Albuquerque's Indian Pueblo Kitchen, Native American dishes are the main course",
-      "lead": "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
+      "title": "英伟达被标普“敲黑板”：不是没钱，是怕你把宝全押在一个人身上",
+      "lead": "AI圈顶流也有烦心事：信用评级机构开始嘀咕，这家公司治理和“关键先生”风险有点扎眼。",
       "body": [
-        "At an Albuquerque, N.M., museum, the restaurant is just as much of a draw as the exhibitions, with dishes like green chile stew and sweet biscochitos flavored with anise and cinnamon.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
+        "标普正在考虑把英伟达的信用评级下调到AA-，理由不是“马上要没钱”，而是治理结构和“关键人物风险”。翻译成家常话：公司太依赖掌门人黄仁勋，万一有个风吹草动，市场会紧张。",
+        "英伟达是这轮AI热潮的卖铲人，芯片、服务器、数据中心都围着它转。评级机构担心的不是某一张显卡，而是整个AI产业链把太多期待压在一家公司、一个团队身上。评级真下调，融资成本、供应商信心和股价情绪都可能被带着晃一晃。",
+        "当然，AA-仍然是高等级，离“垃圾债”差着十万八千里。但资本市场就是这样，风向一变，先紧张的是估值。对英伟达来说，这更像一张提醒条：光跑得快不够，公司治理和接班安排也得让外界放心。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "如果你养老金、指数基金里装着科技股，短期波动可能更明显；如果你只是买显卡打游戏，价格不会因为这条新闻立刻跳水。但它提醒普通人：AI热不是只涨不跌，别把全部积蓄押在单一赛道。",
+      "impactWorld": "全球AI竞赛高度依赖少数芯片巨头，评级机构开始盯“关键人风险”，说明金融界对AI繁荣的底层稳定性有了戒心。若融资成本上升，数据中心扩张节奏可能被拖慢，进而影响全球算力价格和科技竞争格局。",
       "sources": [
         {
-          "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-5983712/indian-pueblo-kitchen-native-american-food-albuquerque"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
         }
       ]
     },
@@ -84,20 +91,21 @@
       "scope": "intl",
       "category": "社会百态",
       "type": "fun",
-      "readMins": 0.5,
+      "readMins": 0.8,
       "date": "2026-11-26",
-      "title": "Court lets Puerto Rico governor fire firm that runs the island's troubled power grid",
-      "lead": "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
+      "title": "电视上吐槽教练，18小时后被裁：罗杰斯这波“嘴快”代价有点大",
+      "lead": "职场大忌又添一例：当着全国观众说老板不行，结果人事通知来得比外卖还快。",
       "body": [
-        "LUMA Energy took over the electric grid five years ago. The court's ruling nullifies its contract, and gives the government a year to find a new operator.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：NPR News）"
+        "匹兹堡钢人队把42岁的四分卫阿隆·罗杰斯裁了。导火索是他上电视公开批评主教练迈克·麦卡锡，而球队此前刚宣布让他给替补梅森·鲁道夫让位。短短18小时，剧情从“坐板凳”冲到“收拾柜子”。",
+        "罗杰斯是未来名人堂级别的球星，但再大的腕儿，公开拆台也会让更衣室和管理层脸上挂不住。球队选择快刀斩乱麻，等于告诉所有人：战术可以讨论，公开打脸不行。",
+        "这事放在办公室里也熟：有意见可以提，渠道和场合很关键。全国直播开怼老板，爽是爽，代价可能是一张离职证明。球迷看热闹，打工人看门道。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "吃瓜归吃瓜，普通人能学到的职场经验很朴素：对上级有意见，先走私下沟通；公开发声前想清楚后果。球迷的话， fantasy 阵容记得改，别一觉醒来发现首发没了。",
+      "impactWorld": "这桩闹剧折射的是美国体育商业里球星话语权和球队权威的拉扯：社交媒体时代，一句电视评论就能引爆全球球迷讨论。它不至于改变世界格局，但会提醒各队，管理超级明星和管好公关，已经是同一门课。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/26/nx-s1-6054139/court-rules-puerto-ricos-governor-can-fire-company-that-runs-troubled-power-grid"
+          "url": "https://www.npr.org/2026/11/26/nx-s1-6054760/steelers-cut-aaron-rodgers"
         }
       ]
     },
@@ -106,18 +114,19 @@
       "region": "kr",
       "regionLabel": "🇰🇷 韩国",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "地缘安全",
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "(LEAD) Lee touts new deposit system as effective in curbing illegal fishing by Chinese vessels",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...",
+      "title": "中国渔船要交“保证金”了？李在明说这招管用，海上猫鼠游戏换了玩法",
+      "lead": "韩国总统李在明26日亲自给一套新上线的“押金制”打广告，说这是治中国渔船非法捕捞的一剂良药——听着像小区物业收装修押金，只不过这回押的是渔船。",
       "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung on Thursday touted a tightene...",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
+        "事情不复杂：以前韩国海警抓到越界捕鱼的中国渔船，罚一笔、放回去，船东回头换个船号接着来，成了“罚款包年套餐”。新招是让渔船先交一笔担保金，等于先押钱后下海，一旦违规直接扣，抓一次疼一年。李在明当天在公开场合夸这套机制“有效”，语气像是终于找到了一款好用的工具。",
+        "韩国西海岸的渔民这些年怨气不小，说自己近海的黄花鱼、带鱼还没长大就被捞走了，燃油钱都快挣不回来。对他们来说，政府能不能拦住船，比发多少补贴都实在。而对中国一侧的渔船船东来说，押金意味着出海前先压一笔不小的现金，小船队压力尤其大。",
+        "不过这套制度能不能真落地，还得看执法端：谁来查、查得多勤、被扣的船东能不能找到申诉渠道。押金不是万能钥匙，但把“违规成本”从一笔可报销的罚款，变成一块压在账上的石头，思路确实变了。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "对韩国西海岸渔民来说，海里鱼多点、少点“不速之客”，直接关系到一年收成；对国内爱吃韩式烤带鱼、小黄鱼的家庭，短期鱼价不会因此大跳水，但远洋货源和进口海鲜的价格波动会更明显。做中韩海产贸易的小老板，则要开始习惯“押金+合规审查”这套新流程。",
+      "impactWorld": "这不是简单的抓船罚款，而是沿海国把专属经济区执法从“事后处罚”升级为“事前准入”——先交钱、后出海。这种模式一旦在韩国跑通，日本、菲律宾等同样被非法捕捞困扰的国家很可能照抄。它也会成为中韩关系里一个持续摩擦、但不至于翻桌的低烈度议题：谈得下去，但每年都要吵几回。",
       "sources": [
         {
           "name": "Yonhap News",
@@ -130,66 +139,18 @@
       "region": "kr",
       "regionLabel": "🇰🇷 韩国",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "民生烟火",
       "type": "news",
-      "readMins": 1.5,
+      "readMins": 1.3,
       "date": "2026-11-26",
-      "title": "Police seek arrest warrant for top scorer of tax accountant exam accused of AI-assisted cheating",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- Police on Thursday filed for an arrest warrant for th...",
+      "title": "韩国铁路员工开始“照章办事”，几趟火车直接停运，通勤族先遭殃",
+      "lead": "韩国铁路公社的工会26日启动“合规怠工”——不罢工、不举牌，就是每一步都严格按规章慢慢来，结果当天就有几趟列车直接取消。",
       "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- Police on Thursday filed for an arrest warrant for th...",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
+        "所谓“照章办事”，说白了就是把平时的灵活操作全收起来：限速该降到最低就降到最低，检查该做三遍就做三遍。乘客看不出来谁在抗议，但列车表先乱了，晚点、取消接踵而至。",
+        "这招的高明之处在于“合法”：工资照拿，政府难抓把柄，可运力像被人悄悄拧小了半圈。对于每天靠京釜线、湖南线通勤的人来说，这比一场明牌罢工更折磨——因为你永远不知道明早那班车还在不在。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
-      "sources": [
-        {
-          "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126011900315"
-        }
-      ]
-    },
-    {
-      "id": "kr-3",
-      "region": "kr",
-      "regionLabel": "🇰🇷 韩国",
-      "scope": "intl",
-      "category": "全球速递",
-      "type": "news",
-      "readMins": 1.5,
-      "date": "2026-11-26",
-      "title": "Lee approves confirmation hearing requests for ministerial, spy chief nominees",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung has approved requests for par...",
-      "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- President Lee Jae Myung has approved requests for par...",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
-      ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
-      "sources": [
-        {
-          "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261126012000320"
-        }
-      ]
-    },
-    {
-      "id": "kr-4",
-      "region": "kr",
-      "regionLabel": "🇰🇷 韩国",
-      "scope": "intl",
-      "category": "社会百态",
-      "type": "fun",
-      "readMins": 0.5,
-      "date": "2026-11-26",
-      "title": "(2nd LD) Unionized rail workers launch work-to-rule campaign; 4 train services canceled",
-      "lead": "SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...",
-      "body": [
-        "SEOUL, Nov. 26 (Yonhap) -- Unionized workers of Korea Railroad Corp. (KORAIL) la...",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Yonhap News）"
-      ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "首尔上班族、周末回老家的大学生、靠火车发货的小商户，都会先挨这一刀。建议这几天赶车的人多留半小时余量，别把重要会议押在一趟可能消失的列车上。",
+      "impactWorld": "韩国的“合规怠工”是发达经济体劳资博弈的典型样本：不掀桌子，只调低效率旋钮。这种软性对抗若成常态，会让外资重新评估韩国物流的稳定性，也给其他国家的工会提供了一套“可复制模板”。",
       "sources": [
         {
           "name": "Yonhap News",
@@ -198,26 +159,75 @@
       ]
     },
     {
+      "id": "kr-3",
+      "region": "kr",
+      "regionLabel": "🇰🇷 韩国",
+      "scope": "intl",
+      "category": "社会百态",
+      "type": "fun",
+      "readMins": 0.8,
+      "date": "2026-11-26",
+      "title": "韩国税务师考试第一名被爆用AI作弊，警察上门要抓人",
+      "lead": "考了全国第一，结果被怀疑是AI替他考的——韩国警方26日直接申请逮捕令，这大概是今年最尴尬的“状元”。",
+      "body": [
+        "这位考生在税务师考试里拿了最高分，本该是朋友圈炫耀一整年的剧本，结果被查出疑似借助AI工具答题。警方认为情节严重，当天就申请了逮捕令。",
+        "以前作弊是递小抄，现在是递算法。考试的对手从邻座考生，变成了看不见的服务器——监考老师再火眼金睛，也拦不住手机里那个“懂王”。"
+      ],
+      "impactOrdinary": "这事给所有考证党提了个醒：AI能帮你复习，但帮你答题就是拿前途赌运气。更现实的是，接下来各类资格考试的安检、禁带设备、考场信号屏蔽只会更严，规规矩矩考试的人要多受几道折腾。",
+      "impactWorld": "全世界的资格认证体系都面临同一个问题：当AI能考过人类第一名，证书还代表能力吗？韩国这案子可能成为一个判例节点，推动各国从“防小抄”转向“防模型”，甚至重构考试本身的设计逻辑。",
+      "sources": [
+        {
+          "name": "Yonhap News",
+          "url": "https://en.yna.co.kr/view/AEN20261126011900315"
+        }
+      ]
+    },
+    {
+      "id": "kr-4",
+      "region": "kr",
+      "regionLabel": "🇰🇷 韩国",
+      "scope": "intl",
+      "category": "硬核科技",
+      "type": "fun",
+      "readMins": 0.7,
+      "date": "2026-11-26",
+      "title": "Olive Young被黑客摸进后门，790人信息泄露，数字小得有点意外",
+      "lead": "韩国美妆零售龙头Olive Young 26日承认内部系统被黑，员工和客户共790人的个人信息被泄露——数字不大，但足够让人心里发毛。",
+      "body": [
+        "公司说是在内部业务系统里发现了未经授权的外部访问，确认后立刻对外通报。790这个数字放在动辄几百万条泄露的新闻里显得“克制”，但被点到的这790个人，可都是实打实的姓名、联系方式级别的暴露。",
+        "有意思的是节奏：先发现、先确认、先公布，没等舆论发酵。对一家天天处理会员数据的零售巨头来说，这更像一次被迫的“安全体检”。"
+      ],
+      "impactOrdinary": "如果你注册过Olive Young的会员或用过它的App，这几周留意下陌生短信和“客服来电”，别随手点链接。日常买个面膜顺手填的手机号，也可能变成别人手里的资源。",
+      "impactWorld": "零售业掌握的是最琐碎也最好用的个人数据，正成为黑客的常规靶场。韩国这起“小规模泄露”其实是全球供应链安全的缩影：企业防不住一次入侵，赔上的可能是整个品牌的信任折扣。",
+      "sources": [
+        {
+          "name": "Korea Times",
+          "url": "https://www.koreatimes.co.kr/business/companies/20261126/olive-young-reports-data-breach-affecting-790-people?utm_source=rss"
+        }
+      ]
+    },
+    {
       "id": "eu-1",
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "贸易博弈",
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
-      "lead": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
+      "title": "英欧新条约里藏了个“十年之痒”：说好不分手，但十年后可以提离婚",
+      "lead": "英欧这对“离婚后还住对门”的老夫妻，今天下午要把新合同摊在桌上了——而且合同里明明白白写着：十年后谁都能说散就散。",
       "body": [
-        "Nearly a third of crossings in early 2026 allegedly involved boats or engines from the German man's firm.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
+        "英国和欧盟要签的新条约文本今天下午正式公布，配套的执行法案也一起端上来。最扎眼的一条不是关税、不是渔业，而是里面悄悄塞进了一个“十年终止条款”：条约跑满十年，任何一方都可以提前打招呼走人。说白了，这纸合同不是奔着白头偕老去的，是奔着“先过十年试试”去的。",
+        "为什么这么设计？因为双方心里都清楚，谁都怕被绑死。英国怕签完就甩不掉，被欧盟规则慢慢“腌入味”；欧盟也怕给英国开了太舒服的口子，别的成员国看了眼红跟着学。于是十年这道坎就成了一个安全阀——既能让企业安心做长期生意，又给政客留了随时翻脸的后门。",
+        "更值得琢磨的是时机和措辞。脱欧这么多年，贸易摩擦、人员流动、北爱尔兰的老账都还在，双方却突然开始讲“重置关系”。这不是谁服软，而是两边算完账发现：互相加码的成本，比坐下来签字贵多了。今天的条约，本质上是把过去几年的乱账，重新装订成一本可以随时再改的活页本。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "对普通人最直接的是：做英欧生意的中小企业、跑跨境物流的司机、在英国和欧洲两头打工的人，未来几年规则会更稳、少折腾，但也别指望一辈子不变——十年后可能又是一轮重新谈判，届时有房贷、有孩子上学的人，又得重新算一遍生活账。",
+      "impactWorld": "这说明欧洲的整合模式正在变得“可拆卸化”：不再是 irrevocable 的绑定，而是一层层的期限合约。英欧这种“带退出条款的深度合作”如果跑得通，会成为其他地区处理邻国关系的新模板——大家不必同床共枕，也能先把生意做了；但代价是，长期战略信任会持续打折，全球规则更碎片化、更讲短期算计。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -226,22 +236,23 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "民生烟火",
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
-      "lead": "Nearly a third of crossings in early 2026 allegedly involved boats or engines from Marvin Reuter's firm.",
+      "title": "西班牙周日投票：干了八年的“管家”要被换掉？",
+      "lead": "西班牙这周末要投票了， socialist 政府管了八年家，现在保守派费霍带着一票人马敲门，问选民一句：“要不要换个人试试？”",
       "body": [
-        "Nearly a third of crossings in early 2026 allegedly involved boats or engines from Marvin Reuter's firm.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
+        "这次是提前大选，说白了就是现任政府觉得自己那套账本推不动了，索性把选择权丢回给老百姓。对手是保守派人民党的阿尔贝托·努涅斯·费霍，主打的就是“换个会算账的来”。",
+        "西班牙人眼下最关心的不是宏大叙事，而是房租、电价、游客太多把小区挤爆、年轻人找不到稳定工作。八年时间够长了，投票箱往往就成了一个情绪出口：不是多喜欢新来的，而是想给旧的提个醒。",
+        "麻烦在于，西班牙的选举制度让大党也很难单独过半，最后大概率又得拉小党凑班子。所以周日投完，真正的戏才开场——谈联盟、许条件、分部长，能拖好几周。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "如果保守派上台，租房补贴、能源限价、旅游区管控这些政策可能调方向；做旅游、餐饮、农业的季节工，短期内最容易感到“风向变了”。在西班牙有房产、有亲戚、有生意的人，值得盯一眼周一的汇率和债市反应。",
+      "impactWorld": "西班牙是欧元区第四大经济体，也是南欧从“债务危机样板”变“增长优等生”的代表。它一旦政治左右摇摆，欧盟内部关于财政规则、移民分摊、对华关税的投票天平都会轻微倾斜——南欧的声音，从来不只是南欧的事。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c6wy4ejnyvdyo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -250,22 +261,23 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "全球速递",
-      "type": "news",
-      "readMins": 1.5,
+      "category": "文化跨界",
+      "type": "fun",
+      "readMins": 0.8,
       "date": "2026-11-26",
-      "title": "France's political mainstream risks presidential vote debacle with no clear candidate",
-      "lead": "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
+      "title": "一把吉他引发的跨大西洋吵架：Fender 和德国“模仿秀”杠上了",
+      "lead": "美国人造了把传奇电吉他，德国人照着样子也造了一把，价格还不贵——现在两边律师事务所的电话都被打爆了。",
       "body": [
-        "Hard-right and hard-left candidates dominate the polls ahead of next year's presidential election.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
+        "争议的主角是 Fender 家的 Stratocaster，摇滚史上出镜率最高的琴之一。美国公司现在盯上了一家德国厂商，说人家做的“通用版”外形太像，等于蹭了几十年的名气。",
+        "德国这边大概率会说：形状是行业通用语言，就像牛仔裤五个口袋，不能谁先做就归谁。这种仗打起来，最后往往不是谁对谁错，而是谁的律师更贵、谁更耗得起。",
+        "最魔幻的是，买琴的人根本不关心这些——他们只想知道，以后那种便宜又顺手的“平替”，还能不能买到。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "如果你或孩子正在学吉他，这件事直接关系到入门琴的价格：一旦判下来收紧，平价“仿款”可能涨价或消失，二手市场也会跟着波动。手里有老款平替琴的人，说不定还能小赚一笔。",
+      "impactWorld": "这案子是“设计版权”全球扩张的又一个注脚：从奢侈品包到运动鞋再到乐器，产品外形正在被当成资产来圈地。判法一旦立住，全球制造业的“通用设计”空间会被再压缩一格，中小厂商的模仿式创新会更难走。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/cq772vedgepro?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cqd01l9x8k48o?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -275,21 +287,22 @@
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
       "category": "社会百态",
-      "type": "fun",
-      "readMins": 0.5,
+      "type": "news",
+      "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "Spanish elections: What you need to know and what's at stake",
-      "lead": "After eight years of Socialist-led rule, snap elections are taking place on Sunday with conservative Alberto Núñez Feijóo vying to win office.",
+      "title": "英吉利海峡的小船，可能有一大半是从德国一个船贩子手里买的",
+      "lead": "BBC 记者跑到德国，堵住了一个卖小船的老板，问他：你那船，怎么老出现在偷渡的新闻画面里？",
       "body": [
-        "After eight years of Socialist-led rule, snap elections are taking place on Sunday with conservative Alberto Núñez Feijóo vying to win office.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：BBC Europe）"
+        "BBC 的调查说，2026 年初横渡英吉利海峡的偷渡船里，将近三分之一涉嫌用了这家德国公司的船或发动机。记者直接上门对质，对方的态度和说法，都成了新闻的一部分。",
+        "这事儿的荒诞之处在于：在德国卖一条小船，大概率完全合法；但这条船一旦被转手、装人、推下法国海滩，就变成了另一国的刑事案件。中间那段链条，谁也说不清算谁的。",
+        "英法两边一直在打击人蛇集团，可船和马达只要还能在欧洲内部自由买卖，堵一个港口，生意就换条路走。这条“供应链”，比想象中结实得多。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "对在英国、法国生活的普通人来说，这意味着海滩、港口附近的巡逻和检查还会加码，跨海峡的渡轮、货运可能更堵更慢；对做水上器材生意的小商户，未来很可能被要求登记买家身份、留底用途，手续只多不少。",
+      "impactWorld": "移民问题正在从“边境问题”变成“内部市场监管问题”：只要欧盟内部货物自由流通，打击偷渡就必须跨境共享交易数据。这会把更多主权敏感的东西——买家信息、公司注册、金融流向——摊到欧洲各国桌面上，也会给极右翼政党送上新的口实。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/c6wy4ejnyvdyo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -298,42 +311,19 @@
       "region": "other",
       "regionLabel": "🌍 其他地区",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "硬核科技",
       "type": "news",
-      "readMins": 1.5,
+      "readMins": 1.4,
       "date": "2026-11-26",
-      "title": "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
-      "lead": "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
+      "title": "连国际足联都被黑客“光顾”了：个人信息和商业资料被顺走",
+      "lead": "这年头，连管着全世界踢球的那帮人也没躲过黑客，FIFA自己承认：资料被偷了。",
       "body": [
-        "Eyewitnesses describe scenes of Egypt’s deadly vehicle fire",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Al Jazeera）"
+        "国际足联26日证实，他们遭到了一次网络攻击，一批个人信息和商业信息被人偷走。说白了，不只是几位官员的电话邮箱，可能还包括一些合作伙伴、商业往来方面的资料。",
+        "不过FIFA赶紧补了一句“别慌”：那个已经停掉的“FIFA Forward Enterprise”项目，里面的文件没有被访问到。也就是说，丢的是外围的东西，核心项目暂时算是有惊无险。",
+        "有意思的是，这事放在今天一点都不稀奇。体育组织手握转播权、赞助合同、球迷数据库，早就成了黑客眼里的“肥肉”。球场上拼脚法，服务器里拼的是谁的密码更结实。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
-      "sources": [
-        {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/26/eyewitnesses-describe-scenes-of-egypts-deadly-vehicle-fire?traffic_source=rss"
-        }
-      ]
-    },
-    {
-      "id": "other-2",
-      "region": "other",
-      "regionLabel": "🌍 其他地区",
-      "scope": "intl",
-      "category": "全球速递",
-      "type": "news",
-      "readMins": 1.5,
-      "date": "2026-11-26",
-      "title": "FIFA says personal and business information stolen in cyberattack",
-      "lead": "FIFA sources say no files from the abandoned FIFA Forward Enterprise project were accessed.",
-      "body": [
-        "FIFA sources say no files from the abandoned FIFA Forward Enterprise project were accessed.",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Al Jazeera）"
-      ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "对普通球迷来说，最现实的影响是：如果你在FIFA相关平台注册过账号、买过票、留过邮箱手机号，最近收到“官方通知你改密码”“点这里领补偿”的邮件短信，先别急着点，多半是趁乱钓鱼的。看完热闹，顺手把自己常用密码换一换，比骂两句管用。",
+      "impactWorld": "体育组织正在变成“准金融级”的数据大户，但安全投入往往跟不上商业扩张。FIFA这次被摸进来，等于给所有国际体育机构敲了一记警钟：未来围绕赛事数据、转播系统和球迷信息的攻防，会成为国际组织治理里躲不开的一条暗线。谁的数据守不住，谁的话语权就打折。",
       "sources": [
         {
           "name": "Al Jazeera",
@@ -342,26 +332,51 @@
       ]
     },
     {
+      "id": "other-2",
+      "region": "other",
+      "regionLabel": "🌍 其他地区",
+      "scope": "intl",
+      "category": "文化跨界",
+      "type": "fun",
+      "readMins": 0.8,
+      "date": "2026-11-26",
+      "title": "詹姆斯又刷纪录：这回是“最老的三双先生”",
+      "lead": "别人这个年纪在群里发养生文章，他还在NBA场上刷三双，真不给人活路。",
+      "body": [
+        "詹姆斯26日砍下25分、12次助攻、10个篮板，顺手帮费城76人终结了迈阿密热火的七连胜，也把自己送上了“NBA历史上拿下三双年纪最大的球员”这个位置。",
+        "三双这词听着玄，其实就是得分、助攻、篮板三项都上双，一场球里又当得分手又当组织者还得抢板，年轻人干一场都喘，他这岁数还能这么折腾，确实离谱。"
+      ],
+      "impactOrdinary": "对咱们普通人来说，这就是一针“年龄焦虑缓解剂”：别动不动说自己三十多岁就废了。当然也别学太狠，人家背后是几十年如一日的训练和身体管理，咱能学的是那句——把状态维持在能干活的程度，就已经赢一半了。",
+      "impactWorld": "职业体育的“运动寿命”正在被不断拉长，背后是训练科学、康复技术和商业运营的整体升级。詹姆斯这种“超长待机”的样本，会进一步改写联盟对老将的价值判断，也让全球体育产业更愿意为“经验+身体管理”买单。",
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://www.aljazeera.com/sports/2026/11/26/lebron-james-nba-oldest-player-triple-double-philadelphia-76ers?traffic_source=rss"
+        }
+      ]
+    },
+    {
       "id": "other-3",
       "region": "other",
       "regionLabel": "🌍 其他地区",
       "scope": "intl",
-      "category": "全球速递",
+      "category": "宏观钱包",
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "With the rise of AI, are we close to having universal basic income",
-      "lead": "Is UBI the solution to mass unemployment in an AI economy?",
+      "title": "AI把活都干了，以后是不是人人发一份“保底工资”？",
+      "lead": "AI越来越能干，大家心里那根弦也越绷越紧：工作要真被它抢了，钱从哪儿来？有人给出了个简单粗暴的答案——国家按月发。",
       "body": [
-        "Is UBI the solution to mass unemployment in an AI economy?",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：Al Jazeera）"
+        "半岛电视台26日讨论了一个越来越热的词：全民基本收入，简称UBI。意思很直白——不管你有钱没钱、上不上班，政府定期给每个人发一笔钱，先把“饿不着”这条底线兜住。",
+        "支持的人说，AI这波进步太快，翻译、客服、写稿、写代码，一个接一个被啃下来，如果大批人突然没了收入，贫富差距会像拉开拉链一样越裂越大，发钱是最直接的止血办法。",
+        "反对的声音也不小：钱从哪来？税加上去，企业会不会先跑？还有人担心，白给的钱会不会让人干脆不干活了。所以到现在，试点满天飞，真正 nationwide 铺开的，一个都没有。"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "这事对咱们最实际的意义，不是明天就能领钱，而是提醒你：如果你干的活是“流程清晰、能被标准化描述”的那一类，就得早点给自己加点AI替不了的东西——跟人打交道的能力、判断力、现场解决问题的本事。发钱是远景，保住饭碗是眼前。",
+      "impactWorld": "AI冲击把“分配问题”重新推到了台前：过去几百年，社会靠“有工作才有收入”这套逻辑运转，如果这套逻辑被技术撬松，各国迟早要在税收、福利和劳动制度上做大改。谁先找到“效率提升”和“社会不撕裂”之间的平衡点，谁就能在下一轮全球竞争里少一点内耗。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/video/money-works/2026/11/26/with-the-rise-of-ai-are-we-close-to-having-universal-basic-income?traffic_source=rss"
+          "url": "https://www.aljazeera.com/economy/2026/11/26/is-ubi-the-solution-to-mass-unemployment-in-an-ai-economy?traffic_source=rss"
         }
       ]
     },
@@ -374,18 +389,18 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-26",
-      "title": "粤港澳大湾区首批用水器具水效标准亮相鹏城",
-      "lead": "中新网深圳11月26日电 (记者 王坚)粤港澳大湾区首批用水器具水效“湾区标准”26日在深圳举行的第三届节水产业创新发展成果展上面向公众及媒体宣传推介。",
+      "title": "中俄两军举行战略磋商",
+      "lead": "中新社北京11月26日电 据中国国防部网站消息，11月26日，中俄两军以视频会议方式举行战略磋商。双方围绕落实两国元首共识、推动两军关系持续深化拓展进行交流，就国际和地区形势深入交换意见，表示两军将进一步加强沟通协作，共同维护国际和地区安全稳定。(完)",
       "body": [
-        "中新网深圳11月26日电 (记者 王坚)粤港澳大湾区首批用水器具水效“湾区标准”26日在深圳举行的第三届节水产业创新发展成果展上面向公众及媒体宣传推介。",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
+        "中新社北京11月26日电 据中国国防部网站消息，11月26日，中俄两军以视频会议方式举行战略磋商。双方围绕落实两国元首共识、推动两军关系持续深化拓展进行交流，就国际和地区形势深入交换意见，表示两军将进一步加强沟通协作，共同维护国际和地区安全稳定。(完)",
+        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/cj/2026/11-26/10738408.shtml"
+          "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738424.shtml"
         }
       ]
     },
@@ -398,18 +413,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "辽宁深耕基层治理 全域守护民众购彩权益",
-      "lead": "中新网本溪11月26日电 (记者 李晛)11月26日，随着最后一场理性购彩专题讲座在辽宁省本溪市溪湖区东风街道新立社区落幕，由辽宁省体育彩票中心主办的“购彩者权益保护季”活动正式收官。",
+      "title": "2026-2027中国羽毛球俱乐部超级联赛在杭州开赛",
+      "lead": "11月26日，江苏羽超的丁柯蕴(上)、郑惟罡(中)和浙江竞体的李茜(下)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，青岛仁洲的蒋振邦(左)和张弛(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，瑞昌李宁羽球学院的高家炫(左)和黄可欣(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。",
       "body": [
-        "中新网本溪11月26日电 (记者 李晛)11月26日，随着最后一场理性购彩专题讲座在辽宁省本溪市溪湖区东风街道新立社区落幕，由辽宁省体育彩票中心主办的“购彩者权益保护季”活动正式收官。",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
+        "11月26日，江苏羽超的丁柯蕴(上)、郑惟罡(中)和浙江竞体的李茜(下)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，青岛仁洲的蒋振邦(左)和张弛(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。中新社记者 王刚 摄 11月26日，瑞昌李宁羽球学院的高家炫(左)和黄可欣(右)在比赛中。当日，2026-2027中国羽毛球俱乐部超级联赛在浙江杭州开赛。该赛季分为常规赛与总决赛两个阶段，吸引8支队伍参赛。",
+        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738410.shtml"
+          "url": "https://www.chinanews.com.cn/tp/2026/11-26/10738405.shtml"
         }
       ]
     },
@@ -422,18 +437,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "中外嘉宾齐聚蓉城 求解“治水之道”如何通向“治国之道”",
-      "lead": "中新网成都11月26日电 (记者 何浠)“都江堰·江河战略论坛”26日在成都举行。会上发布《江河穿越千年 涵养时代文明——从都江堰看江河治理的中国智慧》智库报告、形成《江河治理·都江堰倡议》。历史地理学者、水利专家与国际水务人士围绕古堰讨论：发端于岷江的“治水之道”，何以通向“治国之道”。",
+      "title": "中外代表新疆共话“绿色城市”发展之道",
+      "lead": "中新社乌鲁木齐11月26日电 (记者 苟继鹏)“如果一座城市只有3.7%的土地可以住人，沙漠和戈壁占了大部分，每年有几十天黄沙蔽日，该如何发展？”",
       "body": [
-        "中新网成都11月26日电 (记者 何浠)“都江堰·江河战略论坛”26日在成都举行。会上发布《江河穿越千年 涵养时代文明——从都江堰看江河治理的中国智慧》智库报告、形成《江河治理·都江堰倡议》。历史地理学者、水利专家与国际水务人士围绕古堰讨论：发端于岷江的“治水之道”，何以通向“治国之道”。",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
+        "中新社乌鲁木齐11月26日电 (记者 苟继鹏)“如果一座城市只有3.7%的土地可以住人，沙漠和戈壁占了大部分，每年有几十天黄沙蔽日，该如何发展？”",
+        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-26/10738396.shtml"
+          "url": "https://www.chinanews.com.cn/gn/2026/11-26/10738436.shtml"
         }
       ]
     },
@@ -446,18 +461,18 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-26",
-      "title": "“莫扎特之夜”纪念莫扎特诞辰270周年音乐会在沈阳举行",
-      "lead": "中新网沈阳11月26日电 (记者 李晛)11月26日晚，“莫扎特之夜”纪念莫扎特诞辰270周年音乐会在沈阳盛京大剧院举行。",
+      "title": "20余名缅甸华裔昆明“侨”见传统技艺 感知南侨机工事迹",
+      "lead": "中新网昆明11月26日电 题：20余名缅甸华裔昆明“侨”见传统技艺 感知南侨机工事迹",
       "body": [
-        "中新网沈阳11月26日电 (记者 李晛)11月26日晚，“莫扎特之夜”纪念莫扎特诞辰270周年音乐会在沈阳盛京大剧院举行。",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
+        "中新网昆明11月26日电 题：20余名缅甸华裔昆明“侨”见传统技艺 感知南侨机工事迹",
+        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/cul/2026/11-26/10738402.shtml"
+          "url": "https://www.chinanews.com.cn/hr/2026/11-26/10738442.shtml"
         }
       ]
     },
@@ -470,18 +485,18 @@
       "type": "fun",
       "readMins": 0.5,
       "date": "2026-11-26",
-      "title": "山东泰安：初冬泰山普照寺彩叶斑斓",
-      "lead": "11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为游客驻足欣赏。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾",
+      "title": "三亚聚力打造国内国际双循环重要交汇节点",
+      "lead": "中新网三亚11月26日电 (张月和)中国共产党三亚市第九次代表大会11月24日至26日在三亚市委党校召开。海南省委常委、三亚市委书记王祺扬在会上作报告时说，今后五年，三亚将提升对外开放能级，聚力打造国内国际双循环重要交汇节点。",
       "body": [
-        "11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为普照寺初冬风光。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾勒出一幅诗意悠然的冬日画卷，尽显泰山脚下古刹清幽动人的初冬风光。图为游客驻足欣赏。陈阳 摄 11月26日，山东泰安，泰山普照寺银杏树与泰山橡树林交相辉映，金黄、橙红的叶片错落舒展，勾",
-        "（提示：在 GitHub 仓库 Secrets 中配置任意大模型 API Key，例如 LLM_API_KEY / DEEPSEEK_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY，即可自动解锁家常化通俗长文与双维深度拆解。原文来源：中新网时政）"
+        "中新网三亚11月26日电 (张月和)中国共产党三亚市第九次代表大会11月24日至26日在三亚市委党校召开。海南省委常委、三亚市委书记王祺扬在会上作报告时说，今后五年，三亚将提升对外开放能级，聚力打造国内国际双循环重要交汇节点。",
+        "（AI 深度改写暂未触发，原因：Expecting ',' delimiter: line 75 column 6 (char 2885)。原文来源：中新网时政）"
       ],
-      "impactOrdinary": "配置任意大模型 API Key 后将自动生成针对普通人生活、钱包与日常的通俗拆解。",
-      "impactWorld": "配置任意大模型 API Key 后将自动生成针对国际格局与产业链的深度分析。",
+      "impactOrdinary": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
+      "impactWorld": "待 AI 解锁（原因：Expecting ',' delimiter: line 75 column 6 (char 2885)）。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/tp/2026/11-26/10738399.shtml"
+          "url": "https://www.chinanews.com.cn/cj/2026/11-26/10738441.shtml"
         }
       ]
     }
@@ -489,22 +504,43 @@
   "polls": [
     {
       "id": "poll1",
-      "question": "今天这期午间新闻里，你最关注哪个板块？",
+      "question": "天上要建AI机房，你第一反应是？",
       "options": [
         {
           "id": "a",
-          "label": "🌍 国际政经与美韩欧动向",
-          "baseVotes": 45
+          "label": "先担心抬头看不见星星",
+          "baseVotes": 42
         },
         {
           "id": "b",
-          "label": "🇨🇳 国内民生与科技进展",
-          "baseVotes": 38
+          "label": "先问电费和散热谁掏",
+          "baseVotes": 36
         },
         {
           "id": "c",
-          "label": "🎈 轻松有趣的奇闻轶事",
-          "baseVotes": 27
+          "label": "先替科学家挠头",
+          "baseVotes": 22
+        }
+      ]
+    },
+    {
+      "id": "poll2",
+      "question": "AI帮你考第一，但可能被警察敲门，你干不干？",
+      "options": [
+        {
+          "id": "a",
+          "label": "不干，踏实复习",
+          "baseVotes": 51
+        },
+        {
+          "id": "b",
+          "label": "偷偷用，别声张",
+          "baseVotes": 31
+        },
+        {
+          "id": "c",
+          "label": "让AI先写份检讨",
+          "baseVotes": 18
         }
       ]
     }
