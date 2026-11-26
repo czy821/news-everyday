@@ -1,0 +1,42 @@
+name: Daily Noon Briefing Update
+
+on:
+  schedule:
+    # 默认：每天北京时间中午 12:00（即 UTC 04:00）自动运行
+    - cron: '0 4 * * *'
+    # 如需改为美西时间 PST 中午 12:00，请将上面改为：'0 20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-edition:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fetch latest news and regenerate edition.json
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-2.5-flash
+        run: |
+          python3 scripts/update_news.py
+
+      - name: Commit and push updated edition
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/edition.json)" ]; then
+            git add data/edition.json
+            git commit -m "chore: daily noon briefing update ($(date -u +'%Y-%m-%d'))"
+            git push
+          else
+            echo "No changes to commit."
+          fi
