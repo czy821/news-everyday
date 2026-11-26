@@ -58,17 +58,73 @@ def strip_html(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def _repair_json_text(text: str) -> str:
+    # 去掉对象或数组末尾多余逗号
+    text = re.sub(r",\s*([}\]])", r"\1", text)
+    return text
+
+
+def _extract_balanced_objects(text: str) -> list:
+    """当整体 JSON 某个字段有引号/逗号瑕疵时，逐个抢救合法的文章对象。"""
+    objs = []
+    depth = 0
+    in_str = False
+    esc = False
+    start = -1
+    for i, ch in enumerate(text):
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+        else:
+            if ch == '"':
+                in_str = True
+            elif ch == "{":
+                if depth == 0:
+                    start = i
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0 and start != -1:
+                    chunk = _repair_json_text(text[start : i + 1])
+                    try:
+                        obj = json.loads(chunk)
+                        if isinstance(obj, dict) and obj.get("title"):
+                            objs.append(obj)
+                    except Exception:
+                        pass
+                    start = -1
+    return objs
+
+
 def extract_json_object(raw_text: str) -> dict:
-    """兼容各种模型返回的纯 JSON、Markdown 代码块或前后带说明文字的 JSON。"""
+    """兼容各种模型返回的纯 JSON、Markdown 代码块、末尾多余逗号及局部语法瑕疵。"""
     text = (raw_text or "").strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```(?:json)?\s*", "", text)
-        text = re.sub(r"\s*```$", "", text)
+    if "```" in text:
+        m = re.search(r"```(?:json)?\s*([\s\S]*?)```", text)
+        if m:
+            text = m.group(1).strip()
     start = text.find("{")
     end = text.rfind("}")
     if start != -1 and end != -1 and end > start:
         text = text[start : end + 1]
-    return json.loads(text)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        repaired = _repair_json_text(text)
+        try:
+            return json.loads(repaired)
+        except json.JSONDecodeError:
+            # 尝试逐条抢救 articles 数组里的对象
+            arr_idx = repaired.find('"articles"')
+            if arr_idx != -1:
+                rescued = _extract_balanced_objects(repaired[arr_idx:])
+                if rescued:
+                    return {"articles": rescued}
+            raise
 
 
 def fetch_rss(url: str, source_name: str, limit: int = 8) -> list:
@@ -347,6 +403,7 @@ def generate_region_articles(cfg: dict, region: str, candidates: list, count: in
 1. {deep_rule}
 2. 每篇必须有中文 title、lead（一句话拉家常导语）、body（2-3段通俗正文的数组）、impactOrdinary（对普通人的影响，具体贴近生活）、impactWorld（对世界格局的影响，有深度洞察）。
 3. sources 中的 url 必须原样复制自候选池，严禁编造链接！
+4. 【JSON格式铁律】正文和标题中如需引用，请一律使用中文全角引号“”或「」，严禁在字符串内部出现未转义的英文双引号 "，也不要在末尾加多余逗号。
 
 只输出纯 JSON：
 {{
@@ -373,7 +430,21 @@ def generate_region_articles(cfg: dict, region: str, candidates: list, count: in
 候选池：
 {json.dumps(candidates, ensure_ascii=False)}
 """
-    res = invoke_llm_json(cfg, prompt)
+    last_err = None
+    res = None
+    for attempt in range(2):
+        try:
+            res = invoke_llm_json(cfg, prompt)
+            if isinstance(res, dict) and res.get("articles"):
+                break
+        except Exception as exc:
+            last_err = exc
+            if attempt == 0:
+                print(f"[INFO] Retrying {region} after parse/API error: {exc}")
+                continue
+            raise
+    if not res:
+        raise RuntimeError(str(last_err or "Empty response"))
     arts = res.get("articles", [])
     cleaned = []
     for idx, a in enumerate(arts[:count], start=1):
