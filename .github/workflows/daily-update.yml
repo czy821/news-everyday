@@ -3,7 +3,7 @@ name: Daily Noon Briefing Update
 on:
   schedule:
     # 默认：每天北京时间中午 12:00（即 UTC 04:00）自动运行
-    - cron: '0 4 * * *'
+    - cron: '42 3 * * *'
     # 如需改为美西时间 PST 中午 12:00，请将上面改为：'0 20 * * *'
   workflow_dispatch:
 
