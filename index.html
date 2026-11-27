@@ -261,11 +261,25 @@
         </div>
       </div>
 
-      <!-- Result Counter -->
-      <div class="flex items-center justify-between text-xs text-inkMuted dark:text-stone-400 px-1">
+      <!-- Result Counter & Saved Backup Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-inkMuted dark:text-stone-400 px-1">
         <span id="filter-result-summary">正在展示全部 20 篇内容（预计 26.0 分钟）</span>
-        <button id="reset-filters-btn" type="button" class="text-terracotta hover:underline hidden">重置全部筛选</button>
+        <div class="flex items-center gap-2 flex-wrap">
+          <div id="saved-backup-bar" class="hidden items-center gap-1.5 flex-wrap">
+            <button id="export-saved-json-btn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tealDeep text-white text-[11px] font-semibold hover:bg-tealDeep/90 transition">
+              <i data-lucide="download" class="w-3 h-3"></i> 导出备份 (JSON)
+            </button>
+            <button id="export-saved-md-btn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cardLight dark:bg-cardDark eclectic-border text-ink dark:text-stone-200 text-[11px] font-medium hover:border-terracotta transition">
+              <i data-lucide="file-text" class="w-3 h-3"></i> 导出笔记 (MD)
+            </button>
+            <button id="import-saved-btn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-mustard/20 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200 text-[11px] font-semibold hover:bg-mustard/30 transition">
+              <i data-lucide="upload" class="w-3 h-3"></i> 导入恢复
+            </button>
+          </div>
+          <button id="reset-filters-btn" type="button" class="text-terracotta hover:underline hidden">重置全部筛选</button>
+        </div>
       </div>
+      <input id="import-saved-file" type="file" accept=".json,application/json" class="hidden" />
 
       <!-- Stories Masonry / Bento Grid -->
       <div id="stories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -311,7 +325,11 @@
         </div>
         <div class="flex items-center justify-between pt-3 border-t border-ink/10 dark:border-white/10 text-[11px] text-inkMuted dark:text-stone-400">
           <span id="edition-cutoff">本期收录截止：2026-11-26 12:00</span>
-          <button id="mark-all-unread-btn" type="button" class="text-tealDeep dark:text-teal-300 hover:underline font-medium">清空已读记录</button>
+          <div class="flex items-center gap-3">
+            <button id="quick-export-btn" type="button" class="text-terracotta hover:underline font-medium">备份收藏</button>
+            <button id="quick-import-btn" type="button" class="text-tealDeep dark:text-teal-300 hover:underline font-medium">导入恢复</button>
+            <button id="mark-all-unread-btn" type="button" class="text-inkMuted dark:text-stone-400 hover:underline font-medium">清空已读</button>
+          </div>
         </div>
       </div>
     </section>
@@ -1212,7 +1230,12 @@
       const totalFilterMins = filtered.reduce((s, a) => s + a.readMins, 0);
       const isFiltered = state.activeRegion !== 'all' || state.activeCategory !== 'all' || state.activeMode !== 'all' || state.searchQuery.trim() !== '';
 
-      summary.textContent = state.activeMode === 'saved' ? `我的永久收藏夹：共 ${filtered.length} 篇（跨期保留，不会被每日更新覆盖）` : `当前展示 ${filtered.length} / ${ARTICLES.length} 篇（预计阅读 ${totalFilterMins.toFixed(1)} 分钟）`;
+      summary.textContent = state.activeMode === 'saved' ? `我的永久收藏夹：共 ${filtered.length} 篇（支持随时导出 JSON / Markdown 备份或导入恢复）` : `当前展示 ${filtered.length} / ${ARTICLES.length} 篇（预计阅读 ${totalFilterMins.toFixed(1)} 分钟）`;
+      const backupBar = document.getElementById('saved-backup-bar');
+      if (backupBar) {
+        backupBar.classList.toggle('hidden', state.activeMode !== 'saved');
+        backupBar.classList.toggle('flex', state.activeMode === 'saved');
+      }
       if (resetBtn) resetBtn.classList.toggle('hidden', !isFiltered);
 
       if (filtered.length === 0) {
@@ -1438,6 +1461,102 @@
       }
     }
 
+
+    // =========================================================================
+    // SAVED ARTICLES EXPORT & IMPORT (JSON / Markdown)
+    // =========================================================================
+    function downloadTextFile(filename, content, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    function exportSavedAsJson() {
+      const list = getSavedArticlesList();
+      if (list.length === 0) {
+        showToast('收藏夹目前还是空的，先收藏几篇文章吧');
+        return;
+      }
+      const today = new Date().toISOString().slice(0, 10);
+      const payload = {
+        app: '午间万象',
+        version: 2,
+        exportedAt: new Date().toISOString(),
+        count: list.length,
+        savedArticles: state.savedArticles
+      };
+      downloadTextFile(`午间万象-收藏备份-${today}.json`, JSON.stringify(payload, null, 2), 'application/json;charset=utf-8');
+      showToast(`已导出 ${list.length} 篇收藏的 JSON 备份文件`);
+    }
+
+    function exportSavedAsMarkdown() {
+      const list = getSavedArticlesList();
+      if (list.length === 0) {
+        showToast('收藏夹目前还是空的，先收藏几篇文章吧');
+        return;
+      }
+      const today = new Date().toISOString().slice(0, 10);
+      const lines = [`# 午间万象 · 个人收藏精选（共 ${list.length} 篇）`, `> 导出日期：${today}`, ''];
+      list.forEach((a, idx) => {
+        lines.push(`## ${idx + 1}. ${a.title}`);
+        lines.push(`- **日期**：${a.date || '未知'} ｜ **板块**：${a.regionLabel || ''} ｜ **题材**：${a.category || ''}`);
+        lines.push(`- **一句话拉家常**：${a.lead || ''}`);
+        lines.push('');
+        (a.body || []).forEach(p => { lines.push(p); lines.push(''); });
+        if (a.impactOrdinary) lines.push(`> **对普通人的影响**：${a.impactOrdinary}`);
+        if (a.impactWorld) lines.push(`> **对世界格局的影响**：${a.impactWorld}`);
+        if (Array.isArray(a.sources) && a.sources.length) {
+          lines.push(`- **原始信源**：` + a.sources.map(src => `[${src.name}](${src.url})`).join(' · '));
+        }
+        lines.push('');
+      });
+      downloadTextFile(`午间万象-收藏笔记-${today}.md`, lines.join('\n'), 'text/markdown;charset=utf-8');
+      showToast(`已导出 ${list.length} 篇收藏为 Markdown 笔记`);
+    }
+
+    function handleImportSavedFile(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || ''));
+          let incoming = [];
+          if (parsed && parsed.savedArticles && typeof parsed.savedArticles === 'object') {
+            incoming = Object.values(parsed.savedArticles);
+          } else if (Array.isArray(parsed)) {
+            incoming = parsed;
+          } else if (parsed && Array.isArray(parsed.articles)) {
+            incoming = parsed.articles;
+          }
+          let added = 0;
+          incoming.forEach(item => {
+            if (!item || !item.title) return;
+            const uid = getArticleUid(item);
+            if (!state.savedArticles[uid]) added++;
+            state.savedArticles[uid] = { ...item, uid, savedAt: item.savedAt || Date.now() };
+          });
+          if (incoming.length === 0) {
+            showToast('未在文件中识别到有效收藏记录');
+            return;
+          }
+          savePersistedState();
+          state.activeMode = 'saved';
+          renderAll();
+          const total = Object.keys(state.savedArticles).length;
+          showToast(`导入成功：新增 ${added} 篇，当前收藏夹共 ${total} 篇`);
+        } catch (err) {
+          showToast('导入失败：请选择由本网页导出的 JSON 备份文件');
+        }
+      };
+      reader.readAsText(file, 'utf-8');
+    }
+
     // =========================================================================
     // EVENT BINDINGS
     // =========================================================================
@@ -1523,6 +1642,24 @@
       };
       document.getElementById('reset-filters-btn').addEventListener('click', doReset);
       document.getElementById('empty-reset-btn').addEventListener('click', doReset);
+
+      // Export & Import saved articles
+      const triggerImport = () => {
+        const input = document.getElementById('import-saved-file');
+        if (input) {
+          input.value = '';
+          input.click();
+        }
+      };
+      document.getElementById('export-saved-json-btn').addEventListener('click', exportSavedAsJson);
+      document.getElementById('export-saved-md-btn').addEventListener('click', exportSavedAsMarkdown);
+      document.getElementById('import-saved-btn').addEventListener('click', triggerImport);
+      document.getElementById('quick-export-btn').addEventListener('click', exportSavedAsJson);
+      document.getElementById('quick-import-btn').addEventListener('click', triggerImport);
+      document.getElementById('import-saved-file').addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        handleImportSavedFile(file);
+      });
 
       // Clear read history
       document.getElementById('mark-all-unread-btn').addEventListener('click', () => {
