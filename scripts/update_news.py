@@ -43,6 +43,23 @@ RSS_FEEDS = {
     ],
 }
 
+
+CITY_TECH_FEEDS = {
+    "shenzhen": [
+        ("Google News 深圳科创政策", "https://news.google.com/rss/search?q=%E6%B7%B1%E5%9C%B3+%E7%A7%91%E6%8A%80+%E4%BA%A7%E4%B8%9A+%E6%94%BF%E7%AD%96&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"),
+        ("中新网广东", "https://www.chinanews.com.cn/rss/gd.xml"),
+    ],
+    "changsha": [
+        ("Google News 长沙科创政策", "https://news.google.com/rss/search?q=%E9%95%BF%E6%B2%99+%E7%A7%91%E6%8A%80+%E4%BA%A7%E4%B8%9A+%E6%94%BF%E7%AD%96&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"),
+        ("中新网湖南", "https://www.chinanews.com.cn/rss/hn.xml"),
+    ],
+}
+CITY_LABELS = {
+    "shenzhen": "🏙️ 深圳科创",
+    "changsha": "🌶️ 长沙科创",
+}
+CITY_TARGET_COUNTS = {"shenzhen": 2, "changsha": 2}
+
 TARGET_COUNTS = {"us": 4, "kr": 4, "eu": 4, "other": 3, "cn": 5}
 REGION_LABELS = {
     "us": "🇺🇸 美国",
@@ -588,6 +605,100 @@ def build_fallback_articles_for_region(region: str, candidates: list, count: int
     return out
 
 
+
+def collect_city_tech_candidates() -> dict:
+    pool = {}
+    for city, feeds in CITY_TECH_FEEDS.items():
+        collected = []
+        seen_urls = set()
+        for name, url in feeds:
+            for item in fetch_rss(url, name, limit=8):
+                if item["url"] not in seen_urls:
+                    seen_urls.add(item["url"])
+                    collected.append(item)
+        pool[city] = collected[:10]
+        print(f"[INFO] Collected {len(pool[city])} cityTech candidates for city={city}")
+    return pool
+
+
+def generate_city_tech_articles(cfg: dict | None, city_pool: dict, today_str: str) -> list:
+    """每日生成 4 条深圳 + 长沙科技产业与政策专题（深圳 2 条 + 长沙 2 条）。"""
+    results = []
+    for city, count in CITY_TARGET_COUNTS.items():
+        cands = city_pool.get(city, [])
+        if not cands:
+            continue
+        city_cn = "深圳" if city == "shenzhen" else "长沙"
+        cleaned = []
+        if cfg:
+            prompt = f"""请从下面关于【{city_cn}科技产业与政策】的真实新闻候选池中精选 {count} 条，用家常化、通俗有趣的中文改写，重点讲清楚这项政策或产业动态的具体含金量、对本地科技人/创业者的影响以及行业趋势。
+要求：
+1. 每篇必须包含 title、lead（一句话拉家常总结）、enSummary（1-2句地道英文总结）、body（2段通俗正文）、impactOrdinary（对普通人/本地科技从业者的影响）、impactWorld（对区域或全国产业链的影响）。
+2. sources 中的 url 必须原样复制自候选池，严禁编造！
+3. 正文引号一律用中文“”或「」，不要出现未转义英文双引号。
+
+只输出纯 JSON：
+{{
+  "articles": [
+    {{
+      "title": "...",
+      "lead": "...",
+      "enSummary": "A crisp 1-2 sentence English summary.",
+      "body": ["第一段...", "第二段..."],
+      "impactOrdinary": "...",
+      "impactWorld": "...",
+      "sources": [{{"name": "来源名", "url": "候选池真实URL"}}]
+    }}
+  ]
+}}
+
+候选池：
+{json.dumps(cands, ensure_ascii=False)}"""
+            for attempt in range(2):
+                try:
+                    res = invoke_llm_json(cfg, prompt)
+                    raw_arts = res.get("articles", []) if isinstance(res, dict) else []
+                    temp = []
+                    for idx, a in enumerate(raw_arts[:count], start=1):
+                        cand = cands[(idx - 1) % len(cands)]
+                        norm = _normalize_article(a, "cn", idx, "domestic", today_str, cand)
+                        if norm:
+                            norm["id"] = f"{city[:2]}-{idx}"
+                            norm["city"] = city
+                            norm["regionLabel"] = CITY_LABELS[city]
+                            norm["category"] = "双城科创"
+                            norm["readMins"] = 1.0
+                            temp.append(norm)
+                    if temp:
+                        cleaned = temp
+                        break
+                except Exception as exc:
+                    print(f"[INFO] CityTech batch attempt {attempt+1} for {city} error: {exc}")
+
+        if not cleaned:
+            for idx, item in enumerate(cands[:count], start=1):
+                cleaned.append({
+                    "id": f"{city[:2]}-{idx}",
+                    "city": city,
+                    "region": "cn",
+                    "regionLabel": CITY_LABELS[city],
+                    "scope": "domestic",
+                    "category": "双城科创",
+                    "type": "news",
+                    "readMins": 1.0,
+                    "date": today_str,
+                    "title": item["title"],
+                    "lead": item["summary"] or f"来自 {item['source']} 的{city_cn}科技产业最新动态。",
+                    "enSummary": f"Latest tech industry and policy update from {city.title()} via {item['source']}.",
+                    "body": [item["summary"] or item["title"]],
+                    "impactOrdinary": f"关注{city_cn}本地科创政策与产业落地，把握相关岗位与补贴机会。",
+                    "impactWorld": f"折射{city_cn}在区域科技创新与先进制造产业链中的最新卡位。",
+                    "sources": [{"name": item["source"], "url": item["url"]}],
+                })
+        results.extend(cleaned)
+    return results
+
+
 def main():
     dry_run = "--dry-run" in sys.argv
     now_cn = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
@@ -692,6 +803,10 @@ def main():
     elif errors:
         subtitle = f"部分板块 AI 调用异常（{errors[0][:80]}），已自动保留原文链接。"
 
+    city_pool = collect_city_tech_candidates()
+    city_tech_articles = generate_city_tech_articles(cfg, city_pool, today_str)
+    print(f"[OK] Generated {len(city_tech_articles)} Shenzhen/Changsha cityTech articles")
+
     edition = {
         "editionNumber": next_num,
         "date": today_str,
@@ -699,6 +814,7 @@ def main():
         "headline": headline,
         "subtitle": subtitle,
         "articles": all_articles,
+        "cityTech": city_tech_articles,
         "polls": polls,
     }
 
