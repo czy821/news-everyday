@@ -449,6 +449,7 @@ def _normalize_article(a: dict, region: str, idx: int, scope: str, today_str: st
         "date": today_str,
         "title": title,
         "lead": str(a.get("lead") or body[0]),
+        "enSummary": str(a.get("enSummary") or a.get("en_summary") or a.get("englishSummary") or (fallback_cand["title"] if fallback_cand and re.search(r"[A-Za-z]{4,}", fallback_cand.get("title", "")) else "")).strip(),
         "body": [str(p) for p in body],
         "impactOrdinary": str(a.get("impactOrdinary") or "该事件与日常消费、就业或公共政策息息相关，值得持续留意后续落地细节。"),
         "impactWorld": str(a.get("impactWorld") or "该动向折射出当前区域合作与产业链调整的新趋势。"),
@@ -464,6 +465,7 @@ def _generate_single_article(cfg: dict, region: str, cand: dict, idx: int, scope
   "title": "通俗有趣的中文标题",
   "category": "贸易博弈|硬核科技|宏观钱包|地缘安全|社会百态|生态奇趣|文化跨界|民生烟火",
   "lead": "一句话拉家常导语",
+  "enSummary": "A crisp, natural 1-2 sentence English summary of this story.",
   "body": ["第一段通俗讲解", "第二段补充背景"],
   "impactOrdinary": "对普通人生活或钱包的具体影响",
   "impactWorld": "对世界格局或行业趋势的影响"
@@ -490,7 +492,7 @@ def generate_region_articles(cfg: dict, region: str, candidates: list, count: in
     prompt = f"""请从下面 {REGION_LABELS[region]} 真实新闻候选池中精选 {count} 条，用家常化、通俗生动、像午饭聊天一样有趣的中文改写。
 要求：
 1. {deep_rule}
-2. 每篇必须有中文 title、lead（一句话拉家常导语）、body（2-3段通俗正文的数组）、impactOrdinary（对普通人的影响，具体贴近生活）、impactWorld（对世界格局的影响，有深度洞察）。
+2. 每篇必须有中文 title、lead（一句话拉家常导语）、enSummary（1-2句地道、精炼的英文总结）、body（2-3段通俗正文的数组）、impactOrdinary（对普通人的影响，具体贴近生活）、impactWorld（对世界格局的影响，有深度洞察）。
 3. sources 中的 url 必须原样复制自候选池，严禁编造链接！
 4. 【JSON格式铁律】正文和标题中如需引用，请一律使用中文全角引号“”或「」，严禁在字符串内部出现未转义的英文双引号 "，也不要在末尾加多余逗号。
 
@@ -508,6 +510,7 @@ def generate_region_articles(cfg: dict, region: str, candidates: list, count: in
       "date": "{today_str}",
       "title": "...",
       "lead": "...",
+      "enSummary": "A concise 1-2 sentence English summary.",
       "body": ["第一段...", "第二段..."],
       "impactOrdinary": "...",
       "impactWorld": "...",
@@ -573,6 +576,7 @@ def build_fallback_articles_for_region(region: str, candidates: list, count: int
             "date": today_str,
             "title": item["title"],
             "lead": item["summary"] or f"来自 {item['source']} 的最新报道，点击原文查看完整内容。",
+            "enSummary": item["title"] if re.search(r"[A-Za-z]{4,}", item["title"]) else f"Latest update from {item['source']}.",
             "body": [
                 item["summary"] or item["title"],
                 f"（AI 深度改写暂未触发，原因：{reason}。原文来源：{item['source']}）",
