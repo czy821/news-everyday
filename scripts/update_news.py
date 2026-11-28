@@ -699,16 +699,74 @@ def generate_city_tech_articles(cfg: dict | None, city_pool: dict, today_str: st
     return results
 
 
+
+COVER_THEMES = [
+    {
+        "path": "./assets/covers/cover-ai-tech.jpg",
+        "theme": "AI与硬核科技",
+        "keywords": ["AI", "人工智能", "芯片", "半导体", "算力", "机器人", "卫星", "太空", "大模型", "英伟达", "科技", "量子", "脑机", "3D打印", "高交会", "鸿蒙"],
+    },
+    {
+        "path": "./assets/covers/cover-economy.jpg",
+        "theme": "财经贸易与钱包",
+        "keywords": ["关税", "利率", "加息", "房贷", "通胀", "GDP", "股市", "经济", "贸易", "油价", "预算", "央行", "出口", "消费", "刷卡", "黑五", "融资", "补贴"],
+    },
+    {
+        "path": "./assets/covers/cover-climate-nature.jpg",
+        "theme": "气候能源与生态",
+        "keywords": ["风暴", "气候", "林火", "能源", "环保", "生态", "动物", "海洋", "电", "停电", "熬冬", "新能源", "光伏", "地震", "火山", "洞穴", "自然"],
+    },
+    {
+        "path": "./assets/covers/cover-diplomacy-city.jpg",
+        "theme": "国际峰会与双城",
+        "keywords": ["峰会", "外交", "北约", "欧盟", "谈判", "防务", "制裁", "协议", "安全", "大选", "深圳", "长沙", "城市", "政策", "移民", "核潜艇"],
+    },
+    {
+        "path": "./assets/covers/cover-culture-life.jpg",
+        "theme": "民生烟火与文化",
+        "keywords": ["房租", "教育", "考试", "文化", "音乐", "电影", "地铁", "罢工", "旅游", "机场", "骑手", "外卖", "招聘", "生活", "游行", "趣闻", "美食"],
+    },
+    {
+        "path": "./assets/covers/cover-global.jpg",
+        "theme": "全球视野经典",
+        "keywords": ["全球", "世界", "国际", "亚太", "跨境"],
+    },
+]
+
+
+def pick_daily_cover(headline: str, subtitle: str, articles: list, prev_cover: str, edition_num: int) -> tuple:
+    """结合当日头条与热点新闻关键词自动匹配最契合的主题封面，并避免连续两天重复同一张图。"""
+    corpus = (headline or "") + " " + (subtitle or "") + " "
+    corpus += " ".join((a.get("title", "") + " " + a.get("category", "")) for a in articles[:10])
+    corpus_lower = corpus.lower()
+
+    scored = []
+    for idx, item in enumerate(COVER_THEMES):
+        score = sum(1 for kw in item["keywords"] if kw.lower() in corpus_lower)
+        # 稍微给经典封面留基础权重，同时用 edition_num 打破平局增加轮换感
+        tie_breaker = (idx + edition_num) % len(COVER_THEMES)
+        scored.append((score, tie_breaker, item))
+
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    for _, _, item in scored:
+        if item["path"] != prev_cover:
+            return item["path"], item["theme"]
+    chosen = scored[0][2]
+    return chosen["path"], chosen["theme"]
+
+
 def main():
     dry_run = "--dry-run" in sys.argv
     now_cn = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
     today_str = now_cn.strftime("%Y-%m-%d")
 
     prev_num = 330
+    prev_cover = ''
     if os.path.exists(EDITION_PATH):
         try:
             prev = json.load(open(EDITION_PATH, encoding="utf-8"))
             prev_num = int(prev.get("editionNumber", 330))
+            prev_cover = str(prev.get("coverImage", ""))
             next_num = prev_num if prev.get("date") == today_str else prev_num + 1
         except Exception:
             next_num = prev_num + 1
@@ -807,10 +865,15 @@ def main():
     city_tech_articles = generate_city_tech_articles(cfg, city_pool, today_str)
     print(f"[OK] Generated {len(city_tech_articles)} Shenzhen/Changsha cityTech articles")
 
+    cover_path, cover_theme = pick_daily_cover(headline, subtitle, all_articles, prev_cover, next_num)
+    print(f"[OK] Selected daily cover: {cover_theme} ({cover_path})")
+
     edition = {
         "editionNumber": next_num,
         "date": today_str,
         "updatedAt": f"{today_str} 12:00",
+        "coverImage": cover_path,
+        "coverTheme": cover_theme,
         "headline": headline,
         "subtitle": subtitle,
         "articles": all_articles,
