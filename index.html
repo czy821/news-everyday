@@ -131,11 +131,17 @@
       <!-- Left: Editorial Cover Card -->
       <div class="lg:col-span-8 bg-cardLight dark:bg-cardDark rounded-2xl eclectic-border collage-shadow overflow-hidden flex flex-col">
         <div class="relative h-48 sm:h-60 w-full overflow-hidden bg-amber-50 dark:bg-stone-900">
-          <img src="./assets/hero.jpg" alt="午间万象插画" class="w-full h-full object-cover" />
+          <img id="hero-cover-img" src="./assets/covers/cover-ai-tech.jpg" onerror="this.onerror=null;this.src='./assets/hero.jpg';" alt="午间万象主题封面" class="w-full h-full object-cover transition-opacity duration-300" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent"></div>
-          <div class="absolute top-3 left-3 flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded-full bg-terracotta text-white text-xs font-semibold shadow-sm" id="edition-badge">2026年11月26日 · 第330期</span>
-            <span class="px-2.5 py-1 rounded-full bg-black/55 backdrop-blur-sm text-amber-200 text-xs font-medium">每日12:00准时开席</span>
+          <div class="absolute top-3 left-3 right-3 flex items-center justify-between flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-terracotta text-white text-xs font-semibold shadow-sm" id="edition-badge">2026年11月26日 · 第330期</span>
+              <span class="px-2.5 py-1 rounded-full bg-black/55 backdrop-blur-sm text-amber-200 text-xs font-medium">每日12:00准时开席</span>
+            </div>
+            <button id="cycle-cover-btn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/55 hover:bg-black/75 backdrop-blur-sm text-white text-[11px] font-medium transition" title="点击切换其他主题插画封面">
+              <span>🎨</span>
+              <span id="cover-theme-label">今日主题：AI与硬核科技</span>
+            </button>
           </div>
           <div class="absolute bottom-4 left-4 right-4 text-white">
             <h1 id="edition-headline" class="font-serif text-2xl sm:text-3xl font-bold leading-snug drop-shadow">
@@ -1852,6 +1858,17 @@
         showToast(`已切换为 ${state.timezone === 'Asia/Shanghai' ? '北京时间 (UTC+8)' : '美西时间 (PST)'} 午间12:00倒计时`);
       });
 
+      // Manual cover theme preview cycle
+      const cycleCoverBtn = document.getElementById('cycle-cover-btn');
+      if (cycleCoverBtn) {
+        cycleCoverBtn.addEventListener('click', () => {
+          currentCoverIndex = (currentCoverIndex + 1) % COVER_GALLERY.length;
+          const next = COVER_GALLERY[currentCoverIndex];
+          applyHeroCover(next.path, next.theme);
+          showToast(`已切换封面：${next.theme}`);
+        });
+      }
+
       // Refresh check
       document.getElementById('refresh-edition-btn').addEventListener('click', () => {
         loadLatestEdition(true);
@@ -2099,6 +2116,31 @@
     }
 
 
+
+    const COVER_GALLERY = [
+      { path: './assets/covers/cover-global.jpg', theme: '全球视野经典' },
+      { path: './assets/covers/cover-ai-tech.jpg', theme: 'AI与硬核科技' },
+      { path: './assets/covers/cover-economy.jpg', theme: '财经贸易与钱包' },
+      { path: './assets/covers/cover-climate-nature.jpg', theme: '气候能源与生态' },
+      { path: './assets/covers/cover-diplomacy-city.jpg', theme: '国际峰会与双城' },
+      { path: './assets/covers/cover-culture-life.jpg', theme: '民生烟火与文化' }
+    ];
+    let currentCoverIndex = 1;
+
+    function applyHeroCover(coverPath, coverTheme) {
+      const img = document.getElementById('hero-cover-img');
+      const label = document.getElementById('cover-theme-label');
+      const matchedIdx = COVER_GALLERY.findIndex(c => c.path === coverPath);
+      if (matchedIdx !== -1) {
+        currentCoverIndex = matchedIdx;
+        if (img) img.src = COVER_GALLERY[matchedIdx].path;
+        if (label) label.textContent = `今日主题：${coverTheme || COVER_GALLERY[matchedIdx].theme}`;
+      } else if (coverPath) {
+        if (img) img.src = coverPath;
+        if (label && coverTheme) label.textContent = `今日主题：${coverTheme}`;
+      }
+    }
+
     let CURRENT_EDITION_META = { date: '2026-11-26', editionNumber: 330, updatedAt: '2026-11-26 12:00' };
 
     async function loadLatestEdition(showNotice = false) {
@@ -2126,6 +2168,7 @@
           if (hl && data.headline) hl.textContent = data.headline;
           if (sub && data.subtitle) sub.textContent = data.subtitle;
           if (cutoff) cutoff.textContent = `本期收录截止：${CURRENT_EDITION_META.updatedAt}`;
+          if (data.coverImage) applyHeroCover(data.coverImage, data.coverTheme);
           renderAll();
           initCharts();
           if (showNotice) showToast(`已同步最新一期：${CURRENT_EDITION_META.date}（共${ARTICLES.length}篇 · ${TOTAL_MINS.toFixed(1)}分钟）`);
