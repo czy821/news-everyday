@@ -368,10 +368,16 @@
           <p id="modal-meta" class="text-xs text-inkMuted dark:text-stone-400 mt-2"></p>
         </div>
 
-        <!-- Tea-house Lead Box -->
-        <div class="p-4 rounded-xl bg-mustard/10 dark:bg-amber-900/20 border-l-4 border-mustard">
-          <div class="text-xs font-bold text-amber-800 dark:text-amber-300 mb-1">🫖 一句话拉家常</div>
-          <p id="modal-lead" class="text-sm leading-relaxed font-medium"></p>
+        <!-- Tea-house Lead Box + English Summary -->
+        <div class="space-y-2.5">
+          <div class="p-4 rounded-xl bg-mustard/10 dark:bg-amber-900/20 border-l-4 border-mustard">
+            <div class="text-xs font-bold text-amber-800 dark:text-amber-300 mb-1">🫖 一句话拉家常</div>
+            <p id="modal-lead" class="text-sm leading-relaxed font-medium"></p>
+          </div>
+          <div id="modal-en-summary-box" class="px-4 py-3 rounded-xl bg-tealDeep/8 dark:bg-teal-950/30 border-l-4 border-tealDeep hidden">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-tealDeep dark:text-teal-300 mb-0.5">🌍 English Summary</div>
+            <p id="modal-en-summary" class="text-xs sm:text-sm leading-relaxed text-ink/85 dark:text-stone-300 italic"></p>
+          </div>
         </div>
 
         <!-- Conversational Body -->
@@ -437,6 +443,7 @@
         date: '2026-11-25',
         title: '白宫一口气点名14个经济体：15%到35%新关税提案摆上台面，全球生意人又要算新账',
         lead: '感恩节前一天，美国贸易代表办公室（USTR）甩出一份重磅裁定：盯上包括中国、欧盟、日韩在内的14个贸易伙伴，理由是制造业“结构性产能过剩”，拟加征15%至35%不等的301关税。',
+        enSummary: 'USTR proposed 15%–35% Section 301 tariffs on 14 trading partners—including China, the EU, Japan, and South Korea—over manufacturing overcapacity, with public comments open until January 5, 2027.',
         body: [
           '这事儿说白了，就像街上开大卖场的房东突然贴出告示：说旁边14家供货商的货造得太多太便宜，影响了自己自家工厂的生意，打算统一加收15%到35%的“进场费”。据美国贸易代表办公室（USTR）11月25日公告，贸易代表贾米森·格里尔（Jamieson Greer）依据《1974年贸易法》301条款作出裁定，名单一口气囊括了中国、欧盟、日本、韩国、印度、越南、新加坡、瑞士、印尼、马来西亚、柬埔寨、泰国、孟加拉国和中国台湾地区共14个经济体。',
           '不过先别慌着以为明天商品就集体涨价——根据USTR公布的程序时间表，这些税率目前还只是“提案”，不是最终落地的税单。公众书面意见截止到2027年1月5日，公开听证会要等到2027年1月25日才启动，而且每个联邦公报通知后面都附带豁免清单，哪些货免税、哪些货挨刀，接下来两个月正是各方游说拉锯的窗口期。',
@@ -460,6 +467,7 @@
         date: '2026-11-25',
         title: '把AI机房搬上天？美国FCC批准SpaceX部署100万颗“太空数据中心”卫星',
         lead: '地面建AI算力中心太费电、太费水？SpaceX干脆想把机房发到太空晒太阳。11月25日，美国联邦通信委员会（FCC）真的给这项名为“Starmind”的百万卫星计划开了绿灯。',
+        enSummary: 'The FCC approved SpaceX\'s plan to deploy up to 1 million solar-powered \'Starmind\' orbital data-center satellites, drawing pushback from rivals and astronomers over space debris and collision risks.',
         body: [
           '你没看错，是“一百万颗”。据FCC 11月25日发布的文件及《洛杉矶时报》报道，这是美国历史上首次批准太空数据中心星座授权。SpaceX的算盘听起来像科幻小说：在轨利用取之不尽的太阳能给AI计算模块供电，既能缓解AI爆发带来的算力饥渴，又能省下地球上宝贵的电力和冷却用水。',
           '但这张“太空施工许可证”一发，反对声音立马炸锅。亚马逊旗下的Kuiper系统、卫星运营商Viasat以及美国天文学会都公开表示反对，核心担忧很实在：目前地球轨道上在轨运行的卫星总数不过一两万颗，一下子往天上塞进百万级卫星，太空碎片、碰撞风险和夜空天文观测受干扰的问题怎么兜底？'
@@ -482,6 +490,7 @@
         date: '2026-11-25',
         title: '美国三季度GDP上修到4.3%看着很猛，但美联储“褐皮书”揭了普通人的房本老底',
         lead: '宏观成绩单亮眼得像考了95分，可街坊邻居聊起租房和修房子还是直叹气——这就是11月25日两份美国官方报告拼出来的真实切面。',
+        enSummary: 'U.S. Q3 GDP growth was revised up to 4.3%, yet the Federal Reserve\'s November Beige Book highlights persistent shortages of affordable housing and mounting repair costs for lower-income homeowners.',
         body: [
           '一边是美国经济分析局（BEA）11月25日公布的三季度GDP二次修正数据，年化增速上修至4.3%，明显好于市场原先预期，说明企业利润和整体经济盘子依然很能扛。',
           '另一边，同一天出炉的美联储11月“褐皮书”（以纽约联储辖区等一线调研为例）却说了大实话：制造业温和增长、物价涨幅虽略有放缓，但基层社区反馈“可负担住房严重短缺”依然突出——出租房空置率处于历史低位、待售房源稀缺，不少低收入房主甚至连老房子的日常维修费都掏不起。'
@@ -505,6 +514,7 @@
         date: '2026-11-19',
         title: '还没剪彩就“偷跑”！全球最大野生动物天桥下周开放，郊狼一家已提前去撒欢',
         lead: '洛杉矶101号十车道高速公路上方，人类花大力气给美洲狮和野生动物修了一座“空中森林天桥”，定于12月2日正式开放，结果郊狼早就按捺不住提前五周打卡了。',
+        enSummary: 'Set to officially open December 2 over L.A.\'s 10-lane US-101 freeway, the world\'s largest wildlife crossing is already hosting curious coyotes caught playing on trail cameras weeks ahead of schedule.',
         body: [
           '这座名为沃利斯·安嫩伯格（Wallis Annenberg）的野生动物天桥横跨加州著名的101号十车道高速，专门把被车流隔断几十年的圣莫尼卡山脉和北侧山丘重新连起来，还种上了原生植被。',
           '据《发现》杂志（Discover Magazine）11月19日报道，美国国家公园管理局刚装好远程红外相机，10月28日就拍到一只郊狼大摇大摆走上南坡；没过几天，三只小郊狼干脆在隔音墙底下追逐打闹起来。生物学家笑称，这不仅是一座桥，更是一场长达数年的生态“破冰实验”。'
@@ -528,6 +538,7 @@
         date: '2026-11-26',
         title: 'AI芯片卖疯了，韩国央行今天果断加息到3.25%！经济增长跑得快，物价也跟着蹿',
         lead: '11月26日，韩国央行宣布将基准利率上调25个基点至3.25%，同时把2026年和2027年的GDP增长预期大幅上调至3.9%和4.1%——背后的最大推手，正是卖断货的AI存储芯片。',
+        enSummary: 'The Bank of Korea raised its benchmark rate by 25 bps to 3.25% and lifted its 2026–2027 GDP forecasts as surging AI memory-chip exports fuel rapid growth alongside above-target inflation.',
         body: [
           '别的经济体还在琢磨怎么刺激消费，韩国这边却因为AI芯片出口太火爆，得赶紧踩一脚“防过热”刹车。据半岛电视台与中新网11月26日报道，韩国10月出口额同比暴涨94%达到1153亿美元（9月更创下1209亿美元历史纪录），其中半导体独占近半壁江山。按Counterpoint Research的数据，SK海力士和三星电子联手拿下了全球约80%的高带宽内存（HBM）和60%的DRAM市场。',
           '经济跑得欢（三季度GDP同比增长3.4%，剔除疫情异常年份有望创2010年以来最佳表现），副作用也来了：韩国10月通胀率升至2.8%，明显高于央行2%的目标线，加上能源价格偏高，韩国央行行长与委员们决定先下手为强，把利率往上提一档。'
@@ -550,6 +561,7 @@
         date: '2026-11-24',
         title: '“考试立国”遇上AI考霸：韩国最讲究公平的考试体系，正被人工智能搅得手忙脚乱',
         lead: '在韩国，从升学到进大企业、考公务员，一纸考卷几乎决定命运。可如今AI答题又快又像真人，把这套运行了几十年的选拔体系推到了十字路口。',
+        enSummary: 'South Korea\'s high-stakes exam culture—long prized as a meritocratic equalizer—is facing growing disruption as generative AI blurs the line between genuine test performance and automated cheating.',
         body: [
           '据英国《卫报》11月24日报道，韩国社会向来把标准化考试视为跨越阶层、确保公平的“最后防线”，但生成式AI的普及正让线上测评、论文提交甚至部分资格考核陷入前所未有的信任危机。',
           '一边是学生和求职者在“不惜一切代价拿高分”的剧烈内卷下，越来越难抵挡借助AI润色甚至代考的诱惑；另一边是高校与雇主苦于AI检测工具误判率高，抓也不是、放也不是，不得不重新思考：如果机器比人更会做题，以后到底该考什么？'
@@ -571,6 +583,7 @@
         date: '2026-11-25',
         title: '把鸡蛋都放进芯片篮子香不香？专家提醒韩国警惕“半导体单引擎”周期震荡',
         lead: '本周初韩国股市刚因为“AI泡沫担忧”跟着亚洲科技股跌了一波，周四又反弹1.7%——大起大落的过山车背后，学者提醒韩国别光顾着数芯片钞票。',
+        enSummary: 'Analysts warn that South Korea\'s heavy reliance on semiconductor exports leaves its broader economy exposed to sharp swings whenever global AI spending sentiment wobbles.',
         body: [
           '墨尔本大学Asialink 11月25日发表分析指出，韩国虽然是这轮全球AI半导体浪潮的最大赢家之一，但经济结构高度绑定芯片出口，一旦全球云巨头资本开支放缓、或者美国301新关税波及产业链，韩国经济就容易跟着大幅摇摆。',
           '结合本周市场表现看，11月23日与25日亚洲股市接连因AI估值争议出现回调，韩国Kospi指数波动明显，直到周四才随区域市场回暖涨1.7%。这也难怪不少经济学家呼吁韩国趁着景气期，赶紧把赚到的钱反哺到内需和多元化产业里。'
@@ -593,6 +606,7 @@
         date: '2026-11-14',
         title: '螺钿漆器碰上AI编曲：韩国把“K-pop × 人工智能”创意擂台搬进了英国校园',
         lead: '谁说传统文化和硬核AI不能一锅炖？韩国驻英文化院和利兹大学合办的“2026韩国日”，直接让KAIST科学家、唱片公司高管和大学生一起玩跨界。',
+        enSummary: 'At \'Korea Day 2026\' in Leeds, KAIST researchers and students blended AI music tools with K-pop industry pitches and traditional mother-of-pearl craftsmanship.',
         body: [
           '据韩国政府官方门户Korea.net报道，活动请来韩国科学技术院（KAIST）的三位研究者开讲“AI × 韩国音乐”，拆解算法怎么参与旋律创作与音乐研究。',
           '更有意思的是现场画风：一边是学生在“K-pop × AI 行业创意路演”上对着华纳音乐韩国等业内评委推销脑洞，另一边的工作坊里大家正低头体验传统天然染色、螺钿镶嵌和韩式织布——古典手艺和现代算法同框，毫无违和感。'
@@ -616,6 +630,7 @@
         date: '2026-11-20',
         title: '“分家”之后再搭伙：2026英欧峰会端出一揽子新协议，想把脱欧后的疙瘩理顺点',
         lead: '脱欧好几年，海峡两岸的货车排队、海鲜卡关、人员往来折腾得两头都嫌累。11月20日，英国和欧盟在2026英欧峰会上发表联合声明，推出新一揽子务实合作方案。',
+        enSummary: 'The 2026 UK–EU Summit produced a joint statement and pragmatic cooperation package aimed at easing post-Brexit friction across trade, defense, and cross-Channel mobility.',
         body: [
           '用家常话讲，英欧这几年就像一对办完离婚手续的邻居，房子隔着一道海，平时买菜借工具、防盗看院子哪样都绕不开对方。英国政府官网（GOV.UK）发布的2026英欧峰会联合声明与澄清说明显示，双方围绕贸易便利化、安全协作与民间交流敲定了新的推进框架，同时英方也特意出了一版“辟谣手册”，向国内选民解释哪些红线没碰、哪些实惠能落地。',
           '公关与政策研究机构Edelman 11月23日评论认为，英国工党政府力推这次“关系重启”，既有提振英国低迷贸易的经济考量，也有稳固亲欧选民基本盘的政治算盘；而对欧盟来说，面对外部关税压力和欧洲安全局势，拉住英国这个大邻居一起扛事，同样划算。'
@@ -639,6 +654,7 @@
         date: '2026-11-26',
         title: '欧洲防务连轴转：德法英乌刚发联合声明，欧盟特别峰会今明两天接棒开会',
         lead: '从11月19日德、法、英、乌四国领导人联手发声，到11月26-27日欧盟特别峰会召开，欧洲这个11月把“自己扛起安全担子”写在了脸上。',
+        enSummary: 'Following a joint defense statement by Germany, France, the UK, and Ukraine, EU leaders are convening a Special European Council to align security strategy and long-term commitments.',
         body: [
           '据法国爱丽舍宫11月19日发布的联合声明，德国、法国、英国与乌克兰领导人重申将进一步强化乌克兰、欧洲与北约的防务协作。紧接着，欧盟理事会日程显示，11月26日至27日召开特别欧洲理事会会议，继续协调欧洲防务自主与对外谈判立场。',
           '从这一连串密集动作不难看出，欧洲各国正试图在外部局势充满不确定性时，先在内部把声音统一起来，减少“各自为政”的消耗。'
@@ -661,6 +677,7 @@
         date: '2026-11-25',
         title: '一手抓课堂AI素养、一手砸钱量子技术：欧盟这周两件事都在抢“下一代门票”',
         lead: '怕在AI浪潮里掉队，又怕未来被量子计算卡脖子？欧盟11月下旬连出两招，从中小学生的数字技能一路布局到硬核量子产业链。',
+        enSummary: 'EU education ministers are prioritizing classroom AI literacy while Brussels moves to bolster Europe\'s industrial and security capabilities in quantum technologies.',
         body: [
           '先看教育端：11月19日欧盟教育、青年、文化与体育理事会在布鲁塞尔聚焦“驾驭AI的技能与素养”，核心思路不是把AI赶出教室，而是教年轻人看懂AI、用好AI且不被算法牵着鼻子走。',
           '再看产业端：欧盟官方11月25日发布重点动态，强调强化欧洲在量子技术领域的产业能力与安全保障。在全球中美科技巨头猛卷大模型的当下，欧洲试图在量子传感、量子通信等底层硬科技里保住自己的王牌。'
@@ -683,6 +700,7 @@
         date: '2026-11-03',
         title: '家里备没备手电和干粮？欧盟推“危机备灾新举措”，提醒欧洲街坊居安思危',
         lead: '极端暴雨、电网波动、网络故障……欧盟委员会11月推出新一轮备灾举措，鼓励普通家庭像准备雨伞一样，把“日常应急包”当成生活常识。',
+        enSummary: 'The European Commission rolled out new Preparedness Union measures urging households to treat emergency readiness for extreme weather and infrastructure disruptions as everyday routine.',
         body: [
           '据欧盟民防与人道主义援助总司（ECHO）发布的公告，欧盟正加速落实《欧盟备灾联盟》相关措施，目标是把应急响应从“政府单方面救火”升级为“全社会提前演练”。',
           '说白了，不是制造恐慌，而是面对近年来频发的极端天气、基础设施中断和复合风险，让老百姓平时就知道停电停网时去哪儿领信息、家里常备哪些物资，遇到事儿心里不发毛。'
@@ -706,6 +724,7 @@
         date: '2026-11-17',
         title: '厄尔尼诺添了一把火：印尼持续林火引发跨境烟霾，东南亚多国居民又戴紧了口罩',
         lead: '欧盟哥白尼大气监测局（CAMS）11月17日报告显示，受厄尔尼诺带来的干燥天气助推，印尼自10月延续至11月的林火正给东南亚多地带来持续多日的烟霾。',
+        enSummary: 'Intensified by El Niño, persistent wildfires across Indonesia have sent prolonged transboundary haze over neighboring Southeast Asian countries, straining regional air quality.',
         body: [
           '每年一碰上强厄尔尼诺年份，东南亚的热带泥炭地就格外“易燃”。哥白尼大气监测局通过卫星追踪发现，今年10月到11月印尼多处火点排放的烟尘羽流随风跨境扩散，让周边区域空气质量连续多日承压。',
           '林火看似是“山林里的事”，其实和农业开垦、气候异常紧紧绑在一起。一旦泥炭地起火，不仅扑救难度极大，还会把封存多年的大量碳排放回大气中。'
@@ -727,6 +746,7 @@
         date: '2026-11-25',
         title: '拉美科技圈两面看：巴西利亚2900人畅想创新未来，但港口与油气管道正遭黑客猛攻',
         lead: '一边是超2900名学者与政策制定者齐聚巴西利亚共商拉美科技合作，另一边网络安全机构却敲响警钟：拉美关键基础设施正成为黑客新靶心。',
+        enSummary: 'While over 2,900 delegates gathered in Brasília for the CILAC 2026 science forum, cybersecurity analysts warned of rising attacks targeting Latin American ports, pipelines, and factories.',
         body: [
           '11月24日，联合国教科文组织（UNESCO）等机构参与的CILAC 2026拉美与加勒比开放科学论坛在巴西利亚拉开帷幕，超过2900名代表聚焦科技自立与区域协作，希望帮拉美在全球数字经济里抢占一席之地。',
           '可就在同一周（11月25日），网络安全媒体Dark Reading披露，拉美地区的港口、油气管道和制造业正遭遇新一轮网络攻击潮。数字化跑得越快，如果安全防线没同步补齐，黑客顺着网线就能瘫痪现实世界里的码头和工厂。'
@@ -749,6 +769,7 @@
         date: '2026-11-25',
         title: '阿斯旺论坛上的密集串门：北约南部邻国特使访埃，与埃及、伊拉克及阿盟聊了啥？',
         lead: '中东局势余波未平，各方都在找沟通渠道。11月21日至25日，北约南部邻国事务特别代表赴埃及访问并出席阿斯旺论坛，展开一轮密集外交互动。',
+        enSummary: 'NATO\'s Special Representative for the Southern Neighbourhood visited Egypt for the Aswan Forum, holding talks with Egyptian, Iraqi, and Arab League officials on regional stability.',
         body: [
           '据北约11月25日发布的消息，北约秘书长南部邻国事务特别代表哈维尔·科洛米纳（Javier Colomina）在埃及期间，先后会见了埃及外长、伊拉克外长以及阿拉伯国家联盟高官，还访问了开罗国际冲突解决与维和培训中心。',
           '在多方矛盾交织的当下，这类多边论坛就像外交圈的“茶话会”——未必当场签下大协议，但把沟通热线保持畅通、交流对红海、中东及北非安全局势的判断，本身就是防止误判的重要缓冲垫。'
@@ -772,6 +793,7 @@
         date: '2026-11-26',
         title: '外贸桌上的“一紧一松”：商务部今天强硬回应美301关税，同时欢迎欧盟移出一家中企制裁',
         lead: '11月26日，中国商务部连发三条涉外经贸表态：对美国拟加征301关税坚决反对；对欧盟将玉沙集团移出涉俄制裁清单表示欢迎；同时表态密切关注欧方混动汽车调查。',
+        enSummary: 'China\'s Commerce Ministry strongly opposed Washington\'s proposed Section 301 tariffs while welcoming the EU\'s removal of a Chinese firm from its sanctions list and closely watching an EU hybrid-car probe.',
         body: [
           '把今天商务部的三条表态拼在一起看，特别像一盘正在同时下的多线大棋。第一条“紧”的对美：针对美国USTR昨天抛出的14经济体301关税提案，商务部11月26日明确表示坚决反对，认为这种以所谓产能过剩为由的单边关税做法违背世贸规则。',
           '第二条“松”的对欧：同样在11月26日，欧方发布公告将玉沙集团有限公司移出欧盟涉俄出口管制制裁清单，商务部随即表示欢迎，并呼吁欧方继续将更多中国企业移出清单。第三条则是“稳中盯紧”：针对欧盟对混合动力汽车的保障措施调查，中方明确表示将密切关注后续进展，维护中国车企正当权益。',
@@ -796,6 +818,7 @@
         date: '2026-11-26',
         title: '不再被“困在系统里”：18家重点平台完成算法协商，覆盖超2500万骑手和网约车司机',
         lead: '配送时间怎么算、抽成比例怎么定、差评申诉谁说了算？11月26日消息显示，全国18家重点平台企业已完成算法协商，惠及超过2500万名新就业形态劳动者。',
+        enSummary: 'Eighteen major Chinese digital platforms have completed algorithm negotiations covering over 25 million gig workers, aiming to make delivery deadlines, pay rules, and rest protections fairer.',
         body: [
           '以前大家总吐槽外卖骑手和网约车司机“跟看不见的算法打工”——系统说30分钟送到，晚一分钟就扣钱，司机想找人讲理都没处敲门。据中新网11月26日报道，如今18家重点平台企业通过集体协商机制，把派单逻辑、计价规则、休息保障等核心算法条款摆到桌面上谈，覆盖人数超过2500万。',
           '这就像把原本藏在黑箱里的“电子包工头”请出来开圆桌会：算法不是不能用，但规则得透明、得留出安全冗余，不能一味把效率压力转嫁给路上的打工人。'
@@ -817,6 +840,7 @@
         date: '2026-11-26',
         title: '今晚加油别急着白天加！24时起汽柴油每吨大降440/425元，菜篮子指数也微降',
         lead: '实打实的省钱快讯：11月26日24时起，国内汽油每吨下调440元、柴油下调425元；同日“农产品批发价格200指数”较昨日再降0.05个点。',
+        enSummary: 'Chinese motorists get relief as domestic gasoline and diesel prices drop by 440 and 425 yuan per ton at midnight, accompanied by a slight dip in the national wholesale produce price index.',
         body: [
           '油箱还没见底的车主今天可以稳一手，等过了今晚零点再去加油！按中新网11月26日公布的调价幅度，这次汽柴油每吨分别下调440元和425元，是近期相当有感的一次降幅，加满一箱50升的家用油能省下一杯精品咖啡甚至一顿简餐钱。',
           '顺带瞄一眼“菜篮子”：农业农村部监测的11月26日“农产品批发价格200指数”比昨天又微降了0.05个点，入冬后的油费和菜价双双透着稳当。'
@@ -839,6 +863,7 @@
         date: '2026-11-26',
         title: '“意念操控”定规矩了：工信部脑机接口标委会工作组成立，智能仿生手已走进烟火日常',
         lead: '脑机接口不再只是实验室里的科幻大片——11月26日工信部脑机接口标委会工作组成立，而刚结束不久的2026乌镇峰会上，智能仿生手等民生应用已经吸睛无数。',
+        enSummary: 'China\'s MIIT launched a brain-computer interface standardization working group as everyday assistive tech like smart bionic hands gained prominence at the 2026 Wuzhen Internet Conference.',
         body: [
           '行业里有句话叫“三流企业做产品，一流企业定标准”。据中新网11月26日消息，工业和信息化部脑机接口标准化技术委员会工作组正式成立，意味着从电极安全、信号协议到临床伦理，国内脑机接口产业开始系统性地立规矩、铺跑道。',
           '别以为这离生活很远：就在11月初的2026年世界互联网大会乌镇峰会上，央视网报道一款智能仿生手吸引了大量观众驻足——前沿数字科技正在从“炫技”走向帮助残障人士端水、写字、拥抱日常烟火。'
@@ -861,6 +886,7 @@
         date: '2026-11-26',
         title: '不用挤北上广飞出国！宜昌三峡国际机场出入境客流创历史新高，小城机场跑出“国际范”',
         lead: '以前出国旅游总得先坐高铁去省会或一线城市转机，如今越来越多地级市的家门口就能直飞境外。11月26日，湖北宜昌三峡国际机场口岸出入境客流刷新历史纪录。',
+        enSummary: 'Yichang\'s Three Gorges International Airport set a new record for cross-border passenger traffic, reflecting booming direct international travel from China\'s smaller regional cities.',
         body: [
           '据中新网11月26日报道，随着搭载170名旅客的HB851次航班起降，宜昌三峡国际机场口岸年度出入境客流创下历史新高。这看似是一条地方交通喜讯，背后其实藏着一个很有趣的消费变化：二三线城市的跨境出行需求正在加速释放，同时入境游的外国游客也开始跳过“北上广深”，直接飞进三峡这样的山水人文小城。',
           '家门口拎包就能飞出去看世界，世界也顺着航线直接飞进小城吃凉虾看大坝，双向奔赴的烟火气越来越足。'
@@ -1192,6 +1218,7 @@
               </div>
               <h3 class="font-serif text-lg font-bold leading-snug hover:text-terracotta transition">${a.title}</h3>
               <p class="text-xs sm:text-sm text-inkMuted dark:text-stone-300 leading-relaxed">${a.lead}</p>
+              ${a.enSummary ? `<p class="text-[11px] sm:text-xs text-tealDeep/90 dark:text-teal-300/90 italic leading-relaxed bg-tealDeep/5 dark:bg-teal-950/30 px-2.5 py-1.5 rounded-lg border-l-2 border-tealDeep/50"><span class="not-italic font-semibold mr-1">EN:</span>${a.enSummary}</p>` : ''}
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                 <div class="p-2.5 rounded-xl bg-terracotta/8 dark:bg-orange-950/30 border border-terracotta/15">
                   <div class="text-[11px] font-bold text-terracotta mb-0.5">🏠 对普通人</div>
@@ -1263,6 +1290,7 @@
               </div>
               <h3 class="font-serif font-bold text-base leading-snug hover:text-terracotta transition">${a.title}</h3>
               <p class="text-xs text-inkMuted dark:text-stone-300 leading-relaxed line-clamp-3">${a.lead}</p>
+              ${a.enSummary ? `<p class="text-[11px] text-tealDeep/90 dark:text-teal-300/90 italic leading-relaxed line-clamp-2 border-l-2 border-tealDeep/40 pl-2"><span class="not-italic font-semibold mr-1">EN:</span>${a.enSummary}</p>` : ''}
             </div>
 
             <div class="flex items-center justify-between pt-2.5 border-t border-ink/10 dark:border-white/10">
@@ -1374,6 +1402,16 @@
       title.textContent = a.title;
       meta.textContent = `收录日期：${a.date || CURRENT_EDITION_META.date} · 预计阅读 ${a.readMins} 分钟 · ${a.scope === 'intl' ? '国际板块' : '国内板块'}`;
       lead.textContent = a.lead;
+      const enBox = document.getElementById('modal-en-summary-box');
+      const enText = document.getElementById('modal-en-summary');
+      if (enBox && enText) {
+        if (a.enSummary) {
+          enText.textContent = a.enSummary;
+          enBox.classList.remove('hidden');
+        } else {
+          enBox.classList.add('hidden');
+        }
+      }
       body.innerHTML = (a.body || []).map(p => `<p>${p}</p>`).join('');
       sources.innerHTML = (a.sources || []).map(src => `
         <a href="${src.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-tealDeep/10 text-tealDeep dark:bg-teal-900/40 dark:text-teal-200 hover:bg-tealDeep/20 transition">
@@ -1507,6 +1545,7 @@
         lines.push(`## ${idx + 1}. ${a.title}`);
         lines.push(`- **日期**：${a.date || '未知'} ｜ **板块**：${a.regionLabel || ''} ｜ **题材**：${a.category || ''}`);
         lines.push(`- **一句话拉家常**：${a.lead || ''}`);
+        if (a.enSummary) lines.push(`- **English Summary**: *${a.enSummary}*`);
         lines.push('');
         (a.body || []).forEach(p => { lines.push(p); lines.push(''); });
         if (a.impactOrdinary) lines.push(`> **对普通人的影响**：${a.impactOrdinary}`);
