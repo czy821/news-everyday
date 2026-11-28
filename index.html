@@ -156,6 +156,7 @@
             <button type="button" data-mode="news" class="mode-btn px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-cardDark eclectic-border hover:border-terracotta transition">📰 要闻速览 (11.5分)</button>
             <button type="button" data-mode="fun" class="mode-btn px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-cardDark eclectic-border hover:border-terracotta transition">🎈 奇闻趣事 (4分)</button>
             <button type="button" data-mode="saved" class="mode-btn px-3 py-1.5 rounded-full text-xs font-medium bg-white dark:bg-cardDark eclectic-border hover:border-terracotta transition">⭐ 收藏 (<span id="saved-count">0</span>)</button>
+            <a href="#city-tech-section" class="px-3 py-1.5 rounded-full text-xs font-semibold bg-tealDeep/12 text-tealDeep dark:bg-teal-900/40 dark:text-teal-200 border border-tealDeep/25 hover:bg-tealDeep/20 transition">🚀 深圳×长沙科创 (<span id="city-tech-count">4</span>)</a>
           </div>
           <button id="start-guided-read-btn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-terracotta text-white text-xs font-semibold hover:bg-terracotta/90 transition shadow-sm">
             <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
@@ -229,6 +230,25 @@
       </div>
     </section>
 
+    <!-- Dedicated Dual-City Tech & Policy Section: Shenzhen × Changsha -->
+    <section id="city-tech-section" class="bg-gradient-to-br from-tealDeep/8 via-cardLight to-terracotta/8 dark:from-teal-950/30 dark:via-cardDark dark:to-orange-950/20 rounded-2xl eclectic-border collage-shadow p-5 space-y-4">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-tealDeep dark:text-teal-300">DUAL-CITY TECH · 双城科创专栏</span>
+          <h2 class="font-serif text-xl sm:text-2xl font-bold mt-0.5">深圳 × 长沙 · 每日科技产业与政策速递</h2>
+          <p class="text-xs text-inkMuted dark:text-stone-400 mt-1">每天精选 3–5 条两地最新产业政策、硬核科技突破与企业落地动态（含英文总结与双维影响拆解）</p>
+        </div>
+        <div class="flex items-center gap-1.5" id="city-filter-group">
+          <button type="button" data-city="all" class="city-btn px-3 py-1 rounded-full text-xs font-semibold bg-tealDeep text-white transition">双城全部</button>
+          <button type="button" data-city="shenzhen" class="city-btn px-3 py-1 rounded-full text-xs font-medium bg-white dark:bg-stone-800 eclectic-border hover:border-tealDeep transition">🏙️ 深圳</button>
+          <button type="button" data-city="changsha" class="city-btn px-3 py-1 rounded-full text-xs font-medium bg-white dark:bg-stone-800 eclectic-border hover:border-terracotta transition">🌶️ 长沙</button>
+        </div>
+      </div>
+      <div id="city-tech-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
     <!-- Main Eclectic Filterable Feed -->
     <section id="all-stories-section" class="space-y-4">
       <div class="bg-cardLight dark:bg-cardDark rounded-2xl eclectic-border p-4 space-y-3">
@@ -280,6 +300,18 @@
         </div>
       </div>
       <input id="import-saved-file" type="file" accept=".json,application/json" class="hidden" />
+
+      <!-- Saved Date Filter Bar (Visible in Saved Mode) -->
+      <div id="saved-date-bar" class="hidden bg-mustard/10 dark:bg-amber-950/25 rounded-xl eclectic-border px-3.5 py-2.5 flex-wrap items-center justify-between gap-2.5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-semibold text-amber-900 dark:text-amber-200 inline-flex items-center gap-1">
+            <i data-lucide="calendar" class="w-3.5 h-3.5"></i> 按日期检索收藏：
+          </span>
+          <input id="saved-date-input" type="date" class="px-2.5 py-1 rounded-lg text-xs bg-white dark:bg-cardDark eclectic-border focus:outline-none focus:ring-2 focus:ring-terracotta/40" />
+          <button id="clear-saved-date-btn" type="button" class="hidden px-2 py-1 rounded-lg text-[11px] font-medium text-terracotta hover:bg-terracotta/10 transition">清除日期</button>
+        </div>
+        <div id="saved-date-pills" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar max-w-full"></div>
+      </div>
 
       <!-- Stories Masonry / Bento Grid -->
       <div id="stories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -920,15 +952,132 @@
       }
     ];
 
+    let CITY_TECH = [
+      {
+            "id": "sz-1",
+            "city": "shenzhen",
+            "region": "cn",
+            "regionLabel": "🏙️ 深圳科创",
+            "scope": "domestic",
+            "category": "双城科创",
+            "type": "news",
+            "readMins": 1.0,
+            "date": "2026-11-27",
+            "title": "深圳拿真金白银砸“AI硬件首发”：首店最高奖300万、首发活动补100万，南山体验店月销近600万",
+            "lead": "别人搞首发经济靠请明星剪彩，深圳直接把3D打印、人形机器人和AI眼镜搬进商场当“实验室”——配合最高300万元首店奖励，消费者人均在店里能逛74分钟。",
+            "enSummary": "Shenzhen is backing AI hardware and 3C product debuts with up to 1M yuan in event subsidies and 3M yuan in flagship-store awards, turning local malls into high-traffic innovation showrooms.",
+            "body": [
+                  "据央视网11月27日报道，深圳正把本土“20+8”产业集群与首发经济深度绑定：对汽车、3C数码、AI硬件等品类首发活动最高给予100万元补贴，首店奖励最高达300万元，并提出培育50款现象级热销单品。",
+                  "在南山区的INNO100全球创新旗舰店，顾客既能现场用激光雕刻和3D打印定制小物，又能和人形机器人、外骨骼设备面对面互动，日均客流达5000至6000人次、单月销售额近600万元，背后靠的正是深圳“上午出图纸、下午能打样”的全产业链护城河。"
+            ],
+            "impactOrdinary": "在深圳逛街买AI眼镜、智能穿戴和桌面3D打印机越来越像逛科技馆，而且还能在门店现场检测当天以旧换新；对做消费硬件的创业团队来说，线下首发补贴能直接省下一笔不小的推广费。",
+            "impactWorld": "深圳把“制造供应链前端”直接开进商圈，为全球智能硬件探索出“研发—试产—首店直面消费者”的最短转化链路。",
+            "sources": [
+                  {
+                        "name": "央视网：深圳以科创基因与完备产供链筑牢首发经济护城河",
+                        "url": "https://news.cctv.cn/2026/11/27/ARTIcknM9gJmhWoy5SSWQvKJ261127.shtml"
+                  }
+            ]
+      },
+      {
+            "id": "sz-2",
+            "city": "shenzhen",
+            "region": "cn",
+            "regionLabel": "🏙️ 深圳科创",
+            "scope": "domestic",
+            "category": "双城科创",
+            "type": "news",
+            "readMins": 1.0,
+            "date": "2026-11-28",
+            "title": "内地首个“5万亿外贸大市”背后：深圳超50种产品全球市占率第一，“香港研发+深圳中试”跑出加速度",
+            "lead": "今年前10个月深圳进出口达5.25万亿元（同比大增40.9%），光明科学城合成生物大设施运行超10万小时，前海与深港创新走廊正把实验室样品两年干到车规级量产。",
+            "enSummary": "Shenzhen became mainland China's first 5-trillion-yuan trade city in the first 10 months of 2026, backed by over 50 world-leading product categories and fast Hong Kong-to-Shenzhen R&D-to-manufacturing relays.",
+            "body": [
+                  "据央视网与《求是》网11月27-28日报道，深圳不仅成为中国内地首个“5万亿外贸大市”，更有超过50种产品拿下全球市场份额第一、200多种产品全国第一；截至2026年7月，深圳企事业单位累计参与制定国际标准已达3807项。",
+                  "更具含金量的是跨城创新接力：前海深港青年梦工场的半导体创业团队把基础仿真留在港大实验室，把样品试制、良率调试放在深圳，再接入珠三角制造体系，两年多就跑完从实验室到量产的全程；同时深圳科研选题80%以上由企业提出，财政科研资金投向企业需求不低于60%。"
+            ],
+            "impactOrdinary": "企业主导科研选题和1.5万亿元创投基金生态，让理工科工程师和硬科技创业者在深圳更容易拿到中试平台与早期天使资金支持。",
+            "impactWorld": "深港“前研后产”叠加深圳国际仲裁与数据交易等制度型开放探索，正在为全球硬件创新打造一块高度可预期的高效试验田。",
+            "sources": [
+                  {
+                        "name": "央视网：开放是深圳与生俱来的基因",
+                        "url": "https://news.cctv.com/2026/11/27/ARTII1S9pj0UEs5x9olZM638261127.shtml"
+                  },
+                  {
+                        "name": "求是网：创新是深圳的活力所在",
+                        "url": "https://www.qstheory.cn/20261128/b1465768d405426fa1256b7d9fe74985/c.html"
+                  }
+            ]
+      },
+      {
+            "id": "cs-1",
+            "city": "changsha",
+            "region": "cn",
+            "regionLabel": "🌶️ 长沙科创",
+            "scope": "domestic",
+            "category": "双城科创",
+            "type": "news",
+            "readMins": 1.0,
+            "date": "2026-11-27",
+            "title": "长沙高新区跻身国家级“高标准数字园区”！湘江新区AI企业破1600家，华为联手23企“共建鸿蒙星城”",
+            "lead": "世界计算大会刚在长沙落幕，湘江新区晒出硬核成绩单：人工智能及关联企业超1600家、规上营收440亿元，100%国产化鸿蒙电脑与“20万补贴撬动39亿融资”的柳枝行动齐发力。",
+            "enSummary": "Changsha High-Tech Zone entered China's first batch of national high-standard digital parks, as Xiangjiang New Area's 1,600+ AI firms and Huawei's 23-partner HarmonyOS alliance accelerate computing commercialization.",
+            "body": [
+                  "据《长沙晚报》11月27日报道，工信部与商务部联合公布首批91家高标准数字园区建设名单，长沙高新区顺利入选。在刚结束的2026世界计算大会上，华为联合23家生态企业发布“共建鸿蒙星城”方案，本土龙头拓维信息亮出100%国产化率的兆瀚鸿蒙电脑，中兴通讯长沙基地则让100多款大模型直接进产线干活、拉升生产效率25%以上。",
+                  "在园区服务上，麓谷片区不当“收租房东”而当“育苗园丁”：坚持11年的“柳枝行动”用20万元初创补贴已累计撬动社会融资39亿元、孵出160多家国家高企，还向企业开放600多个智慧场景，让好产品直接在本地产业链上长出来。"
+            ],
+            "impactOrdinary": "对想回中西部发展的程序员、AI工程师和初创团队来说，长沙不仅房价友好，还有省算力调度平台、“柳枝行动”20万元启动补贴和密集的鸿蒙/信创岗位，性价比相当突出。",
+            "impactWorld": "长沙依托“新一代自主安全计算系统”国家队集群，正在把国产算力、鸿蒙生态与工业产线结合成中部地区的特色数字高地。",
+            "sources": [
+                  {
+                        "name": "长沙晚报：世界计算大会，湘江新区“算”出了什么？",
+                        "url": "https://www.icswb.com/h/100046/20261127/1005932.html"
+                  }
+            ]
+      },
+      {
+            "id": "cs-2",
+            "city": "changsha",
+            "region": "cn",
+            "regionLabel": "🌶️ 长沙科创",
+            "scope": "domestic",
+            "category": "双城科创",
+            "type": "news",
+            "readMins": 1.0,
+            "date": "2026-11-27",
+            "title": "长沙县顶格资助高端研发团队最高1亿元！新能源整车占比达65.3%，长沙工程机械军团携AI装备出海抢单",
+            "lead": "一边是长沙县围绕“3×3”现代化产业体系祭出最高1亿元团队综合资助，一边是三一、中联重科、山河智能带着AI挖掘机器人和电动巨无霸在上海宝马展拿下全球大单。",
+            "enSummary": "Changsha County is offering up to 100 million yuan for top R&D teams as NEVs hit 65.3% of local vehicle output, while Sany, Zoomlion, and Sunward showcase AI and electric heavy machinery to global buyers.",
+            "body": [
+                  "据《湖南日报》11月27日特稿，长沙县（星沙）及长沙经开区规上工业企业智能制造试点占比已达53%，截至2026年三季度新能源汽车产量占整车比重升至65.3%；当地对高端领军科技人才团队给出最高1亿元综合资助，并配齐住房、子女教育与科研补贴，上海技术交易所中南中心还联合湘江实验室共建概念验证中心，帮科研成果跨过“中试门槛”。",
+                  "产业出海同样猛：人民网11月27日报道，湖南工程机械军团组团亮相上海宝马展，中联重科亮出AI挖掘机器人和全球最大300吨电驱履带吊，山河智能新能源展品占比超半数，三一在非洲赞比亚建成的光储柴矿山微电网绿电占比超95%，每年帮矿山省电费约4000万元。"
+            ],
+            "impactOrdinary": "从无人配送车跑上长沙经开区街头，到新能源整车、智能制造工厂与领军团队落户，星沙与经开区正为机械、自动化、新能源和软件人才提供大量高含金量岗位。",
+            "impactWorld": "长沙工程机械龙头正从“卖单台铁疙瘩”升级为向全球输出“电动装备+无人驾驶+矿山微电网”的整套绿色智能方案，改写全球重型装备竞争格局。",
+            "sources": [
+                  {
+                        "name": "湖南日报：长沙县创新筑筋骨制造攀高地",
+                        "url": "https://changsha.voc.com.cn/news/202611/34360138.html"
+                  },
+                  {
+                        "name": "人民网：湖南工程机械组团亮相上海宝马展竞逐全球市场",
+                        "url": "http://hn.people.com.cn/n2/2026/1127/c336521-41762546.html"
+                  }
+            ]
+      }
+];
+
     // =========================================================================
     // APP STATE & SAFE STORAGE (已读按日期自动重置 + 收藏保存完整快照不丢失)
     // =========================================================================
     const STORAGE_KEY = 'noon_briefing_state_v2';
     const state = {
       activeRegion: 'all',
+      activeCity: 'all',
       activeCategory: 'all',
       activeMode: 'all',
       searchQuery: '',
+      savedDateFilter: '',
       editionKey: '2026-11-26#330',
       readIds: new Set(),
       savedArticles: {}, // key: uid ("YYYY-MM-DD__id") -> 完整文章快照，跨天更新永不丢失
@@ -1033,7 +1182,7 @@
     }
 
     function findArticleByUid(uid) {
-      return ARTICLES.find(a => getArticleUid(a) === uid) || state.savedArticles[uid] || null;
+      return ARTICLES.find(a => getArticleUid(a) === uid) || CITY_TECH.find(a => getArticleUid(a) === uid) || state.savedArticles[uid] || null;
     }
 
     function getSavedArticlesList() {
@@ -1050,6 +1199,7 @@
         if (state.activeMode === 'deep' && a.type !== 'deep') return false;
         if (state.activeMode === 'news' && a.type !== 'news') return false;
         if (state.activeMode === 'fun' && a.type !== 'fun') return false;
+        if (state.activeMode === 'saved' && state.savedDateFilter && (a.date || '') !== state.savedDateFilter) return false;
         if (q) {
           const hay = (a.title + ' ' + a.lead + ' ' + (a.body || []).join(' ') + ' ' + a.category + ' ' + a.regionLabel + ' ' + (a.date || '')).toLowerCase();
           if (!hay.includes(q)) return false;
@@ -1246,6 +1396,39 @@
       }).join('');
     }
 
+    function renderSavedDateBar() {
+      const bar = document.getElementById('saved-date-bar');
+      const pills = document.getElementById('saved-date-pills');
+      const dateInput = document.getElementById('saved-date-input');
+      const clearBtn = document.getElementById('clear-saved-date-btn');
+      if (!bar || !pills) return;
+
+      const show = state.activeMode === 'saved';
+      bar.classList.toggle('hidden', !show);
+      bar.classList.toggle('flex', show);
+      if (!show) return;
+
+      if (dateInput && dateInput.value !== state.savedDateFilter) {
+        dateInput.value = state.savedDateFilter;
+      }
+      if (clearBtn) clearBtn.classList.toggle('hidden', !state.savedDateFilter);
+
+      const savedList = getSavedArticlesList();
+      const dateCounts = {};
+      savedList.forEach(a => {
+        const d = a.date || '未知日期';
+        dateCounts[d] = (dateCounts[d] || 0) + 1;
+      });
+      const sortedDates = Object.keys(dateCounts).sort((a, b) => b.localeCompare(a));
+
+      const allPill = `<button type="button" data-saved-date="" class="saved-date-pill shrink-0 px-2.5 py-1 rounded-full text-[11px] font-semibold transition ${!state.savedDateFilter ? 'bg-terracotta text-white' : 'bg-white dark:bg-cardDark eclectic-border hover:border-terracotta'}">全部日期 (${savedList.length})</button>`;
+      const datePillsHtml = sortedDates.map(d => {
+        const active = state.savedDateFilter === d;
+        return `<button type="button" data-saved-date="${d}" class="saved-date-pill shrink-0 px-2.5 py-1 rounded-full text-[11px] font-medium transition ${active ? 'bg-terracotta text-white' : 'bg-white dark:bg-cardDark eclectic-border hover:border-terracotta'}">${d} (${dateCounts[d]})</button>`;
+      }).join('');
+      pills.innerHTML = allPill + datePillsHtml;
+    }
+
     function renderStoriesGrid() {
       const grid = document.getElementById('stories-grid');
       const empty = document.getElementById('empty-state');
@@ -1255,9 +1438,10 @@
 
       const filtered = getFilteredArticles();
       const totalFilterMins = filtered.reduce((s, a) => s + a.readMins, 0);
-      const isFiltered = state.activeRegion !== 'all' || state.activeCategory !== 'all' || state.activeMode !== 'all' || state.searchQuery.trim() !== '';
+      const isFiltered = state.activeRegion !== 'all' || state.activeCategory !== 'all' || state.activeMode !== 'all' || state.searchQuery.trim() !== '' || state.savedDateFilter !== '';
 
-      summary.textContent = state.activeMode === 'saved' ? `我的永久收藏夹：共 ${filtered.length} 篇（支持随时导出 JSON / Markdown 备份或导入恢复）` : `当前展示 ${filtered.length} / ${ARTICLES.length} 篇（预计阅读 ${totalFilterMins.toFixed(1)} 分钟）`;
+      renderSavedDateBar();
+      summary.textContent = state.activeMode === 'saved' ? (state.savedDateFilter ? `收藏夹日期筛选「${state.savedDateFilter}」：共找到 ${filtered.length} 篇` : `我的永久收藏夹：共 ${filtered.length} 篇（可按日期或关键词检索，支持导出备份与导入恢复）`) : `当前展示 ${filtered.length} / ${ARTICLES.length} 篇（预计阅读 ${totalFilterMins.toFixed(1)} 分钟）`;
       const backupBar = document.getElementById('saved-backup-bar');
       if (backupBar) {
         backupBar.classList.toggle('hidden', state.activeMode !== 'saved');
@@ -1357,11 +1541,68 @@
       });
     }
 
+    function renderCityTechSection() {
+      const grid = document.getElementById('city-tech-grid');
+      const countEl = document.getElementById('city-tech-count');
+      if (countEl) countEl.textContent = String(CITY_TECH.length);
+      if (!grid) return;
+
+      document.querySelectorAll('.city-btn').forEach(btn => {
+        const active = btn.dataset.city === state.activeCity;
+        btn.className = active
+          ? 'city-btn px-3 py-1 rounded-full text-xs font-semibold bg-tealDeep text-white transition'
+          : 'city-btn px-3 py-1 rounded-full text-xs font-medium bg-white dark:bg-stone-800 eclectic-border hover:border-tealDeep transition';
+      });
+
+      const list = CITY_TECH.filter(a => state.activeCity === 'all' || a.city === state.activeCity);
+      if (list.length === 0) {
+        grid.innerHTML = '<div class="col-span-full text-center text-xs text-inkMuted py-6">今日该城市暂无新增条目</div>';
+        return;
+      }
+
+      grid.innerHTML = list.map(a => {
+        const uid = getArticleUid(a);
+        const isRead = state.readIds.has(uid);
+        const isSaved = Boolean(state.savedArticles[uid]);
+        const cityBadgeCls = a.city === 'shenzhen'
+          ? 'bg-tealDeep text-white'
+          : 'bg-terracotta text-white';
+        return `
+          <article class="bg-cardLight dark:bg-cardDark rounded-2xl eclectic-border card-hover p-4 flex flex-col justify-between gap-2.5 cursor-pointer ${isRead ? 'opacity-75' : ''}" data-open-article="${uid}">
+            <div class="space-y-2">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold ${cityBadgeCls}">${a.regionLabel}</span>
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-ink/5 dark:bg-white/10 text-inkMuted dark:text-stone-300">产业 · 政策</span>
+                </div>
+                <span class="text-[11px] font-mono text-inkMuted dark:text-stone-400">${a.readMins || 1}分</span>
+              </div>
+              <h3 class="font-serif font-bold text-base leading-snug hover:text-terracotta transition">${a.title}</h3>
+              <p class="text-xs text-inkMuted dark:text-stone-300 leading-relaxed">${a.lead}</p>
+              ${a.enSummary ? `<p class="text-[11px] text-tealDeep/90 dark:text-teal-300/90 italic leading-relaxed border-l-2 border-tealDeep/40 pl-2"><span class="not-italic font-semibold mr-1">EN:</span>${a.enSummary}</p>` : ''}
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-ink/10 dark:border-white/10 text-xs">
+              <span class="text-tealDeep dark:text-teal-300 font-semibold inline-flex items-center gap-1">查看产业与政策拆解 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></span>
+              <div class="flex items-center gap-1.5">
+                <button type="button" data-toggle-save="${uid}" class="p-1 rounded hover:bg-mustard/15 transition ${isSaved ? 'text-mustard' : 'text-inkMuted'}" title="收藏">
+                  <i data-lucide="bookmark" class="w-3.5 h-3.5 ${isSaved ? 'fill-current' : ''}"></i>
+                </button>
+                <button type="button" data-toggle-read="${uid}" class="px-2 py-0.5 rounded-full text-[11px] font-medium eclectic-border ${isRead ? 'bg-sage text-white border-sage' : 'hover:bg-sage/15'}">
+                  ${isRead ? '✓ 已读' : '标已读'}
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
     function renderAll() {
       renderProgressAndCounters();
       renderCategoryPills();
       updateFilterButtonStyles();
       renderDeepDiveCards();
+      renderCityTechSection();
       renderStoriesGrid();
       renderPolls();
       if (typeof lucide !== 'undefined') lucide.createIcons();
@@ -1371,7 +1612,9 @@
     // IMMERSIVE READER MODAL
     // =========================================================================
     function getModalNavPool() {
-      return state.activeMode === 'saved' ? getSavedArticlesList() : ARTICLES;
+      if (state.activeMode === 'saved') return getSavedArticlesList();
+      if (CITY_TECH.some(a => getArticleUid(a) === state.selectedArticleUid)) return CITY_TECH;
+      return ARTICLES;
     }
 
     function openArticleModal(articleUid) {
@@ -1647,6 +1890,15 @@
         document.getElementById('all-stories-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
 
+      // Dual-city Shenzhen/Changsha filter buttons
+      document.getElementById('city-filter-group').addEventListener('click', (e) => {
+        const btn = e.target.closest('.city-btn');
+        if (!btn) return;
+        state.activeCity = btn.dataset.city;
+        renderCityTechSection();
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+
       // Region buttons
       document.getElementById('region-filter-group').addEventListener('click', (e) => {
         const btn = e.target.closest('.region-btn');
@@ -1663,6 +1915,25 @@
         renderAll();
       });
 
+      // Saved date search input & quick date pills
+      document.getElementById('saved-date-input').addEventListener('change', (e) => {
+        state.savedDateFilter = e.target.value || '';
+        renderStoriesGrid();
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+      document.getElementById('clear-saved-date-btn').addEventListener('click', () => {
+        state.savedDateFilter = '';
+        renderStoriesGrid();
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+      document.getElementById('saved-date-pills').addEventListener('click', (e) => {
+        const pill = e.target.closest('.saved-date-pill');
+        if (!pill) return;
+        state.savedDateFilter = pill.dataset.savedDate || '';
+        renderStoriesGrid();
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      });
+
       // Search input
       document.getElementById('search-input').addEventListener('input', (e) => {
         state.searchQuery = e.target.value;
@@ -1676,7 +1947,9 @@
         state.activeCategory = 'all';
         state.activeMode = 'all';
         state.searchQuery = '';
+        state.savedDateFilter = '';
         document.getElementById('search-input').value = '';
+        const sdi = document.getElementById('saved-date-input'); if (sdi) sdi.value = '';
         renderAll();
       };
       document.getElementById('reset-filters-btn').addEventListener('click', doReset);
@@ -1840,6 +2113,7 @@
             updatedAt: data.updatedAt || (data.date + ' 12:00')
           };
           ARTICLES = ensureArticleUids(data.articles);
+          if (Array.isArray(data.cityTech) && data.cityTech.length > 0) CITY_TECH = ensureArticleUids(data.cityTech);
           if (Array.isArray(data.polls) && data.polls.length > 0) POLLS = data.polls;
           TOTAL_MINS = ARTICLES.reduce((sum, a) => sum + Number(a.readMins || 1), 0);
           state.editionKey = `${CURRENT_EDITION_META.date}#${CURRENT_EDITION_META.editionNumber}`;
@@ -1866,6 +2140,7 @@
     // =========================================================================
     window.addEventListener('DOMContentLoaded', () => {
       ARTICLES = ensureArticleUids(ARTICLES);
+      CITY_TECH = ensureArticleUids(CITY_TECH);
       loadPersistedState(state.editionKey);
       applyTheme();
       applyFontSize();
