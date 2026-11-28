@@ -2,8 +2,10 @@
   "editionNumber": 331,
   "date": "2026-11-28",
   "updatedAt": "2026-11-28 12:00",
-  "headline": "芯片、电灯和房租：今天世界有点忙",
-  "subtitle": "英伟达踩刹车、韩国赌AI、基辅熬冬、西班牙年轻人租房难；感恩节停电也没挡住黑五刷卡。中午歇口气，来茶馆聊两句。",
+  "coverImage": "./assets/covers/cover-ai-tech.jpg",
+  "coverTheme": "AI与硬核科技",
+  "headline": "世界忙着转，咱们喝口茶慢慢看",
+  "subtitle": "AI芯片、房租和地铁迷宫，今天的新闻有点杂。别急，泡杯茶，咱们挑几件身边事慢慢聊。",
   "articles": [
     {
       "id": "us-1",
@@ -14,16 +16,16 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-28",
-      "title": "英伟达对东南亚“踩刹车”：一颗AI芯片，牵动中美科技拔河",
-      "lead": "美国一边收紧AI芯片出口，英伟达一边让东南亚的服务器发货先等等——这可不是物流小哥偷懒，是科技博弈又拧紧了一圈。",
-      "enSummary": "Nvidia has paused server shipments to several Southeast Asian countries as Washington tightens restrictions aimed at keeping advanced AI chips out of China. The move shows how chip supply chains are becoming a front line in U.S.-China tech competition.",
+      "title": "英伟达突然踩了刹车：东南亚的AI芯片，先别急着发货",
+      "lead": "老黄家的芯片最近有点烫手——美国政府使了个眼色，东南亚好几个国家的服务器订单就先在仓库里躺着了。",
+      "enSummary": "Nvidia has told manufacturing partners to pause AI server shipments to Malaysia, Singapore, Thailand and Indonesia, as Washington tightens its push to keep advanced chips out of China.",
       "body": [
-        "据TechCrunch报道，英伟达已经通知制造伙伴，暂停向马来西亚、新加坡、泰国和印度尼西亚运送服务器。表面看是几条物流通知，背后却是美国正在加码的AI芯片出口管制：华盛顿不希望高端算力绕个弯，最后流进中国。",
-        "为什么盯上东南亚？因为这里既是数据中心和电子制造的热门落脚点，也可能成为芯片转口的灰色通道。对企业来说，订单一停，交付就延，成本就涨；对英伟达来说，则是在巨大市场和合规红线之间走钢丝。",
-        "更值得琢磨的是，管制的对象正从单颗芯片扩展到整台服务器和区域转运网络。以后每一张海关单、每一次转手，都可能被放在放大镜下看。全球AI供应链，正在从“效率优先”慢慢变成“阵营优先”。"
+        "这事说起来不复杂：英伟达通知代工和分销伙伴，发往马来西亚、新加坡、泰国、印尼的AI服务器先停一停，等通知再动。这几个国家本来是英伟达在亚洲增长最快的市场之一，数据中心一片一片地建，现在突然被按了暂停键。",
+        "为什么偏偏是这四个国家？说白了，它们常年扮演“中转站”的角色：芯片先进了这些地方，再七拐八绕流到别的市场。美国这两年盯得越来越紧，这回干脆不追着末端查了，直接把水龙头拧在源头，先在发货环节卡住。",
+        "代价当然也有。东南亚本地的云服务商、AI创业公司只能排队等货，工期一拖再拖；英伟达自己也得算账，毕竟那边是它最肥的增量市场之一。但从华盛顿的角度看，宁可少赚点，也不愿算力跑到对手手里——生意归生意，棋局归棋局。"
       ],
-      "impactOrdinary": "普通人未必马上感受到，但云服务、AI工具、游戏显卡和电子产品价格，都可能被供应链摩擦一点点推高。对在东南亚科技厂上班的人来说，订单节奏变化也会直接影响加班和饭碗。",
-      "impactWorld": "美国把出口管制从芯片延伸到服务器和第三国转运，意味着科技竞争正从产品层面下沉到物流与规则层面。短期看是堵漏洞，长期看会加速全球AI供应链分裂，也会逼着中国和东南亚加快自建算力与替代方案。",
+      "impactOrdinary": "短期内你可能感觉不到，但慢慢会传导过来：用海外云服务跑AI的公司要排队甚至涨价，做东南亚出海生意的朋友会被客户天天追问交付时间；至于想换显卡的打工人，别指望这波之后能降价。",
+      "impactWorld": "出口管制正从“点对点卡企业”变成“整片区域划线”，全球AI算力开始按地缘分块，一个世界两套供应链的趋势更明显。东南亚被夹在中间，一边是美国芯片，一边是中国订单，长期只能一边承接产能、一边催生本地替代和更隐蔽的转口渠道。",
       "sources": [
         {
           "name": "TechCrunch",
@@ -36,23 +38,24 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "民生烟火",
+      "category": "宏观钱包",
       "type": "news",
-      "readMins": 1.2,
+      "readMins": 1.5,
       "date": "2026-11-28",
-      "title": "感恩节风暴停电，黑色星期五照刷纪录",
-      "lead": "这边树倒电断，那边购物车满——美国人的感恩节假期，过得像一部又狼狈又上头的连续剧。",
-      "enSummary": "A powerful Thanksgiving storm knocked out power to nearly a million customers and disrupted travel across the East Coast. Even so, experts expect record Black Friday spending as holiday shopping kicks off.",
+      "title": "梅西百货想靠“卖贵一点”翻身，气球撑不住财报了",
+      "lead": "感恩节大游行人山人海，可梅西百货心里门儿清：光靠几只大气球，救不了年年下滑的生意。",
+      "enSummary": "As Macy's celebrates the 100th edition of its Thanksgiving parade, the department store is reinventing itself as a higher-end destination after years of falling sales.",
       "body": [
-        "一场强风暴在感恩节当天横扫美国多地，近百万用户断电，街道被淹，出行被打乱。纽约的梅西感恩节大游行也被迫推迟到周六，节日气氛被天气硬生生按了暂停键。",
-        "可另一边，黑色星期五的购物季还是准时开锣。专家预测，通胀并没有把美国人的钱包彻底吓住， holiday spending 可能再创纪录。只不过更多人可能一边刷手机下单，一边祈祷家里快点来电。"
+        "这周梅西百货风风光光办完了第100届感恩节大游行，但热闹背后是另一本账：连着好几年销售下滑，中间价位的百货最难做——上面被奢侈品抢客，下面被折扣店和电商薅走。",
+        "于是它换了个活法：不再拼“什么都有、什么都便宜”，而是往高端走，把门店做成更精致的购物目的地，货架上的品牌往上提一档，体验也往“逛街”而不是“扫货”上靠。",
+        "问题是，老顾客会不会买账？涨价容易，改印象难。百年老店这次押的是美国中产还愿意为“逛得舒服”多掏钱。"
       ],
-      "impactOrdinary": "对普通家庭来说，最直接的就是冰箱里的火鸡、停电后的取暖、航班延误和保险理赔。想捡黑五便宜的人，也得更精打细算：线上折扣虽多，但物流延误和临时涨价都可能来凑热闹。",
-      "impactWorld": "美国消费者还敢不敢花钱，是全球零售和供应链的重要风向标。如果风暴压不住消费热情，说明美国经济仍有韧性；但要是大家只是靠信用卡硬撑，后面的账单压力就会传导到全球市场。",
+      "impactOrdinary": "对爱捡便宜的消费者不太友好：折扣变少、价格往上走；但对想认真试衣服、有人伺候的顾客是好事。门店岗位也会变——普通收银少了，懂搭配的导购多了。",
+      "impactWorld": "美国零售正在“哑铃化”：一头极致便宜，一头极致贵，中间的百货被挤压。梅西的转身是全球中产消费分层的一个缩影——谁抓住中间地带，谁就得不断重新证明自己。",
       "sources": [
         {
           "name": "NPR News",
-          "url": "https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday"
+          "url": "https://www.npr.org/2026/11/27/nx-s1-6026486/macys-tries-to-reinvent-with-luxury"
         }
       ]
     },
@@ -61,19 +64,19 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "社会百态",
+      "category": "硬核科技",
       "type": "news",
       "readMins": 1.0,
       "date": "2026-11-28",
-      "title": "X平台20年后才想起家长控制，网友：总算有开关了",
-      "lead": "马斯克的X平台终于给青少年加了个家长遥控器，虽然来得晚，但家长们大概会说：有总比没有强。",
-      "enSummary": "X has introduced parental controls for teenagers, allowing guardians to manage what minors see on the platform. The feature arrives roughly two decades after the social network launched.",
+      "title": "马斯克的X终于想起加“家长模式”，晚了整整20年",
+      "lead": "X上线青少年家长管控功能，网友的第一反应是：这功能比我注册账号还晚。",
+      "enSummary": "X has rolled out parental controls for teenagers, giving guardians a way to manage what minors see on the platform — roughly two decades after launch.",
       "body": [
-        "据TechCrunch报道，X终于上线了面向青少年的家长控制功能，让父母和监护人可以管理孩子在平台上看到的内容。对一个已经运营约20年的社交平台来说，这个功能来得确实有点像迟到多年的家庭作业。",
-        "不过，有开关不等于万事大吉。青少年会不会换个账号继续玩，家长能不能真正看懂设置，平台又会不会认真执行，都是后续看点。社交媒体保护未成年人，最难的从来不是加按钮，而是让按钮真的管用。"
+        "新功能说白了就是：家长和监护人可以把孩子的账号管起来，看看他们在刷什么、能刷到什么。对一家以“什么都敢说”著称的平台来说，这步子迈得不算小。",
+        "但现实有点好笑：孩子们大多早就备好了小号，而家长得先知道孩子到底有几个账号，才有机会按下那个开关。工具给到了，难题还在客厅里。"
       ],
-      "impactOrdinary": "对家长来说，至少多了一个能和孩子谈规则的抓手；对青少年来说，刷到什么内容可能不再完全靠算法心情。当然，最实际的影响可能是家庭群里又多了一条转发：快把那个家长控制打开。",
-      "impactWorld": "各大平台正被各国监管盯紧未成年人保护，X这一步既是补课，也是表态。若执行有力，可能推动更多平台把家长控制做成标配；若只是摆设，则会加深外界对社交平台自我监管能力的怀疑。",
+      "impactOrdinary": "对家长是个新抓手，对孩子是新一轮斗智斗勇；如果你家青少年整天挂在X上，周末的家庭谈判桌上多半会多一个议题。",
+      "impactWorld": "各国都在给未成年人上网立规矩，平台从“自我标榜自由”转向“合规求生”。这不是良心发现，是监管压力下的统一动作——全球科技治理正在趋同。",
       "sources": [
         {
           "name": "TechCrunch",
@@ -86,19 +89,19 @@
       "region": "us",
       "regionLabel": "🇺🇸 美国",
       "scope": "intl",
-      "category": "文化跨界",
+      "category": "社会百态",
       "type": "fun",
       "readMins": 0.8,
       "date": "2026-11-28",
-      "title": "不刷屏，掷骰子：美国娃重新玩起《龙与地下城》",
-      "lead": "当家长受够了屏幕，一群十来岁的孩子围坐一桌，拿纸笔和骰子开启冒险——没Wi-Fi，也能上头。",
-      "enSummary": "Some parents are introducing screen-weary tweens to Dungeons & Dragons, the decades-old tabletop role-playing game. The analog hobby offers imagination and face-to-face fun without a phone.",
+      "title": "一群美国小孩放下手机，跑去“地下城”打怪了",
+      "lead": "家长实在受不了屏幕，把孩子送去玩1970年代的桌游「龙与地下城」，结果孩子比谁都上头。",
+      "enSummary": "Fed up with screens, some parents are steering their tweens toward Dungeons & Dragons — the analog role-playing game invented in the 1970s.",
       "body": [
-        "NPR报道了一个挺有意思的反向潮流：一些家长被孩子的屏幕时间逼得没招，干脆把他们领进《龙与地下城》的世界。没有短视频，没有推送，只有一张桌子、几颗骰子和一脑袋想象力。",
-        "别小看这个上世纪70年代发明的老游戏。孩子们要编故事、做选择、跟队友合作，还得接受骰子说翻脸就翻脸。比起一个人闷头刷手机，这种吵吵闹闹的桌面冒险，反而更像真正的社交现场。"
+        "画风是这样的：几个十来岁的孩子围着一张桌子，纸、笔、几颗骰子，一坐三小时，没人碰手机。玩的是半个世纪前发明的角色扮演游戏，靠嘴讲、靠想象打架。",
+        "家长们的理由很朴素：屏幕抢不回来，那就换个更有意思的东西抢。结果孩子还真买账——毕竟当英雄比刷短视频过瘾，而且还能跟朋友面对面吵架（游戏里的）。"
       ],
-      "impactOrdinary": "对家庭来说，这可能是一个低成本、低电量的周末选项：不用买昂贵设备，却能让孩子坐下来聊上几个小时。对家长最直接的好处是，终于有个理由把手机收走，还不至于引发家庭大战。",
-      "impactWorld": "当数字生活越来越密不透风，桌面游戏、纸质书和线下社群的回潮，说明人们也在寻找技术之外的连接方式。它未必能对抗科技巨头，但能提醒世界：好玩的社交，不一定非得联网。",
+      "impactOrdinary": "周末活动多了一个选项：不用充电，但要凑得齐人；家长可能得轮流当“地下城主”，念剧本念到嗓子哑。",
+      "impactWorld": "数字疲劳正在催生一场“模拟复兴”：桌游、纸质书、线下社团，成了注意力经济里的反向生意。当屏幕卷到极致，稀缺的反而是那张能围坐下来的桌子。",
       "sources": [
         {
           "name": "NPR News",
@@ -115,24 +118,20 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-28",
-      "title": "李在明跑去江原道铲土：韩国要拿AI数据中心赌一把国运",
-      "lead": "韩国总统李在明周末没歇着，跑到江原道参加AI数据中心开工仪式，放话说要倾全国之力冲进AI赛道。",
-      "enSummary": "President Lee Jae Myung attended the groundbreaking of a major AI data center in Gangwon Province and vowed to mobilize national resources to win the global AI race. The project signals Seoul's push to turn cheap power and land into computing muscle.",
+      "title": "李在明跑到江原道挖第一铲土：AI这趟车，韩国要抢头排座",
+      "lead": "别以为AI只是硅谷和大厂的事，韩国总统这回直接拎着铁锹上山沟里开工去了。",
+      "enSummary": "President Lee Jae Myung attended the groundbreaking of a major AI data center in Gangwon Province, vowing to mobilize national resources to win the global AI race. The project signals Seoul's push to turn cheap power and land into computing muscle.",
       "body": [
-        "周六的江原道，李在明拿着一把铁锹站在空地上，身后是还没影儿的数据中心工地。他讲得很直白：AI这场仗，韩国不能只当观众，政府会把能调动的资源都往上压。话音刚落，韩国媒体马上把它解读成“AI版的国家动员令”。",
-        "为什么选江原道？说白了就是图和电。数据中心是电老虎，需要便宜的电、凉快的气候和成片的空地，江原道这几样都占。韩国想干的，是把过去的钢铁、造船式重工业思路，换成服务器集群式的新基建，让别人家的AI模型跑来韩国“借电训练”。",
-        "不过话说回来，工地铲土只是第一步。芯片、人才、电价、并网速度，哪一样掉链子都可能变成半拉子工程。李在明这次把话说得很满，接下来就看几年后，这片山沟里亮的到底是服务器指示灯，还是又一块“规划留念牌”。"
+        "11月28日，韩国总统李在明出现在江原道的一块工地上，参加一座大型人工智能数据中心的破土动工仪式。他当场表态，政府会“举全国之力”去抢AI这轮比赛的先手，语气不像剪彩，更像发令枪。",
+        "为什么把数据中心建在江原道？说白了，数据中心是吃电大户，也是占地大户，需要便宜的电、凉快的气候和成片的地。韩国把AI从首尔的写字楼往道县搬，等于把“算力”当成新的高速公路来修。",
+        "更值得注意的是“举全国之力”这四个字。芯片、电力、土地、人才、外交采购，全得串成一条线。李在明这番话，对内是给地方经济打气，对外则是告诉竞争对手：韩国不打算当AI时代的配角。"
       ],
-      "impactOrdinary": "对普通人来说，短期最直接的是江原道周边就业和房价、租金的波动；长期看，如果真搞起来，韩国本地AI服务会更便宜、更快，但也意味着电费账单一栏可能越来越扎眼。",
-      "impactWorld": "全球AI竞赛正在从“谁的模型聪明”转向“谁的电便宜、机房多”。韩国这一步是把制造业老本行改造成算力出口，若成功，会在美中的算力版图之间挤出一块中等强国的位置。",
+      "impactOrdinary": "对普通人来说，最直接的是就业盘子：工地上有活干，数据中心建成后要运维、要电工、要安保、要配套餐饮住宿。中长期看，算力便宜了，本地AI服务和云服务价格也可能跟着往下走。当然，附近的电费和用水也可能被推高，这是要盯的账。",
+      "impactWorld": "全球AI竞争正在从“谁的模型聪明”转向“谁的电便宜、算力多、落地快”。韩国把国家级资源押在数据中心上，等于加入了美中之外的第三梯队冲刺，也让东亚的算力版图更紧绷。对邻国来说，这既是产业竞争，也是能源与供应链话语权的争夺。",
       "sources": [
         {
           "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261128001551315"
-        },
-        {
-          "name": "Yonhap News",
-          "url": "https://en.yna.co.kr/view/AEN20261128001500315"
+          "url": "https://en.yna.co.kr/view/AEN20261128001552315"
         }
       ]
     },
@@ -143,18 +142,18 @@
       "scope": "intl",
       "category": "民生烟火",
       "type": "news",
-      "readMins": 1.5,
+      "readMins": 1.2,
       "date": "2026-11-28",
-      "title": "韩国网上邮局被黑：至少11.3万人资料被人顺手牵羊",
-      "lead": "周末刚想上网寄个包裹，结果先等来一条坏消息：韩国网上邮局遭黑客攻击，十多万人的个人信息被扒走了。",
-      "enSummary": "A hacking attack on South Korea's Internet Post Office leaked personal data of at least 113,000 customers, authorities said. The incident raises fresh questions about cybersecurity at public services.",
+      "title": "网络邮局被黑：至少11.3万人的个人信息被人端走了",
+      "lead": "寄快递、查挂号、办邮政业务，很多人图方便用网上邮局，结果这回踩了坑。",
+      "enSummary": "A hacking attack on Korea's Internet Post Office exposed the personal data of at least 113,000 customers. Authorities are investigating how the breach happened and how far the leaked information spread.",
       "body": [
-        "这次中招的是“网上邮局”，也就是大家平时上网查快递、预约寄件、改地址用的那套系统。韩国方面的说法是，黑客攻进去以后，至少11.3万名顾客的个人资料被泄露。数字听着像统计表，落在个人头上就是姓名、联系方式这类实打实的东西。",
-        "韩国的邮政系统一直被视为生活基础设施，很多人寄件、收件、改地址都靠它，一旦出问题，牵扯面比一般电商还广。目前相关部门已经介入调查，重点无非两个：漏洞到底在哪儿，以及泄露的信息会不会已经被人挂到黑市上叫卖。",
-        "对老百姓来说，最现实的动作不是等通报，而是自己先防一手：陌生链接别点，自称邮政或快递的短信电话多留个心眼，密码该换就换。毕竟信息一旦流出去，就跟泼出去的水一样，收不回来。"
+        "11月28日曝出的消息说，韩国网络邮局遭到黑客攻击，至少11.3万名客户的个人信息被泄露。这个数字是“至少”，也就是说，后面可能还会往上加。",
+        "网络邮局是很多人办邮政业务的第一入口，注册时填的姓名、联系方式、地址这类信息，恰恰是最容易被拿去做诈骗和骚扰的素材。一次泄露，骚扰电话可能就跟上来了。",
+        "目前相关部门正在查漏洞从哪儿进来、数据流到哪儿去。对普通用户来说，能做的很有限但很实在：留意可疑短信和电话，别随手点链接，涉及转账汇款的一律先打个官方客服核实。"
       ],
-      "impactOrdinary": "凡是注册过韩国网上邮局的人，都建议近期提防冒充邮政的诈骗短信和电话；如果多个平台用同一个密码，最好赶紧换掉，别让人一把钥匙开全家的门。",
-      "impactWorld": "公共邮政系统被黑，说明国家级民生平台也是黑客眼里的肥肉。哪个国家的数字化跑得越快，这类“基础设施级”数据泄露就越可能成为常态考题。",
+      "impactOrdinary": "如果你用过网上邮政服务，接下来几周对陌生来电、冒充“邮政客服”的退款电话要多留个心眼。信息一旦流出去，收不回来，只能自己把防线拉高：改密码、开二次验证、不轻信任何“补发赔偿”的说辞。",
+      "impactWorld": "公共服务的数字化越深，被攻击的面就越大。韩国这次泄露虽然规模不算惊人，但指向一个全球性难题：政府网站和公共平台往往是网络安全最薄弱的一环。各国都在补这堂课，谁补得慢，谁的老百姓就先挨骗。",
       "sources": [
         {
           "name": "Yonhap News",
@@ -167,24 +166,24 @@
       "region": "kr",
       "regionLabel": "🇰🇷 韩国",
       "scope": "intl",
-      "category": "社会百态",
-      "type": "fun",
+      "category": "宏观钱包",
+      "type": "news",
       "readMins": 1.0,
       "date": "2026-11-28",
-      "title": "首尔站像迷宫：一对巴西老夫妻刚下车就原地转圈",
-      "lead": "坐机场铁路晃到首尔站，本该是旅行第一口顺气，结果一对巴西夫妇站在换乘通道口直接懵了。",
-      "enSummary": "Foreign tourists arriving at Seoul Station describe the transfer passages as a confusing maze, highlighting a gap between Korea's slick image and its on-the-ground signage. A Brazilian couple said they panicked soon after stepping off the airport train.",
+      "title": "谈了五个月，浦项制铁工会点头了：底薪涨2.6%，外加一笔现金",
+      "lead": "钢铁工人和公司拉锯了五个月，最后还是一个“钱”字谈拢了。",
+      "enSummary": "Unionized workers at POSCO voted to accept the company's pay offer after five months of negotiations, approving a 2.6 percent base pay raise, a one-off payment of 6.2 million won and better benefits.",
       "body": [
-        "故事的主角是一对来自巴西的夫妇，六十出头的玛丽亚和先生，第一次来韩国。从仁川机场坐上机场铁路，一路还算顺利，可到了首尔站，两个人对着四通八达的换乘通道犯了难，据当地媒体报道，当场就有点慌了。",
-        "这事其实挺有代表性。韩国对外宣传里常常是干净、高效、科技感拉满，但真到了首尔站这种巨无霸枢纽，指示牌多得像考试题，语言版本、出口编号、地铁线颜色全挤在一起，本地人凭肌肉记忆走，外地人只能靠猜。",
-        "有意思的是，这类“游客迷路”小事往往比宣传片更影响口碑。毕竟一个人对国家的第一印象，常常不是高楼，而是拖着箱子在通道里绕了三圈还找不到出口的那一刻。"
+        "韩国钢铁巨头浦项制铁的工会成员在11月28日投票通过了公司的薪酬方案，结束了长达五个月的拉锯。方案内容包括底薪上调2.6%、一次性发放620万韩元（约合4600美元），以及一些福利改善。",
+        "这个结果算是“各退半步”：工会没拿到最想要的涨幅，公司也避免了罢工停产的更大损失。对钢铁这种重资产行业来说，停产一天烧的都是真金白银。",
+        "值得留意的是那个“一次性”三个字。一次性奖金发完就没了，不进入长期工资基数，这是近年来不少韩国大企业谈薪时的常见套路——面子上好看，账本上压力小一点。"
       ],
-      "impactOrdinary": "去韩国自由行的人，可以在手机里先存好首尔站的出口编号和换乘路线图；带长辈出行的，最好别把第一站安排在大型换乘枢纽，省得开局就把体力耗在找路上。",
-      "impactWorld": "各国都在抢游客，硬件比拼已经差不多，真正的分水岭变成了标识、语言和无障碍这些细节。谁能让外国游客少迷一次路，谁就多一分软实力。",
+      "impactOrdinary": "对浦项员工来说，年底多了一笔不小的现金，能缓解点生活压力，但2.6%的涨幅跑不跑得赢物价，还得看明年的账单。对其他企业的打工人来说，这份协议很可能成为明年谈薪的参照线。",
+      "impactWorld": "钢铁是制造业的骨架，工资谈成什么样，直接关系到韩国钢材的成本和国际报价。谈判平稳收场，短期利好全球供应链的稳定；但工资成本往上走，长期也会推着韩国钢厂加快自动化和海外布局。",
       "sources": [
         {
           "name": "Korea Times",
-          "url": "https://www.koreatimes.co.kr/southkorea/20261128/foreign-tourists-navigate-complicated-maze-upon-arriving-at-seoul-station?utm_source=rss"
+          "url": "https://www.koreatimes.co.kr/business/20261128/posco-workers-vote-to-accept-pay-deal?utm_source=rss"
         }
       ]
     },
@@ -193,23 +192,24 @@
       "region": "kr",
       "regionLabel": "🇰🇷 韩国",
       "scope": "intl",
-      "category": "文化跨界",
+      "category": "社会百态",
       "type": "fun",
-      "readMins": 0.5,
+      "readMins": 0.8,
       "date": "2026-11-28",
-      "title": "TWICE志效要去拉美唱歌了：智利音乐节见",
-      "lead": "K-pop又往拉美递了一张名片：TWICE的志效确认登上2027年智利比尼亚德尔马国际音乐节。",
-      "enSummary": "TWICE member Jihyo will perform at the 2027 Vina del Mar International Song Festival in Chile, one of Latin America's biggest music events. Her agency confirmed the February 2027 appearance.",
+      "title": "一对巴西夫妇在首尔站当场懵了：这换乘图，比迷宫还迷宫",
+      "lead": "坐机场快线进城本来挺顺，一出闸机，两位六十多岁的游客直接原地站着不动了。",
+      "enSummary": "A Brazilian couple arriving at Seoul Station via the Airport Railroad Express found themselves lost in a confusing transfer maze. Their story highlights a gap between Korea's slick transport tech and its signage for first-time foreign visitors.",
       "body": [
-        "志效的经纪公司周六放出消息，她将于2027年2月登上智利比尼亚德尔马国际音乐节。这个音乐节从1960年办到现在，在拉美属于家喻户晓级别的老牌舞台。",
-        "对K-pop来说，这不是简单跑个通告。拉美市场这些年对韩国偶像的热情一直很猛，演唱会门票常常比欧美还难抢，这次让主唱级别的成员单枪匹马站上当地主流音乐节，等于直接往西语观众心里扎营。"
+        "61岁的玛丽亚和丈夫从仁川机场坐上机场快线，一路顺畅到首尔站。结果下车后，两人站在换乘通道前，看着满眼的指示牌，彻底不知道该往哪走。",
+        "首尔站是高铁、地铁、机场铁路全挤在一起的大枢纽，本地人靠着熟悉闭着眼都能转，第一次来的外国人就只能靠猜。语言不通、标识层级不清、出口太多，三件事凑一起，谁都得慌。",
+        "这事儿听着好笑，其实是韩国发展旅游绕不开的小坎：硬件修得漂亮，最后一百米的“指路”却常常掉链子。"
       ],
-      "impactOrdinary": "喜欢K-pop的拉美粉丝能在家门口看到现场；对普通韩国人来说，这类演出也是文化产业出口的一部分，和卖手机、卖汽车一样能挣钱。",
-      "impactWorld": "韩国流行文化正从“亚洲输出”转向“全球分区运营”，拉美成了新战场。音乐节的舞台背后，是文化影响力和消费市场的双重争夺。",
+      "impactOrdinary": "爱去韩国自由行的人可以提前做功课：先查好首尔站的换乘路线，或者干脆多花点钱打车。反过来看，我们自己城市里那些绕晕外地人的大车站，也该照照这面镜子。",
+      "impactWorld": "旅游竞争到这个阶段，比的不是有几座地标，而是游客下飞机后能不能顺顺当当走到酒店。导视系统做得好不好，直接决定一个国家的口碑传播——一位被绕晕的游客，回家能讲十年。",
       "sources": [
         {
           "name": "Korea Times",
-          "url": "https://www.koreatimes.co.kr/entertainment/20261128/twices-jihyo-to-perform-at-major-latin-american-music-festival?utm_source=rss"
+          "url": "https://www.koreatimes.co.kr/southkorea/20261128/foreign-tourists-navigate-complicated-maze-upon-arriving-at-seoul-station?utm_source=rss"
         }
       ]
     },
@@ -222,16 +222,16 @@
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-28",
-      "title": "基辅又要熬一个冬天：灯会灭、暖气会停，但没人打算先眨眼",
-      "lead": "乌克兰人一边往家里搬柴火和充电宝，一边刷手机看谈判新闻——这已经是战时的第四个冬天了。",
-      "enSummary": "Ukraine is bracing for another punishing winter of war, with the energy grid under strain and no clear answer to how the fighting will end.",
+      "title": "基辅的又一个冬天：灯还亮着，人有点累，但没人说要认输",
+      "lead": "仗打到第四个年头，乌克兰人一边叹气说“真的累了”，一边又把发电机、蜡烛和充电宝翻出来——这个冬天，还得硬扛。",
+      "enSummary": "Ukraine is bracing for another harsh winter of war, with a weary public still refusing to back down and no clear answer on how the conflict will end. The mood is exhaustion without surrender.",
       "body": [
-        "对基辅的普通家庭来说，冬天不是天气预报里的一个数字，而是一份生存清单：窗户贴上保温膜，阳台堆着劈好的柴，柜子里码着罐头和瓶装水，充电宝永远插在墙上。前几个冬天的经验告诉他们，导弹和无人机最爱挑气温往下掉的时候来，电站一被打，暖气片凉得比人心还快。",
-        "更折磨人的是那种说不清的疲惫。街上的人没有投降的意思，但也很少有人还能兴致勃勃地谈「胜利」两个字，大家更愿意聊的是怎么把孩子送进有发电机的学校、怎么帮前线的亲戚凑一台车。战争被过成了一种日常，日常又被战争一点点磨薄。",
-        "而在谈判桌上，基辅听到的多是让人心里发凉的声音：援助在变慢，盟友在算账，连美国的态度都被乌克兰总统公开吐槽「有点奇怪」。这个冬天真正难熬的地方也许不是寒冷本身，而是那种「必须撑住、却看不清终点」的滋味。"
+        "BBC记者在基辅街头看到的画面很典型：咖啡馆靠墙摆着一排充电宝，门口堆着沙袋，老板娘一边擦杯子一边说“去年冬天我们也这么过来的”。停电、断暖、防空警报，这些已经不算新闻，而是生活日程表里的一项。",
+        "真正折磨人的不是冷，是“看不到头”。前线在磨，谈判在拖，家里人一个在战壕一个在国外，视频通话里谁都不敢先提“结束”两个字。有位老人对记者说得很直白：不怕吃苦，怕的是吃完苦还是这个局面。",
+        "但“累”并不等于“软”。从政府到普通市民，主流情绪仍是先撑住再说——撑住电网、撑住补给、撑住西方那点越来越犹豫的援助。这个冬天，考验的不只是供暖系统，还有整个社会的耐心余额。"
       ],
-      "impactOrdinary": "欧洲人的取暖账单和电价还会跟着这场战争的节奏上下跳；粮价、油价、运费也会时不时被黑海的风吹得抖一抖。对我们来说，加油和买面粉的时候，多少都在为这场远方的冬天买单。",
-      "impactWorld": "这场消耗战正在重新定义「援助」这件事：西方的钱袋子和耐心都在见底，谈判的价码却越抬越高。谁先撑不住，谁就得在桌上让出更多——这个冬天可能是分水岭。",
+      "impactOrdinary": "对乌克兰普通人来说，这意味着又一轮停电、限暖和物价上涨，取暖器、充电设备、备用燃料成了家庭必备；对在欧洲收留乌克兰家庭的国家而言，难民回归的时间表还得继续往后推。",
+      "impactWorld": "战争进入消耗战阶段后，决定胜负的已不只是前线推进，而是谁的社会更扛得住疲惫。欧洲的援助意愿、美国的政治摇摆、俄罗斯的持久战算盘，都在这一个冬天里被反复验算，而“怎么结束”这个问题，至今没人拿得出各方都接受的答案。",
       "sources": [
         {
           "name": "BBC Europe",
@@ -248,16 +248,16 @@
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-28",
-      "title": "西班牙大选最扎心的话题：年轻人租不起房，小情侣被迫各住各家",
-      "lead": "周日就投票了，瓦伦西亚一对小情侣还在为房租发愁——这大概是今年西班牙最有说服力的竞选广告。",
-      "enSummary": "Spain votes on Sunday with housing costs dominating the campaign, as young people struggle with rents and PM Pedro Sánchez fights to defy the polls.",
+      "title": "西班牙大选前最扎心的一问：房租这么贵，年轻人还怎么谈恋爱",
+      "lead": "瓦伦西亚一对小情侣被房租硬生生拆成两处住——周日就要投票了，他们说，最想投给“租得起房”这四个字。",
+      "enSummary": "Ahead of Spain's Sunday election, young voters in Valencia say soaring rents have made living together impossible. Housing has become one of the ballot's most emotional issues.",
       "body": [
-        "西班牙首相桑切斯正在全国各地赶场子拉票，想要逆着民调翻盘；对手则一边骂他「不老实」、一边喊「背叛」。但真正把选民按在心里的，不是这些口水，而是每个月工资单上那一行房租。",
-        "记者在瓦伦西亚碰到一对年轻情侣，两个人感情挺好，却各自住在父母家——不是不想一起过，是合起来也租不起一套像样的房子。旅游城市的短租把房源吸走，工资又没跟上，年轻人只能把「搬出去住」当成一个遥遥无期的计划。",
-        "于是住房成了这场选举的万能钥匙：左派说要管租金、多建保障房，右派说要松绑、让市场多盖房。听上去都有道理，可投票日一到，年轻人最关心的还是——下个月那间屋子，房东会不会又涨价。"
+        "BBC记者在瓦伦西亚见到一对年轻人：两个人感情好好的，却各自住在合租房里，因为一起租一套房的钱，够他们分开付两份房租再加吃饭。姑娘说了一句“impossible”，说了两遍。",
+        "这不是个别现象。西班牙房租这几年涨得比工资快得多，年轻人搬回父母家、推迟结婚生子、跨城通勤都成了常态。周日的投票里，住房问题被各党派抢着拿来说，首相桑切斯在最后一场造势上也拼命拉年轻选票。",
+        "说到底，选票箱里装的常常不是意识形态，而是账单。谁能把房租按下来、把空置房逼出来，谁就能拿到这批“被房租教育过”的年轻人。"
       ],
-      "impactOrdinary": "如果你在欧洲读书或打工，这套逻辑一点都不陌生：房租吃掉一半工资，合租要抢，搬家像打仗。住房问题正在把「中产生活」变成一个需要两个人一起才勉强够得着的奢侈品。",
-      "impactWorld": "住房正在取代移民，成为欧洲最能把选民推向极端的议题。哪个党能让人觉得「我的孩子还住得起」，哪个党就能拿到下一代手里的票——这也是整个欧洲政治的暗线。",
+      "impactOrdinary": "对西班牙年轻人，这场选举直接关系到未来几年能不能独立租房、要不要继续和父母同住；对房东和投资者，则意味着税收、租金管制和短租限制可能生变。",
+      "impactWorld": "住房危机已经从伦敦蔓延到里斯本、柏林、马德里，成为欧洲选民最痛的那根神经。当“住不起”变成政治议题，主流政党被迫向左转、收紧市场规则，欧洲城市的经济逻辑和投资环境也会跟着改写。",
       "sources": [
         {
           "name": "BBC Europe",
@@ -270,24 +270,24 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "地缘安全",
-      "type": "news",
-      "readMins": 1.0,
+      "category": "贸易博弈",
+      "type": "fun",
+      "readMins": 0.8,
       "date": "2026-11-28",
-      "title": "爱沙尼亚12月1日把边境门关上：理由只有一句「为了欧洲安全」",
-      "lead": "这个只有一百多万人的小国，决定在12月1日把通往俄罗斯的陆路口岸关掉。",
-      "enSummary": "Estonia will close its border with Russia on 1 December, its foreign minister said during a visit to Baku, framing the move as securing Europe.",
+      "title": "马克龙一句“打了药的肉”，把巴西人给惹毛了",
+      "lead": "法国总统对着自家农民顺嘴吐槽巴西肉“喂了药”，结果这话飘过大西洋，巴西那边直接炸锅：你倒是说说，哪块肉？",
+      "enSummary": "Macron's remark that Brazilian meat is 'doped' drew a sharp pushback from Brazil, months after the EU banned Brazilian beef and poultry. A throwaway line has become a trade spat.",
       "body": [
-        "爱沙尼亚外长察赫克纳在访问阿塞拜疆首都巴库时把话挑明了：12月1日起，爱沙尼亚将关闭与俄罗斯的边界，理由是「为了欧洲的安全」。同一趟行程里，他还在巴库和埃里温开了大使馆，明显是想在高加索多交几个朋友。",
-        "对一个和俄罗斯接壤的小国来说，关边境不是姿态，而是算术：人少、线长、经不起折腾。过去几年，波罗的海三国一直担心边境被用来做「混合动作」——不管是人员流动还是别的花样，先把门关严实，心里才踏实。",
-        "代价当然也有：边境小镇的生意、跨国家属的往来、还有那些靠两边跑谋生的人，都得重新安排日子。安全这回事，往往就是有人安心了，有人不方便了。"
+        "事情是这样的：马克龙在跟法国农业代表聊天时，为了安抚自家农民的焦虑，说巴西肉是“doped”，意思是被喂了各种药物。这话本来是对内说的，结果传出去成了国际新闻。",
+        "巴西方面当然不干，回怼说我们的检验标准摆在那儿，你这是拿农民的情绪当外交辞令。别忘了，几个月前欧盟才禁了巴西的牛肉和禽肉，双方的火气本来就压着。",
+        "最尴尬的是，法国农民听了鼓掌，巴西出口商听了咬牙，欧盟贸易官员听了头疼——一句话的功夫，谈判桌上又多了一件要解释的事。"
       ],
-      "impactOrdinary": "住在边境附近的居民、做跨境小生意的商贩，感受到的是最直接的变化：探亲要多绕几百公里，货车要排更久的队。欧洲内部关于「安全」和「方便」谁先谁后的争论，也会越来越常见。",
-      "impactWorld": "从芬兰到波罗的海，欧洲与俄罗斯的接触面正在一段段被「物理关闭」。这等于把冷战式的前沿线重新画了出来，也意味着将来即使想缓和，连个能开口说话的窗口都更少了。",
+      "impactOrdinary": "对欧洲消费者，这场口水仗短期不会让牛排降价，反而可能让部分肉类供应更紧、标签上的“产地”变得更敏感；对巴西养殖户，则意味着订单和价格的不确定性。",
+      "impactWorld": "农产品正在变成地缘政治的语言。环保标准、动物用药、森林砍伐，被欧盟包装成“合规门槛”，被南方国家看成“绿色保护主义”。这类口角每多一次，欧盟与南方共同市场的贸易协定就更难落地一分。",
       "sources": [
         {
-          "name": "Euronews",
-          "url": "https://www.euronews.com/2026/11/27/estonia-will-close-border-with-russia-to-secure-europe-foreign-minister-says-during-baku-v"
+          "name": "BBC Europe",
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg28npvzeo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -296,24 +296,24 @@
       "region": "eu",
       "regionLabel": "🇪🇺 欧洲",
       "scope": "intl",
-      "category": "贸易博弈",
-      "type": "fun",
-      "readMins": 0.8,
+      "category": "地缘安全",
+      "type": "news",
+      "readMins": 1.3,
       "date": "2026-11-28",
-      "title": "马克龙说巴西肉「打了兴奋剂」，巴西：您再说一遍试试？",
-      "lead": "法国总统在农民面前吐槽巴西肉「像打了兴奋剂」，结果一句话把大西洋对岸给点着了。",
-      "enSummary": "Brazil pushed back after President Macron called its meat 'doped' while addressing French farmers, months after the EU banned Brazilian beef and poultry imports.",
+      "title": "泽连斯基说了句大实话：那两位的友谊“有点怪”",
+      "lead": "乌克兰总统在BBC专访里罕见地直接点名：特朗普和普京这份交情，看着实在“strange”，而美国在谈判桌上也没把俄罗斯逼够。",
+      "enSummary": "In a BBC interview, Zelensky called the Trump-Putin friendship 'strange' and said Washington is not pressing Russia hard enough in peace talks. It is a rare public jab at Kyiv's key backer.",
       "body": [
-        "事情是这样的：马克龙在跟法国农民代表聊天时，顺口把巴西肉形容成「打了兴奋剂」的货色，意思大概是嫌弃人家标准和法国不一样。偏偏几个月前欧盟刚禁了巴西的牛肉和禽肉，这话听着就不像随口一说了。",
-        "巴西那边立刻回怼，态度很明确：你一句「嗑药肉」，砸的是我们多少农户的饭碗。法国农民听了却很受用——在他们眼里，进口低价肉就是压在自己身上的那块石头。",
-        "说白了，这是一场老戏码：法国护着自己的农场，欧盟拿着标准当门槛，巴西扛着出口当命根子。只是这回台词说得太生动，一时半会儿下不了台。"
+        "泽连斯基的原话不客气：两位领导人之间的那种“友谊”在他看来很奇怪。他还抱怨，美国在推动停火的谈判里，对俄罗斯的压力明显不够。",
+        "这话说得挺冒险。乌克兰现在最缺的就是武器和钱，而这两样都捏在华盛顿手里。但基辅的焦虑也很实在——如果大国之间先谈好了，乌克兰可能被叫去签字，而不是被叫去商量。",
+        "所以他选择公开喊话：一边提醒美国别把乌克兰当局外人，一边向欧洲暗示，别指望别人替你把安全账结清。外交场合的客气话背后，其实是战场上的时间在倒数。"
       ],
-      "impactOrdinary": "对吃货来说，最直接的影响是货架上的选择：进口牛肉会不会更贵、更少，本地肉会不会更贵。餐桌上的价格，经常就是外交辞令的账单。",
-      "impactWorld": "当「食品安全标准」变成贸易武器，欧盟与南方共同市场的那份大协议就更难落地。绿色门槛到底是保护消费者还是保护自家农民，这场吵架会一直吵下去。",
+      "impactOrdinary": "对乌克兰家庭，这些话关系到最后能不能停火、亲人能不能回来；对欧洲普通纳税人，则关系到能源价格、军费开支和难民安置还要不要继续加码。",
+      "impactWorld": "当基辅开始公开质疑华盛顿的斡旋方式，说明西方阵营内部的信任出现缝隙。若美俄越顶交易成为常态，欧洲会被迫加速“防务自主”，而战后安全秩序的规则，可能由少数大国在乌克兰不在场的情况下写下。",
       "sources": [
         {
           "name": "BBC Europe",
-          "url": "https://www.bbc.co.uk/news/articles/c6rrg28npvzeo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -326,19 +326,19 @@
       "type": "fun",
       "readMins": 0.8,
       "date": "2026-11-28",
-      "title": "F1换胎比泡面还快？进站那一秒全靠团队默契",
-      "lead": "午饭刷到F1进站画面，我差点以为一群人在跳快闪。",
-      "enSummary": "An F1 pit stop lasts only seconds, but it relies on precise teamwork and repeated practice. The sport turns split-second coordination into a global spectacle.",
+      "title": "加沙棋手把棋盘重新摆起来：三年战火后，先找回下棋的快乐",
+      "lead": "要说战火里还能有啥让人喘口气的事，加沙这群棋手给了个答案：把棋子摆回棋盘。",
+      "enSummary": "Gaza's chess players are returning to the board after three years of war, rebuilding a small community through the game. Their story shows how culture and routine can help people endure and reconnect.",
       "body": [
-        "很多人看F1只盯着赛车飞驰，其实最刺激的场面之一在维修区。赛车一停，十来个人像被按了同一个开关，卸轮胎、拧螺丝、换胎、再放车，几秒钟内收工。",
-        "Al Jazeera记者专门去体验了一把进站换胎，结论很家常：这活儿不是力气大就行，得每个人知道自己那一下该在什么时候出手，快半拍慢半拍都可能乱套。"
+        "在加沙，棋盘不是什么奢侈品，却成了很多人撑过艰难日子的老伙计。打了三年仗，社区散了，家也搬了，但棋手们还是想办法凑到一起，把棋子一颗颗摆回去。",
+        "这事听着小，其实挺有劲。下棋要安静、要动脑，还得对面坐着个人——在废墟边上重新坐下，本身就是一种“我还在”的宣告。棋盘一摆，邻居、孩子、老朋友又有了聚在一起的理由。"
       ],
-      "impactOrdinary": "看比赛图个乐，但也能顺手学点团队协作的常识：分工清楚、反复练、别抢戏，工作里一样管用。",
-      "impactWorld": "F1把精密协作包装成全球娱乐产品，背后是体育、工程和商业的合流。谁能把秒级配合做成招牌，谁就能在注意力经济里多拿一分。",
+      "impactOrdinary": "对普通人来说，这故事像一句家常提醒：日子再乱，也别把让自己开心的那点爱好丢了；它可能就是重新跟人搭上话、把生活拉回正轨的绳子。",
+      "impactWorld": "它提醒国际社会，战后重建不只是房子、粮食和药品，还包括让人重新坐在一起的文化空间；这种软性重建会慢慢影响外界对加沙的叙事和援助意愿。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/28/the-split-second-teamwork-behind-an-f1-pit-stop?traffic_source=rss"
+          "url": "https://www.aljazeera.com/features/2026/11/28/gazas-chess-players-survive-a-genocide-and-rebuild-a-community?traffic_source=rss"
         }
       ]
     },
@@ -347,23 +347,24 @@
       "region": "other",
       "regionLabel": "🌍 其他地区",
       "scope": "intl",
-      "category": "民生烟火",
+      "category": "硬核科技",
       "type": "news",
       "readMins": 1.2,
       "date": "2026-11-28",
-      "title": "厄尔尼诺一发力，秘鲁和厄瓜多尔的城市先泡了汤",
-      "lead": "这两天南美那边不是下雨，是老天爷端着盆往下倒。",
-      "enSummary": "El Nino-linked heavy rain has flooded cities in Peru and Ecuador, affecting thousands of families and leaving dozens dead in Ecuador. The downpours are testing local rescue and relief systems.",
+      "title": "OpenAI 反手告苹果：AI 圈和手机圈开始互掀桌子",
+      "lead": "前脚还在聊合作，后脚就进法院——OpenAI 和苹果这出戏，比发布会还有看头。",
+      "enSummary": "OpenAI has counter-sued Apple, alleging theft of trade secrets through a former employee. The case adds a legal front to the growing rivalry between AI and consumer-tech giants.",
       "body": [
-        "报道说，秘鲁皮乌拉有大约两千个家庭受洪水影响，厄瓜多尔则有约四万七千人被波及，已经报告三十多人死亡。城市排水一顶不住，街道很快变河道。",
-        "这种天气跟厄尔尼诺脱不了干系。雨来得猛，山区和沿海低地都容易出事，救援车辆进不去，普通人家先愁的是今晚住哪儿、干净水从哪儿来。"
+        "这回合是 OpenAI 把苹果告了，核心说法是：苹果通过一名前员工拿走了商业秘密。翻译成大白话，就是“你挖我人可以，别顺手把我家底也带走”。",
+        "苹果那边还没把话说透，但这场官司已经把 AI 公司和硬件巨头的暗战摆到台面上。以前大家谈的是合作、入口、生态，现在谈的是法院、证据和律师费。",
+        "对围观群众来说，这不只是两家大公司斗气。手机里的 AI 助手、订阅价格、隐私条款，最后都可能被这类官司悄悄改写。"
       ],
-      "impactOrdinary": "对当地人来说，洪水不是新闻里的数字，而是家里进水、断水断电、孩子停课。放到我们身上也提醒一句：极端天气来了，提前看预警、备点应急物资不丢人。",
-      "impactWorld": "气候脆弱区一受灾，粮食、交通和公共卫生都会跟着抖三抖。国际援助和本地治理要是跟不上，拉美这些地区的经济恢复就会被反复打断。",
+      "impactOrdinary": "普通人短期未必马上有感，但手机和电脑里的 AI 功能可能因此变慢、变贵，或者隐私条款更绕；两家互相提防，最后埋单的 often 还是用户。",
+      "impactWorld": "AI 新贵和硬件巨头从合作走向对簿公堂，说明数据、人才和商业秘密才是下一轮科技竞争的硬通货；全球科技公司都会更小心地锁紧合同和员工流动。",
       "sources": [
         {
-          "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/news/2026/11/28/el-nino-linked-deluges-flood-cities-in-peru-ecuador?traffic_source=rss"
+          "name": "BBC World",
+          "url": "https://www.bbc.co.uk/news/articles/cm15ekqvlezeo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
@@ -374,22 +375,22 @@
       "scope": "intl",
       "category": "社会百态",
       "type": "news",
-      "readMins": 1.4,
+      "readMins": 1.3,
       "date": "2026-11-28",
-      "title": "印度IIT名校梦背后，有学生没能等到毕业",
-      "lead": "都说考上IIT像拿到人生通关券，可有个年轻人进校几个月就出事了。",
-      "enSummary": "A student who made it into an Indian Institute of Technology died months later in a suspected suicide, raising fresh questions about support gaps. The case highlights the pressure behind India's elite education dream.",
+      "title": "肯尼亚“饿死信徒”邪教头目被判有罪：123条人命，不是一句信仰能糊弄的",
+      "lead": "肯尼亚那起让人后背发凉的饿死信徒案，终于等来法院一锤：头目 Paul Mackenzie 被判过失杀人罪。",
+      "enSummary": "A Kenyan court has found cult leader Paul Mackenzie guilty of manslaughter over the deaths of 123 followers. The case has exposed how poverty, isolation and unchecked religious authority can turn deadly.",
       "body": [
-        "Al Jazeera报道了Rishikesh Kumar的故事：他好不容易挤进印度顶尖的IIT，家里大概也觉得苦日子要到头了，但几个月后他疑似自杀身亡。",
-        "这事之所以扎心，是因为IIT在印度几乎等于“学霸圣地”和阶层上升的敲门砖。可名校光环背后，课业压力、离家适应、心理支持够不够，常常被成绩单盖过去。",
-        "报道追问的是支持系统有没有缺口：学生出事前有没有人察觉，学校有没有方便求助的渠道。不是一句“抗压能力差”就能打发。"
+        "这起案子最让人难受的地方，是受害者不是一两个，而是123人。法院认定 Paul Mackenzie 对这些死亡负有刑事责任，罪名是过失杀人。",
+        "调查披露出来的画面很刺眼：信徒被要求断食、跟家人切断联系，最后把命搭进去。邪教头目往往不是靠什么神迹，而是靠封闭环境、恐惧和穷困把人一步步套牢。",
+        "判决出来了，但伤口没那么快合上。当地社区还在问：为什么一个人能把这么多人带到绝路，旁边的人、机构和监管当时都在哪儿？"
       ],
-      "impactOrdinary": "家里有考生的，看完很难不叹气。升学当然重要，但孩子吃不吃得下饭、睡不睡得着、有没有人能说话，也得算进“成绩”里。",
-      "impactWorld": "印度靠精英教育输送工程师和科技人才，IIT是块金字招牌。可如果高压筛选不断制造悲剧，这块招牌也会被追问：人才竞争的代价到底该由谁来付。",
+      "impactOrdinary": "对普通家庭来说，这是一堂沉重的防骗课：遇到让你断食、断亲、交财产的“精神导师”，别犹豫，先跑、先报警、先拉黑。",
+      "impactWorld": "它把宗教极端、贫困和基层治理漏洞摆上台面，提醒各国监管不能只在惨案后补窟窿；非洲之角的社区信任和公共安全也会被长期追问。",
       "sources": [
         {
           "name": "Al Jazeera",
-          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/28/behind-indias-iit-dream-student-suicides-and-gaps-in-support?traffic_source=rss"
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/28/28-11-sv-kenya-cult-leader-paul-mackenzie?traffic_source=rss"
         }
       ]
     },
@@ -398,24 +399,24 @@
       "region": "cn",
       "regionLabel": "🇨🇳 国内",
       "scope": "domestic",
-      "category": "民生烟火",
+      "category": "硬核科技",
       "type": "deep",
       "readMins": 2.5,
       "date": "2026-11-28",
-      "title": "三秒叫车是咱们的日常，却是他们的“闯关”：无障碍出租车卡在哪儿了",
-      "lead": "咱们掏出手机点两下就能叫来一辆车，可对坐轮椅的朋友、看不见路的朋友来说，从点屏幕到坐进车里，每一步都可能是一道坎。",
-      "enSummary": "Accessible taxis are still hard to find, hail and park for people with disabilities in China. The gap lies not only in vehicles but in booking systems, driver training and street design.",
+      "title": "高交会闭幕了，AI却赖着不走：今年深圳这场“科技大集”透了三个底",
+      "lead": "逛了二十多年高交会的老采购跟我说，今年展馆里最忙的不是卖货的，是拉着工程师追问“这套系统能不能明天就装进我厂里”的老板。",
+      "enSummary": "The 2026 China Hi-Tech Fair in Shenzhen closed with artificial intelligence as the main attraction, as overseas buyers moved from browsing booths to hunting for factory-ready partnerships.",
       "body": [
-        "这两天有条报道挺扎心：对普通人来说，叫车是几秒钟的事；但对视障人士或需要轮椅出行的群体来说，点开手机软件这一步就可能卡住——有的软件读屏不友好，有的司机接单后一看是轮椅乘客就悄悄取消。定位更是玄学，不少小区、医院门口根本没有方便轮椅上下车的落客点。",
-        "说白了，无障碍出租车这事儿不是“买几辆大空间的车”就完了。车要能装得下轮椅、还得有坡板和安全固定带；平台要有专门的预约通道，最好能提前约时间；司机得知道怎么推、怎么扶、怎么固定，而不是站在旁边干着急。这三个环节里哪一环掉链子，整条路就走不通。",
-        "更现实的一层是钱。跑一趟无障碍订单，司机往往要多花二三十分钟装卸轮椅，如果平台不给补贴、不加权重派单，司机自然用脚投票。所以真正管用的办法，是把无障碍服务做成“有回报的事”，再加上公共场所的落客区改造，让愿意接单的人不吃亏，让需要出行的人不碰运气。"
+        "有“中国科技第一展”之称的高交会11月28日在深圳落幕。往年大家挤着看的是炫酷样机，今年画风变了：展台上摆的多是带油污的机械臂、跑在真实产线上的质检模型、还有已经收了好几年服务费的工业软件。一句话，AI不再只是在屏幕上表演，它开始上班了。",
+        "现场最热闹的是洽谈区。来自中东、东南亚、欧洲的客商一边比划一边问价，问的不是“这玩意儿多先进”，而是“多久能交货”“能不能配我们现有的老设备”。这背后其实是中国制造的一张家底：从芯片模组到结构件，从深圳到东莞一小时车程内全配齐，方案落地速度快得让老外有点不适应。",
+        "当然也别急着吹。展会上不少企业坦言，真正赚钱的还是那几个深耕行业十几年的玩家，通用大模型听着响，落到车间里还得靠一行行调参数、一次次试错。展会散场，好戏才刚开场——接下来拼的不是谁模型大，而是谁更懂那台机器、那道工序、那个拧螺丝的老师傅。"
       ],
-      "impactOrdinary": "家里有老人、有行动不便的亲属，你会明显感觉到差别：能不能顺利打上车，直接决定了一次复诊、一趟探亲是顺利出门还是全家出动抬人。城市做不做这些细节，最后都落在每个家庭的体力账和时间账上。",
-      "impactWorld": "一个城市怎么对待走得最慢的人，是外界判断它现代化程度的直观标尺。在老龄化加速的背景下，无障碍出行体系正在从福利议题变成城市竞争力的组成部分，谁先把这套“软服务”磨细，谁就更容易在适老产业和国际城市评价中拿到分。",
+      "impactOrdinary": "对普通人来说，最直接的变化在找工作上：会调设备、会看数据、能给AI“挑错”的岗位越来越吃香，纯靠体力的重复岗位则在被悄悄替换。如果你在工厂、物流或客服行业，趁着还没被替换，学点跟机器打交道的本事，比什么都实在。",
+      "impactWorld": "全球AI竞赛其实已经分出两条路：一条死磕模型参数和算力堆叠，一条把AI往车间、港口、医院里塞。中国走的是后者，优势是场景多、供应链全、试错成本低。这意味着未来几年，很多国家的产业升级方案里，恐怕绕不开“中国方案”这四个字。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-28/10739209.shtml"
+          "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739365.shtml"
         }
       ]
     },
@@ -424,24 +425,24 @@
       "region": "cn",
       "regionLabel": "🇨🇳 国内",
       "scope": "domestic",
-      "category": "硬核科技",
+      "category": "民生烟火",
       "type": "news",
       "readMins": 1.5,
       "date": "2026-11-28",
-      "title": "巴基斯坦总理打来一通“太空电话”，另一头在中国空间站",
-      "lead": "想象一下：总理拨出去的电话，对方接听的位置在离地四百公里的天上。",
-      "enSummary": "",
+      "title": "雪场开板了！吉林新雪季一开门，冷风直接吹成了热气腾腾的生意",
+      "lead": "天一冷，东北人就开始忙活——不是猫冬，是开板。吉林2026—2027新雪季全面启幕，各大滑雪场陆续开门迎客。",
+      "enSummary": "Jilin has kicked off its 2026-2027 ski season as resorts across the province open one after another, turning winter cold into a booming tourism business.",
       "body": [
-        "11月28日，巴基斯坦总理夏巴兹·谢里夫和国防军司令兼陆军参谋长穆尼尔，在巴方太空与高层大气研究委员会总部，同正在中国空间站执行神舟二十四号任务的巴基斯坦航天员齐尚·阿里进行了天地通话。巴方军政一把手一起出现在航天机构，规格摆得很明白。",
-        "这通电话的分量不只在寒暄。外国航天员搭乘中国飞船、进驻中国空间站，本身就说明这套载人航天体系的“对外接口”已经跑通：从选拔训练到在轨保障，再到地面指挥协同，都是一整套硬功夫。",
-        "对巴基斯坦来说，第一次有人常驻太空，是举国可以抬头看的科技名片；对中国来说，空间站从“自己家的实验室”变成“可以请客的平台”，国际合作这一步迈得扎实。"
+        "央视网消息，随着气温走低，吉林的新雪季已经全面启动，雪场一个接一个“开板”。对当地人来说，这不是新闻，是号角——教练、民宿老板、租雪具的、卖铁锅炖的，全都开始了一年里最忙也最赚钱的几个月。",
+        "这几年冰雪旅游早就不只是滑雪发烧友的事。带娃体验的、拍照打卡的、公司团建的，把雪场周边撑成了一条完整产业链。有雪场负责人说，现在游客问得最多的是“有没有新手道”和“附近有啥好吃的”，体验感比技术更重要。",
+        "冷资源变热消费，说白了就是把天寒地冻变成真金白银。不过热闹归热闹，雪场的安全、交通、住宿价格能不能跟上，才是这波热度能不能烧到明年春天的关键。"
       ],
-      "impactOrdinary": "别觉得这事离咱远。航天合作谈得顺，卫星数据、气象遥感、农业估产这些应用就更容易落地，将来手机里的天气预报、导航精度都可能因此受益；相关产业链上的岗位和订单，也会慢慢渗到普通人身边。",
-      "impactWorld": "载人航天向来是高端地缘关系的试金石。当发展中国家的航天员开始借中国的平台上天，太空合作的选项就不再只有一条路，全球航天格局也因此多出一个玩家选项，这比任何表态都更有说服力。",
+      "impactOrdinary": "想滑雪的，现在正是订早鸟票的时候，价格比春节便宜一大截；在东北开民宿、跑包车、做餐饮的人，这几个月的收入能顶大半年。当然，去之前记得看清雪场的教练资质和保险，别光图便宜。",
+      "impactWorld": "冰雪经济正在成为中国北方的一张新名片。全球气候变暖让阿尔卑斯山的雪季越来越不稳，而中国东北、新疆的雪场却在扩容升级，未来几年有望吸引更多日韩、东南亚游客，把冬季旅游的路线重新排一遍。",
       "sources": [
         {
           "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/gj/2026/11-28/10739211.shtml"
+          "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739376.shtml"
         }
       ]
     },
@@ -450,23 +451,24 @@
       "region": "cn",
       "regionLabel": "🇨🇳 国内",
       "scope": "domestic",
-      "category": "生态奇趣",
+      "category": "硬核科技",
       "type": "news",
-      "readMins": 1.0,
+      "readMins": 1.5,
       "date": "2026-11-28",
-      "title": "黑龙江这场雪下出了“花样”：中雪、大雪，还附赠冻雨",
-      "lead": "东北的雪本来不稀奇，稀奇的是这回连冻雨都来凑热闹，路面直接变成天然溜冰场。",
-      "enSummary": "",
+      "title": "大连这艘“海上大冰箱”交船了，一船能装17.5万立方米液化天然气",
+      "lead": "11月28日，第二代17.5万立方米LNG运输船“海谐”轮在大连命名交付，这已经是国产大型液化天然气船的迭代款了。",
+      "enSummary": "The second-generation 175,000-cubic-meter LNG carrier Hai Xie was named and delivered in Dalian on November 28, marking another step in China's shipbuilding upgrade.",
       "body": [
-        "黑龙江省气象台28日通报，27日8时到28日8时，全省有211个站点出现降水，多地中雪、局地大雪，部分地方还下了雨夹雪甚至冻雨。冻雨这东西看着斯文，落地就结冰，是路面打滑的头号元凶。",
-        "受前期降雪叠加影响，道路容易出现积雪、结冰，湿滑得厉害。气象部门已经提醒注意防范，出门开车的老铁们，车速和车距都得留足。"
+        "由中船大连造船联合中船贸易为招商轮船建造的“海谐”轮，28日正式交船。通俗点说，这是一艘能在零下163摄氏度里把天然气“冻成水”运走的超级冷藏船，一船的气够不少城市用上一阵子。",
+        "所谓第二代，不是加个大号那么简单。相比第一代，它在能耗、蒸发率、操控性上都做了优化，货舱围护系统也更成熟。能自己设计、自己建、自己交付这类船的国家，全球掰着手指头数得过来。",
+        "这类船看着离日常生活远，其实跟家里灶台上的火苗直接相关。进口天然气的成本，很大一块压在运输环节上，船越省气、越省油，最后摊到气价上就越薄。"
       ],
-      "impactOrdinary": "这两天在东北，出门最好把行程往前挪半小时，鞋底换成防滑的，开车别抢那三秒钟。家里有老人的，能不出门就先别出门，摔一跤的成本比迟到高得多。",
-      "impactWorld": "极端雨雪冰冻越来越像气候变化的“日常考题”。从电网防覆冰到城市应急调度，这类天气考验的是一个国家基础设施的抗压韧性，也是各地防灾体系互相借鉴经验的地方。",
+      "impactOrdinary": "对普通人来说，这类船多一艘，冬天供暖和做饭用的天然气供应就更稳一分，价格波动的空间也更小。另外，LNG船建造是个高薪技术活，焊工、调试工程师的需求一直不小。",
+      "impactWorld": "全球LNG船订单近几年几乎被中韩两国包圆，中国从“跟着造”到“迭代造”，正在切走高端船型这块最肥的肉。对一个要靠海运进口能源的世界来说，谁能造船，谁就多一分在能源牌桌上的话语权。",
       "sources": [
         {
-          "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-28/10739206.shtml"
+          "name": "中新网财经",
+          "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739352.shtml"
         }
       ]
     },
@@ -479,19 +481,20 @@
       "type": "fun",
       "readMins": 0.8,
       "date": "2026-11-28",
-      "title": "一块“老砖茶”坐高铁进城：赤壁青砖茶把武汉茶博会泡香了",
-      "lead": "茶叶不待在产地等人来，这回是自己拎包进城，跑到武汉去会客商了。",
-      "enSummary": "",
+      "title": "22国留学生在哈尔滨下象棋，有人把“马”走成了直线",
+      "lead": "11月28日，黑龙江首届高校留学生象棋嘉年华在哈尔滨开赛，来自22个国家的近80名留学生坐到了棋盘前。",
+      "enSummary": "Nearly 80 students from 22 countries gathered in Harbin on November 28 for a Chinese chess carnival, turning a traditional board game into a cross-cultural icebreaker.",
       "body": [
-        "11月27日，2026咸宁赤壁青砖茶展销大会暨第34届中国武汉茶业博览交易会在武汉启幕。这回没在产地办，而是借武汉这个华中商贸枢纽，把人流、客商和消费市场一次凑齐。",
-        "赤壁青砖茶是压成砖的老牌黑茶，历史上就是走远路的货。如今它沿着“一带一路”卖到更远的地方，千年茶香换了个更时髦的卖法：展销、洽谈、品牌一起上。"
+        "比赛现场挺欢乐。有留学生一上来就问：“为什么这个马不能直着走？”旁边的中国同学解释半天，最后干脆拿手机画了个示意图。也有人学得快，几盘下来已经开始用“将军”吓唬对手了。",
+        "主办方说，办这个活动不光是为了比赛，更是想让留学生在棋盘上摸一摸中国文化的脾气——讲究布局、讲究耐心、讲究一步看三步。这比在课堂上听十遍“中庸之道”都管用。",
+        "最后冠军是谁其实没多少人记得，倒是散场时一群不同肤色的年轻人还在复盘残局，嘴里念叨着“马走日、象走田”。"
       ],
-      "impactOrdinary": "对普通人来说，好处很实在：买茶多了一个能现场试、现场比价的场合，价格和品质更透明；对茶农茶企来说，多一个渠道就多一份收入，也许多几个回乡做茶的年轻人。",
-      "impactWorld": "一片砖茶走的是贸易路，带的是文化名片。农产品做成有故事、有标准的品牌往外走，是中国商品从“卖得便宜”转向“卖得有名字”的一个小小样本。",
+      "impactOrdinary": "对我们来说，这事儿挺提气：文化输出不一定非得靠大片和演唱会，一副象棋、一张棋盘，照样能让人坐下来聊半天。家里有外国同事或朋友的，教他下盘象棋，比请他吃三顿饭都拉近距离。",
+      "impactWorld": "这类民间交流看着小，其实是在给国家形象做“软装修”。当越来越多外国人能看懂中国的规则和节奏，误会就少一点，生意和合作也顺一点。",
       "sources": [
         {
-          "name": "中新网财经",
-          "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739204.shtml"
+          "name": "中新网时政",
+          "url": "https://www.chinanews.com.cn/ty/2026/11-28/10739366.shtml"
         }
       ]
     },
@@ -500,80 +503,29 @@
       "region": "cn",
       "regionLabel": "🇨🇳 国内",
       "scope": "domestic",
-      "category": "社会百态",
+      "category": "民生烟火",
       "type": "fun",
-      "readMins": 0.9,
+      "readMins": 1.0,
       "date": "2026-11-28",
-      "title": "兰州大学急了：谁再说“交费包过、不用上课”，我可不认",
-      "lead": "“交钱就能拿硕士”“课都不用上”——这类广告词听着太香，香到学校自己都坐不住了。",
-      "enSummary": "",
+      "title": "一碗板面“煮”出200亿元，安徽太和这天来了十万人嗦面",
+      "lead": "11月28日，安徽阜阳太和县办“万人品板面”活动，来了超10万名本地市民和外地游客，场面相当壮观。",
+      "enSummary": "Taihe County in Anhui held a mass noodle-tasting event on November 28, drawing over 100,000 visitors and highlighting a local snack industry worth 20 billion yuan.",
       "body": [
-        "11月27日晚，兰州大学发布关于同等学力申请硕士学位招生的严正声明，明确把“交费包过”“不用上课”这类说法定性为虚假宣传，并表示保留追究法律责任的权利。",
-        "这话其实戳中了不少人的心事：工作几年想提升学历，看到这种承诺难免动心。但正规的同等学力申硕，该考的试、该上的课、该走的流程一样都少不了，任何“花钱走捷径”的口子，基本都是培训机构自己开的。"
+        "太和板面这东西，很多人在外地吃过，却不知道老家在哪。它的招牌动作是把面往案板上使劲摔，摔出来的面才筋道。这次活动上，几十口大锅一字排开，师傅们摔面的声音比锣鼓还热闹。",
+        "更让人意外的是产业规模——太和板面相关的产业链已经做到200亿元。不只是开面馆，还有调料包、半成品、预制面、连锁加盟，甚至有人把店开到了海外。一碗几块钱的面，硬是被做成了正经生意。",
+        "当地人说，太和人出去闯，很多是从支个面摊开始的。如今这碗面成了县域经济的一张牌：培训、供应链、品牌一起上，让出去的人有手艺，留下来的人有活干。"
       ],
-      "impactOrdinary": "想报班的朋友记住一句话：凡是把“包过”挂在嘴边的，先当广告看，再去学校官网核对招生信息。钱花出去容易，退回来难，别让学费变成智商税。",
-      "impactWorld": "学历注水是全球通病，各国都在想办法给文凭“验真”。高校主动出面辟谣、追责，其实是在给本国的教育信誉上保险，这比多招几个学生重要得多。",
+      "impactOrdinary": "如果你所在的城市有太和板面馆，那背后可能就是一整条产业链在供货。对想小本创业的人来说，这类门槛低、口味稳的小吃生意，往往比追风口踏实得多。",
+      "impactWorld": "中国县域小吃的出海，其实是一种很温和的文化扩张：靠的是味道和价格，不靠宣传。当一碗板面在海外唐人街站稳脚跟，中国的日常烟火气也就跟着走出去了。",
       "sources": [
         {
-          "name": "中新网时政",
-          "url": "https://www.chinanews.com.cn/sh/2026/11-28/10739208.shtml"
+          "name": "中新网财经",
+          "url": "https://www.chinanews.com.cn/cj/2026/11-28/10739355.shtml"
         }
       ]
     }
   ],
   "cityTech": [
-    {
-      "id": "sh-1",
-      "region": "cn",
-      "regionLabel": "🏙️ 深圳科创",
-      "scope": "domestic",
-      "category": "双城科创",
-      "type": "deep",
-      "readMins": 1.0,
-      "date": "2026-11-28",
-      "title": "深圳给机器人产业下了三年“军令状”：不是喊口号，是排产线",
-      "lead": "深圳工信局和科创局联手发了份2026到2028年的智能机器人工作方案，说白了就是给这门生意定了三年的“施工图”。",
-      "enSummary": "Shenzhen has issued a three-year action plan (2026-2028) to build a high-quality smart robotics industry. The signal is clear: robots are moving from demo booths onto real production lines.",
-      "body": [
-        "这份方案最实在的地方，是它不像一般的“鼓励发展”文件，而是把智能机器人当成一条要从头到尾打通的长链条来抓：上游的减速器、伺服、传感器，中游的本体制造，下游的工厂、物流、医疗、巡检场景，都要往一块儿凑。对深圳的硬件创业者来说，这意味着你不再是单打独斗地找零件、找测试场地、找第一个愿意试用你机器的客户，而是有机会顺着政策的牵引，进到一条现成的产业链里。",
-        "更关键的是“高质量发展”这几个字背后的潜台词：低价内卷、拼参数、做样机骗补贴的路子会越来越窄，能落地产线、能算清投资回报、能稳定交付的公司才会被真正扶起来。深圳这些年攒下的电子供应链、快速打样能力和工程师密度，恰好是机器人从实验室走向量产的稀缺条件，这份方案本质上是在把这张底牌打得更彻底。"
-      ],
-      "impactOrdinary": "对普通打工人的直接感受可能是一两年后：工厂里的搬运、分拣、巡检岗位会更多由机器承担，同时调试、运维、数据标注这类新岗位会冒出来。对本地科技从业者，机械、控制、视觉算法、嵌入式这几类人会更抢手，跳槽谈薪时手里多了一张“政策风口”的牌；但只会拼装、不会调系统的队伍，日子会更难过。",
-      "impactWorld": "深圳是全国智能机器人供应链的关键节点，这份三年方案等于给上游零部件和下游应用场景同时加了一把火。一旦本地形成“样机—小批量—量产—场景反馈”的闭环，成本曲线会被压下来，全国乃至海外的机器人整机厂都更可能来深圳采购和验证，深圳在机器人产业分工里的位置会从“组装地”往“标准与成本定义者”挪一步。",
-      "sources": [
-        {
-          "name": "深圳政府在线",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcmtGanZqc1YxV2hOSUpvVm1WQ09ZNjd2bHFKRk83NkpTOEFwaDVqdlJLUDRYQ2NnOFhOblhxb0VXQjZmNmdxRlViSE5HaHNuV2VTbzZWTkRzTnJLc1NaOGxBTHV3bU1nemg0UkNRN1FULVJ5dGFNbEk1U0dKN0N1cElQYVB0N0p2?oc=5"
-        }
-      ],
-      "city": "shenzhen"
-    },
-    {
-      "id": "sh-2",
-      "region": "cn",
-      "regionLabel": "🏙️ 深圳科创",
-      "scope": "domestic",
-      "category": "双城科创",
-      "type": "news",
-      "readMins": 1.0,
-      "date": "2026-11-28",
-      "title": "深圳“20+8”升级到3.0版：新兴产业已经占了GDP四成三",
-      "lead": "深圳那套有名的“20+8”产业政策迭代到3.0版了，背景是新兴产业已经撑起全市GDP的43%，家底变了，打法也得跟着变。",
-      "enSummary": "Shenzhen has upgraded its signature 20+8 industrial policy to version 3.0, with emerging industries now accounting for 43 percent of the city's GDP. The focus is shifting from building clusters to refining them.",
-      "body": [
-        "“20+8”可以理解成深圳给自己划的二十个重点产业赛道加八个未来产业方向，3.0版的意思不是把摊子铺得更大，而是把资源往更能打的地方收。四成三这个数字很说明问题：新兴产业在深圳已经不是“新苗”，而是顶梁柱，所以政策的重心自然从“先扶起来”转向“扶得更精准”——谁能补上卡脖子的环节、谁能把上下游带进来，谁就更容易拿到土地、资金和应用场景。",
-        "对创业者来说，最实际的含金量在于“预期变清楚了”。你做什么方向、能不能进政府的产业目录、申报时按哪套口径算，这些都决定了融资故事讲不讲得通。3.0版释放的信号是：深圳不打算靠房地产和地价套利来撑增长，而是继续押注硬科技和先进制造，这对愿意死磕技术的团队是利好，对只会追热点、凑概念的团队则是挤出。"
-      ],
-      "impactOrdinary": "对本地科技从业者，产业的“官方排序”基本等于岗位和薪资的排序：集成电路、智能终端、新能源、生物医药、机器人这些赛道，招人更凶、议价空间更大；而纯粹的互联网流量岗，光环会继续淡。对普通人来说，财政往产业上压得越重，城市的就业结构和公共服务投入也会跟着变，短期感受不到，三五年后差别很明显。",
-      "impactWorld": "深圳是全国产业政策的风向标之一，它把新兴产业做到GDP四成三还继续加码，会强化珠三角“研发在深圳、制造在周边”的分工格局，也会给其他城市立一个“不靠地产、靠产业链”的样本。放到全国看，这意味着资源会进一步向少数有完整供应链的城市集中，深圳的议价能力和对高端人才的虹吸效应都会更强。",
-      "sources": [
-        {
-          "name": "21财经",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTnBaTWhDamZ1ajdRaWNtYUtfV3czNlhIZFdFSlZ6Q0hLOURaQ3AteVlScUFwdlBPZDQxdzZ1NkRsZy0tYm8tNmo5eHg5dzJiUlBkeHI2ajc0QmNyVFN6SkIxT0x1TDQ2UTFyaVFTdGp4TXB2bjRNeFhkQUQ5b0wySFBXNkZlVTZXdEc5TkJfYw?oc=5"
-        }
-      ],
-      "city": "shenzhen"
-    },
     {
       "id": "ch-1",
       "region": "cn",
@@ -583,19 +535,19 @@
       "type": "deep",
       "readMins": 1.0,
       "date": "2026-11-28",
-      "title": "全国首单“两新+并购”科创债落地长沙，3.6亿元给科技企业添了把柴",
-      "lead": "兴业银行长沙分行搞出全国第一单“两新+并购”科技创新债券，3.6亿元的盘子，说白点就是给本地搞技术、想并购扩张的企业多开了一扇借钱的门。",
-      "enSummary": "Industrial Bank's Changsha branch has issued China's first 'two-new plus M&A' science-tech bond, raising 360 million yuan. It gives local tech firms a fresh, cheaper channel to fund equipment upgrades and acquisitions.",
+      "title": "长沙给AI发“车间工牌”：八大赛道让算法真下产线",
+      "lead": "一句话：长沙不只想让AI在PPT里写诗，更要它进车间拧螺丝、看质检、排生产。",
+      "enSummary": "Changsha is pushing AI into real factory floors across eight manufacturing tracks, betting that industrial scenarios will turn algorithms into productivity rather than demo reels.",
       "body": [
-        "先说这单生意新鲜在哪。过去科创债多半是单纯给研发或者项目输血，这次把“两新”也就是大规模设备更新、消费品以旧换新，跟“并购”捆在一块儿，钱既能用来换产线、上设备，也能用来收购上下游小伙伴。3.6亿元不算天文数字，但胜在是全国头一份，等于是把一条新路先蹚出来给后面的企业看：原来债券市场还能这么用。",
-        "对长沙的科技老板们来说，最实在的是多了一个不靠抵押厂房、不靠找风投的融资选项。尤其是那些手里有技术、有订单，但想扩产或者想吃掉竞争对手的中型企业，发债比股权融资更不容易稀释话语权。当然，债是要还的，门槛和审核也摆在那儿，不是谁都能上，但“首单”落在长沙，本身就是个信号——本地金融机构愿意为科技产业试新玩法。"
+        "这次重点不是多办几场论坛，而是把“人工智能+制造”拆成八条能落地赛道，让企业拿场景、拿订单、拿改造需求来对接技术。对长沙科技人来说，最值钱的是本地制造业家底厚，工程机械、汽车、电子信息等都有真实工况，算法不用先找场景，场景就在门口。谁能把模型塞进质检、排产、设备维护，谁就更容易拿到第一笔钱。",
+        "含金量在于“场景换技术、技术换效率”的闭环。过去很多AI创业公司最怕客户只愿意做小Demo，现在政府牵线把龙头企业和中小方案商放在一张桌上，试错成本降了，复制速度也快了。风口不在“通用大模型”四个字，而在懂工艺、懂数据、懂现场交付的垂类团队。"
       ],
-      "impactOrdinary": "普通人短期感受不到，但企业融资路子宽了，扩产招人的底气就足一些；对本地科技从业者来说，公司多一条融资渠道，意味着项目不容易断粮，跳槽时也能多问一句“你们发债了没”。",
-      "impactWorld": "如果这种“设备更新+并购”组合债能跑通并被复制，湖南乃至中部制造业的整合速度会加快，中小科技企业抱团做大、产业链补链强链都有了新的资金工具箱。",
+      "impactOrdinary": "对普通打工人，工厂里的质检、巡检、排产岗位会先被AI当助手，不是一下换人，而是会用的先涨本事；对本地程序员和算法工程师，懂工业流程的比只会调参的更吃香，跳槽谈薪也多一个硬筹码。",
+      "impactWorld": "对区域产业链，长沙这套打法如果跑通，会把工程机械、汽车、电子制造的智能化改造经验向外溢出，带动中部制造业从卖设备走向卖“设备+软件+服务”，也会让更多AI公司把华中交付中心放在长沙。",
       "sources": [
         {
-          "name": "红网（Google News 长沙科创政策）",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9LVlAzNjRrX09KTkxIWVFoVi1rdUFnTFgyMFlSelJGV3M4NUtvVUZlbVZmYXNwN01Bc0dLQjJMMGtCbzhDNVhKOThsN2RETjRXc1VUbzZuNnM1UG95amxrRXhwbnZzZw?oc=5"
+          "name": "凤凰网",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBUdGF2VUhOYUZhZVRzbHMzN1lhLWJFY3NZYmlEZVFkRWY0aUVaS05DbzZjZC0tRFN3T3dscEY2NzNoc0xqX20yX21WYTZWZw?oc=5"
         }
       ],
       "city": "changsha"
@@ -609,19 +561,19 @@
       "type": "news",
       "readMins": 1.0,
       "date": "2026-11-28",
-      "title": "长沙经开区机器人越干越像样，智造这盘棋开始成形",
-      "lead": "长沙经开区的机器人产业这两年不是喊口号，是实打实往“成势”上走，湖南日报专门写了特稿，说的就是这地方从制造往智造蹦的那一下。",
-      "enSummary": "Changsha's economic development zone is turning robotics from a slogan into a real industrial cluster, moving from traditional manufacturing toward intelligent production. The trend matters for both local engineers and the wider supply chain.",
+      "title": "全国首单“两新+并购”科创债落地长沙，3.6亿元不是来听响的",
+      "lead": "一句话：长沙科技企业融资桌上多了一道硬菜，银行把并购和“两新”打包成债券，3.6亿元真金白银先试水。",
+      "enSummary": "A 360 million yuan debut sci-tech bond combining new-quality productivity and M&A financing has landed in Changsha, giving local tech firms a fresh long-term funding channel.",
       "body": [
-        "机器人产业最怕什么？怕只有几家整机厂唱独角戏，零件全靠外面买。长沙经开区这几年干的活，是把减速器、控制器、传感器、系统集成这些环节一点点往本地聚，让企业出门左拐就能找到配套。产业链一密，成本就降，迭代就快，客户提个改需求，不用等外省寄样品。这就是所谓“加速成势”的含金量——不是多盖了几栋厂房，而是生态开始自己转起来。",
-        "对创业者和工程师来说，机会在两个地方：一是给机器人做“脑子”和“眼睛”，也就是视觉、算法、工业软件这类软功夫；二是做落地场景，工程机械、汽车、电子信息这些长沙的老本行，全是机器人的天然试验场。不过也得清醒，这行拼的是长期投入和耐心，风口来了不等于人人都能飞，能不能拿到订单、扛住价格战，才是真考验。"
+        "这笔钱的关键词不是“首单”两个字，而是“两新+并购”。很多科技企业想扩产、想买技术、想整合上下游，最卡的是中长期资金，不是短期周转。兴业银行长沙分行把科技创新债券和并购需求捆在一起，等于给企业一张更长的饭票：可以拿去搞设备更新、技术升级，也可以服务并购整合，比单纯贷款更匹配科技企业的成长节奏。",
+        "对创业者来说，别只盯着3.6亿元本身，更要看信号——长沙的科技金融开始从“给补贴”转向“给工具”。债券市场一旦认这类产品，后面复制的不只是这一单，而是更多银行、更多期限、更多利率梯度的产品。谁能把项目现金流、技术壁垒和并购逻辑讲清楚，谁就更容易从银行拿到长期钱。"
       ],
-      "impactOrdinary": "产线自动化程度高了，重复性、危险性岗位会减少，但调试、运维、系统集成这类技术岗会变多；本地学自动化、机械、软件的年轻人，留在长沙找对口工作的选择更宽了。",
-      "impactWorld": "长沙把机器人和工程机械、汽车产业绑在一起打，等于给中部智能制造提供了一个“场景换技术”的样本，若跑通，会带动湖南乃至中部装备制造的整链升级。",
+      "impactOrdinary": "对普通科技从业者，企业融资渠道顺了，研发项目和扩招才更稳，至少不会一遇到资金紧就砍团队；对本地创业者，融资PPT里除了股权融资，也可以认真算一笔债权融资账，别把银行只当“缺钱才找”的地方。",
+      "impactWorld": "对全国产业链，这类“两新+并购”组合债如果形成样板，会推动科技金融从单点补贴转向组合工具，帮助中部制造业和科技企业做整合升级，也会让长沙在科技金融产品创新上多一张可复制的名片。",
       "sources": [
         {
-          "name": "华声在线（Google News 长沙科创政策）",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1pTVJGZjJvM1l3Vml6TVMyc29SOHN4WVNjWjFXdGZIQTNwYndoTENVeHBwTkx2U1hURG1TU0VyNzRMQ0d4YjRQdzJaSEcwZDF2Qzg2NHJDY3pzU3BJNEtvYlZLaw?oc=5"
+          "name": "红网",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9LVlAzNjRrX09KTkxIWVFoVi1rdUFnTFgyMFlSelJGV3M4NUtvVUZlbVZmYXNwN01Bc0dLQjJMMGtCbzhDNVhKOThsN2RETjRXc1VUbzZuNnM1UG95amxrRXhwbnZzZw?oc=5"
         }
       ],
       "city": "changsha"
@@ -630,43 +582,43 @@
   "polls": [
     {
       "id": "poll1",
-      "question": "如果给城市装一颗AI心脏，你最想先用在哪儿？",
+      "question": "如果AI这趟车现在停在你面前，你选哪个座？",
       "options": [
         {
           "id": "a",
-          "label": "红绿灯别再堵",
-          "baseVotes": 46
+          "label": "头排抢座，先上车再说",
+          "baseVotes": 48
         },
         {
           "id": "b",
-          "label": "医院排队少点",
+          "label": "中间靠窗，稳当看看风景",
           "baseVotes": 34
         },
         {
           "id": "c",
-          "label": "先把网费打下来",
-          "baseVotes": 20
+          "label": "先不上，等票价降了再讲",
+          "baseVotes": 18
         }
       ]
     },
     {
       "id": "poll2",
-      "question": "冬天最怕哪样突然掉链子？",
+      "question": "房租要是再涨，你觉得年轻人谈恋爱该咋办？",
       "options": [
         {
           "id": "a",
-          "label": "停电，手机只剩1%",
-          "baseVotes": 52
+          "label": "合租式恋爱，AA到底",
+          "baseVotes": 44
         },
         {
           "id": "b",
-          "label": "停暖，屋里穿羽绒服",
-          "baseVotes": 30
+          "label": "公园长椅也能谈，浪漫免费",
+          "baseVotes": 35
         },
         {
           "id": "c",
-          "label": "停网，茶馆都刷不了",
-          "baseVotes": 18
+          "label": "先搞钱，爱情晚点再说",
+          "baseVotes": 21
         }
       ]
     }
